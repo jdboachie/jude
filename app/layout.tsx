@@ -55,7 +55,7 @@ export default function RootLayout({
       )}
     >
       <body className="grid grid-col-6 max-lg:grid-col-4 antialiased max-w-4xl lg:mx-auto">
-        <div className={cx(serif.className, "hidden sticky top-0 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
+        <div className={cx(serif.className, "hidden sticky top-0 px-4 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
           doesnt show on mobile
         </div>
         <main className="flex-auto mt-8 w-full min-w-0 flex flex-col px-2 md:px-0">
