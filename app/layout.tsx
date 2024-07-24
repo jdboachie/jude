@@ -54,9 +54,9 @@ export default function RootLayout({
         sans.className
       )}
     >
-      <body className="grid grid-cols-6 antialiased max-w-3xl mx-4 lg:mx-auto">
+      <body className="grid grid-cols-6 lg:grid-cols-4 antialiased max-w-3xl mx-4 lg:mx-auto">
         <div className={cx(serif.className, "sticky top-0 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
-          
+
         </div>
         <main className="flex-auto mt-8 col-span-4 col-start-2 min-w-0 flex flex-col px-2 md:px-0">
           <Navbar />
