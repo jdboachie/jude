@@ -54,7 +54,7 @@ export default function RootLayout({
         sans.className
       )}
     >
-      <body className="grid grid-cols-6 lg:grid-cols-4 antialiased max-w-3xl mx-4 lg:mx-auto">
+      <body className="grid grid-cols-6 max-lg:grid-cols-4 antialiased max-w-4xl mx-4 lg:mx-auto">
         <div className={cx(serif.className, "sticky top-0 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
 
         </div>
@@ -65,6 +65,9 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
         </main>
+        <div className="">
+
+        </div>
       </body>
     </html>
   )

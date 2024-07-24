@@ -1,19 +1,19 @@
 import { BlogPosts } from 'app/components/posts'
+import { cx } from 'lib/utils'
+import { serif } from './fonts'
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-medium tracking-tighter">
+      <h1 className="mb-8 text-4xl text-neutral-800 dark:text-neutral-400 font-medium tracking-tighter">
         Jude Boachie
       </h1>
+      <p className={cx(serif.className, 'italic leading-loose py-2 text-neutral-700 dark:text-neutral-400')}>Bio</p>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {`Engineer at Soko Aerial. Mastering all manner of craft. Computer Engineering @KNUST.`}
       </p>
       <div className="my-8">
+        <p className={cx(serif.className, 'italic leading-loose py-2 text-neutral-700 dark:text-neutral-400')}>Writing</p>
         <BlogPosts />
       </div>
     </section>

@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
+import { GeistMono } from 'geist/font/mono'
+import { cx } from 'lib/utils'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -50,7 +52,7 @@ function RoundedImage(props) {
 
 function Code({ children, ...props }) {
   let codeHTML = highlight(children)
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
+  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} className={cx(GeistMono.className, 'tracking-normal font-normal')} />
 }
 
 function slugify(str) {

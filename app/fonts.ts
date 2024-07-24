@@ -1,4 +1,4 @@
-import { Inter, Newsreader } from 'next/font/google'
+import { Inter,  Newsreader } from 'next/font/google'
 
 export const sans = Inter({
   weight: ['400', '700'],
