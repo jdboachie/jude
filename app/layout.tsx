@@ -7,19 +7,22 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+import { sans, serif } from './fonts'
+import { cx } from 'lib/utils'
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Jude Boachie',
+    template: '%s | Jude Boachie',
   },
-  description: 'This is my portfolio.',
+  description: 'All manner of craft.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Jude Boachie',
+    description: 'All manner of craft.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Jude Boachie',
     locale: 'en_US',
     type: 'website',
   },
@@ -36,8 +39,6 @@ export const metadata: Metadata = {
   },
 }
 
-const cx = (...classes) => classes.filter(Boolean).join(' ')
-
 export default function RootLayout({
   children,
 }: {
@@ -47,13 +48,17 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
+        'text-black bg-white dark:text-white dark:bg-black tracking-tight',
         GeistSans.variable,
-        GeistMono.variable
+        GeistMono.variable,
+        sans.className
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+      <body className="grid grid-cols-6 antialiased max-w-3xl mx-4 lg:mx-auto">
+        <div className={cx(serif.className, "sticky top-0 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
+          
+        </div>
+        <main className="flex-auto mt-8 col-span-4 col-start-2 min-w-0 flex flex-col px-2 md:px-0">
           <Navbar />
           {children}
           <Footer />
