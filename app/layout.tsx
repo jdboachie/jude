@@ -55,7 +55,7 @@ export default function RootLayout({
       )}
     >
       <body className="grid grid-cols-6 max-lg:grid-cols-4 antialiased max-w-4xl mx-4 lg:mx-auto">
-        <div className={cx(serif.className, "sticky top-0 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
+        <div className={cx(serif.className, "max-lg:hidden sticky top-0 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
 
         </div>
         <main className="flex-auto mt-8 col-span-4 col-start-2 min-w-0 flex flex-col px-2 md:px-0">
@@ -65,7 +65,7 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
         </main>
-        <div className="">
+        <div className="max-lg:hidden">
 
         </div>
       </body>
