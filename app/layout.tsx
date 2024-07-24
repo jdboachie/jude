@@ -54,18 +54,18 @@ export default function RootLayout({
         sans.className
       )}
     >
-      <body className="grid grid-cols-6 max-lg:grid-cols-4 antialiased max-w-4xl lg:mx-auto">
-        <div className={cx(serif.className, "max-lg:hidden sticky top-0 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
-
+      <body className="grid grid-col-6 max-lg:grid-col-4 antialiased max-w-4xl lg:mx-auto">
+        <div className={cx(serif.className, "hidden sticky top-0 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
+          doesnt show on mobile
         </div>
-        <main className="flex-auto mt-8 col-span-4 min-w-0 flex flex-col px-2 md:px-0">
+        <main className="flex-auto mt-8 w-full min-w-0 flex flex-col px-2 md:px-0">
           <Navbar />
           {children}
           <Footer />
           <Analytics />
           <SpeedInsights />
         </main>
-        <div className="max-lg:hidden">
+        <div className="hidden">
 
         </div>
       </body>
