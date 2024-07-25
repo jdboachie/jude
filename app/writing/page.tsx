@@ -7,8 +7,8 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">My Blog</h1>
+    <section className='flex flex-col gap-8 pb-8'>
+      <h1 className="font-medium text-lg mb-8 tracking-tighter">Writing</h1>
       <BlogPosts />
     </section>
   )

@@ -47,27 +47,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(
-        'text-black bg-white dark:text-white dark:bg-black trackingtight',
-        GeistMono.variable,
-        sans.className,
-        GeistSans.className,
-      )}
+      className={cx(sans.className)}
     >
-      <body className="grid grid-cols-6 max-lg:grid-cols-4 antialiased max-w-4xl mx-auto">
-        <div className={cx(serif.className, "sticky max-md:hidden top-0 pt-10 text-neutral-700 h-screen italic flex items-start justify-center")}>
-
-        </div>
-        <main className="flex-auto col-span-4 pt-8 w-full min-w-0 flex flex-col px-4 lg:px-0">
+      <body className="grid grid-cols-4 md:grid-cols-6 antialiased max-w-5xl mx-auto text-neutral-700 dark:text-neutral-300">
+        <main className="flex flex-col col-span-4 col-start-2 pt-8 w-full min-w-0 lg:px-8">
           <Navbar />
           {children}
-          <Footer />
           <Analytics />
           <SpeedInsights />
+          <Footer />
         </main>
-        <div className="max-lg:hidden flex">
-
-        </div>
       </body>
     </html>
   )

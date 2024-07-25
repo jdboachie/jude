@@ -1,7 +1,11 @@
 'use client'
 
+import { GeistMono } from 'geist/font/mono';
+import { cx } from 'lib/utils';
 import Link from 'next/link'
 import * as React from 'react'
+// import { m } from 'framer-motion'
+// import { staggerChildrenVariants } from 'app/page';
 
 
 function ArrowIcon() {
@@ -61,8 +65,8 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+    <footer className="footer mb-16 col-span-6 border-t border-t-neutral-300 dark:border-t-neutral-800">
+      <ul className="text-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 sm:flex-row sm:space-x-4 sm:space-y-0 dark:text-neutral-400">
         <li>
           <Link
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -70,7 +74,7 @@ export default function Footer() {
             target="_blank"
             href="/rss"
           >
-            <p className="mr-2 h-7 underline underline-offset-4">rss</p>
+            <p className="mr-2 h-7 items-center flex underline-offset-4">rss</p>
             <ArrowIcon />
           </Link>
         </li>
@@ -81,7 +85,7 @@ export default function Footer() {
             target="_blank"
             href="https://github.com/jdboachie"
           >
-            <p className="mr-2 h-7 underline underline-offset-4">github</p>
+            <p className="mr-2 h-7 items-center flex underline-offset-4">github</p>
             <ArrowIcon />
           </Link>
         </li>
@@ -101,7 +105,7 @@ export default function Footer() {
         <p className="text-neutral-600 text-sm dark:text-neutral-300">
           © {new Date().getFullYear()} MIT Licensed
         </p>
-        <p className="text-neutral-600 text-sm dark:text-neutral-300">
+        <p className={cx(GeistMono.className, "text-neutral-600 text-sm dark:text-neutral-300")}>
           {currentTime}
         </p>
       </div>

@@ -47,6 +47,10 @@ html {
   @apply visible;
 }
 
+a {
+  @apply underline-offset-4 decoration-neutral-500/50 hover:decoration-neutral-500
+}
+
 .prose a {
   @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
 }

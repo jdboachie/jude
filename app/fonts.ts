@@ -1,12 +1,9 @@
-import { Inter,  Newsreader } from 'next/font/google'
+import LocalFont from 'next/font/local'
 
-export const sans = Inter({
-  weight: ['400', '700'],
-  subsets: ['latin']
+export const sans = LocalFont({
+  src: 'fonts/Inter-VariableFont_slnt,wght.ttf'
 })
 
-export const serif = Newsreader({
-  weight: ['400', '500', '600', '700', '800'],
-  subsets: ['latin'],
-  style: ['italic', 'normal']
+export const serif = LocalFont({
+  src: 'fonts/Newsreader-Italic-VariableFont_opsz,wght.ttf',
 })

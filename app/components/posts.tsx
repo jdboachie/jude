@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { formatDate, getBlogPosts } from 'app/writing/utils'
 
-export function BlogPosts() {
+export async function BlogPosts() {
   let allBlogs = getBlogPosts()
 
   return (
-    <div>
+    <div className='hover:text-neutral-400 transition-colors duration-100 text-neutral-200 dark:hover:text-neutral-600 grid '>
       {allBlogs
         .sort((a: { metadata: { publishedAt: string | number | Date } }, b: { metadata: { publishedAt: string | number | Date } }) => {
           if (
@@ -18,14 +18,14 @@ export function BlogPosts() {
         .map((post) => (
           <Link
             key={post.slug}
-            className="flex flex-col space-y-1 mb-4"
+            className="flex flex-col p-2 hover:text-neutral-900 dark:hover:text-neutral-100"
             href={`/writing/${post.slug}`}
           >
-            <div className="w-full opacity-90 hover:opacity-100 transition-colors duration-300 flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <p className="text-neutral-600 truncate dark:text-neutral-400 w-[120px] tabular-nums">
+            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
+              <p className="truncate w-[120px] tabular-nums">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
-              <p className="text-neutral-900 text-base dark:text-neutral-100 tracking-tight">
+              <p className="tracking-tight">
                 {post.metadata.title}
               </p>
             </div>
