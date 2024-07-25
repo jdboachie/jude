@@ -21,11 +21,11 @@ export function BlogPosts() {
             className="flex flex-col space-y-1 mb-4"
             href={`/writing/${post.slug}`}
           >
-            <div className="w-full opacity-80 hover:opacity-100 transition-colors duration-300 flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
+            <div className="w-full opacity-90 hover:opacity-100 transition-colors duration-300 flex flex-col md:flex-row space-x-0 md:space-x-2">
+              <p className="text-neutral-600 truncate dark:text-neutral-400 w-[120px] tabular-nums">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
-              <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+              <p className="text-neutral-900 text-base dark:text-neutral-100 tracking-tight">
                 {post.metadata.title}
               </p>
             </div>
