@@ -11,6 +11,7 @@ import * as React from 'react'
 function ArrowIcon() {
   return (
     <svg
+      className='hover:-translate-x-1 hover:-translate-y-1 duration-500 ease-out'
       width="12"
       height="12"
       viewBox="0 0 12 12"

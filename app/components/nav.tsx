@@ -28,7 +28,7 @@ export function Navbar() {
                 key={path}
                 href={path}
                 className={cx(
-                  "transition-all no-underline underline-offset-0 text-neutral-700 dark:text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-200 flex align-end justify-end relative py-1 m-1",
+                  "transition-all text-sm no-underline hover:underline underline-offset-0 text-neutral-700 dark:text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-200 flex align-end justify-end relative py-1 m-1",
                   // name === 'Index' ? `${sans.className}` : ''
                 )}
               >

@@ -5,7 +5,7 @@ export async function BlogPosts() {
   let allBlogs = getBlogPosts()
 
   return (
-    <div className='hover:text-neutral-400 transition-colors duration-100 text-neutral-200 dark:hover:text-neutral-600 grid '>
+    <div className='hover:text-neutral-400 transition-colors duration-300 dark:text-neutral-200 dark:hover:text-neutral-600 grid '>
       {allBlogs
         .sort((a: { metadata: { publishedAt: string | number | Date } }, b: { metadata: { publishedAt: string | number | Date } }) => {
           if (
