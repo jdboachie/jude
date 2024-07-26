@@ -13,6 +13,6 @@ export const serif = LocalFont({
 
 export const display = EB_Garamond({
   weight: ['400', '700'],
-  style: ['italic',], //, 'normal
+  style: ['italic', 'normal'],
   subsets: ['latin']
 })

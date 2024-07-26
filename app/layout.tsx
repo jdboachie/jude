@@ -53,7 +53,7 @@ export default function RootLayout({
         <main
           className={cx(
             "flex flex-col col-span-4 md:col-start-2 pt-8 w-full min-w-0 px-6 md:px-8",
-            'after:z-50 after:-top-1 after:fixed after:inset-0 after:h-16 after:bg-gradient-to-b after:backdrop-blur-[5px] after:backdrop-opacity-40 after:from-white/95 after:via-white/90 dark:after:from-neutral-900 dark:after:via-neutral-900/80 after:to-transparent'
+            'after:z-50 after:-top-1 after:fixed after:inset-0 after:h-12 after:bg-gradient-to-b after:blur-sm after:backdrop-opacity-40 after:from-white/95 after:via-white/90 dark:after:from-neutral-900 dark:after:via-neutral-900/80 after:to-transparent'
           )}
         >
           <Navbar />
