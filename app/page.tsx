@@ -61,7 +61,7 @@ export default function Page() {
           Jude Boachie
         </m.h1>
         {/* <m.p variants={staggerChildrenVariants} className={cx(serif.className, 'italic leading-loose pt-2')}>Bio</m.p> */}
-        <m.div variants={staggerChildrenVariants} className={sectionStyles('purple')}>
+        <m.div variants={staggerChildrenVariants} className={sectionStyles('red')}>
           <span className={cx(serif.className, 'text-lg font-medium')}>Light of the world.</span>{' '}
           Engineer at <Link className='underline underline-offset-2 decoration-neutral-500/50 hover:decoration-neutral-500' href={'https://sokoaerial.com'}>Soko Aerial</Link>.
           Mastering all manner of craft. Computer Engineering @KNUST.{' '}<span className='inline-flex'>Total Success <Image alt='sparkles emoji' src={'https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/2728.png'} width={500} height={500} className='size-5' /></span>
