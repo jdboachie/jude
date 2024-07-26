@@ -53,7 +53,7 @@ export default function Page() {
       >
         <m.h1
         variants={staggerChildrenVariants}
-          className={cx("mb-8 text-9xl max-sm:text-8xl font-medium tracking-tigter", display.className)}
+          className={cx("mb-8 text-9xl max-md:text-6xl font-medium tracking-tigter", display.className)}
         >
           Jude Boachie
         </m.h1>
