@@ -49,8 +49,13 @@ export default function RootLayout({
       lang="en"
       className={cx(sans.className, 'cursor-crosshair')}
     >
-      <body className="grid grid-cols-4 md:grid-cols-6 antialiased max-w-5xl mx-auto text-neutral-700 dark:text-neutral-300">
-        <main className="flex flex-col col-span-4 md:col-start-2 pt-8 w-full min-w-0 px-4 md:px-8">
+      <body className="grid grid-cols-4 md:grid-cols-6 antialiased max-w-5xl mx-auto text-neutral-700 dark:text-neutral-300 dark:bg-neutral-900 bg-white">
+        <main
+          className={cx(
+            "flex flex-col col-span-4 md:col-start-2 pt-8 w-full min-w-0 px-4 md:px-8",
+            'after:z-50 after:-top-1 after:fixed after:inset-0 after:h-16 after:bg-gradient-to-b after:backdrop-blur-[5px] after:backdrop-opacity-40 after:from-white/95 after:via-white/90 dark:after:from-neutral-900 dark:after:via-neutral-900/80 after:to-transparent'
+          )}
+        >
           <Navbar />
           {children}
           <Analytics />
