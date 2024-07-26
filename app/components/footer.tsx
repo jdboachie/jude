@@ -11,7 +11,7 @@ import * as React from 'react'
 function ArrowIcon() {
   return (
     <svg
-      className='hover:-translate-x-1 hover:-translate-y-1 duration-500 ease-out'
+      className='hover:translate-x-1 hover:-translate-y-1 duration-500 ease-out'
       width="12"
       height="12"
       viewBox="0 0 12 12"
@@ -49,25 +49,44 @@ function formatTime(date: Date): string {
   return date.toLocaleTimeString(undefined, options);
 }
 
+function getTimeInLocation(timeZone: string): string {
+  const options: Intl.DateTimeFormatOptions = {
+    timeZone: timeZone,
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false, // 24-hour format, set to true for 12-hour format
+  };
+
+  const formatter = new Intl.DateTimeFormat('en-US', options);
+  return formatter.format(new Date());
+}
+
 
 export default function Footer() {
 
-  const [currentDate, setCurrentDate] = React.useState<string>('');
   const [currentTime, setCurrentTime] = React.useState<string>('');
 
   React.useEffect(() => {
     const intervalId = setInterval(() => {
-      const now = new Date();
-      setCurrentDate(formatDate(now));
-      setCurrentTime(formatTime(now));
+      const now = new Intl.DateTimeFormat('en-US',
+        {
+          timeZone: 'Africa/Accra',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false, // 24-hour format, set to true for 12-hour format
+        }
+      );
+      setCurrentTime(now.format(new Date()));
     }, 1000); // Update every second
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <footer className="footer mb-16 col-span-6 border-t border-t-neutral-300 dark:border-t-neutral-800">
-      <ul className="text-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 sm:flex-row sm:space-x-4 sm:space-y-0 dark:text-neutral-400">
+    <footer className="text-sm p-4 sm:p-0 footer mb-16 col-span-6 border-t border-t-neutral-300 dark:border-t-neutral-800 text-neutral-600 dark:text-neutral-300">
+      <ul className="mt-8 flex flex-col space-x-0 space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0">
         <li>
           <Link
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -102,12 +121,13 @@ export default function Footer() {
           </a>
         </li> */}
       </ul>
-      <div className="flex justify-between mt-8">
-        <p className="text-neutral-600 text-sm dark:text-neutral-300">
+      <div className="items-center flex justify-between mt-8">
+        <p className="">
           © {new Date().getFullYear()} MIT Licensed
         </p>
-        <p className={cx(GeistMono.className, "text-neutral-600 text-sm dark:text-neutral-300")}>
-          {currentTime}
+        <p className={cx(GeistMono.className, "flex gap-4 font-light")}>
+          <Link href={'https://maps.app.goo.gl/RXv5TQN8pWe5cqms6'} className='max-sm:w-1/'>6.6701387,<br className='sm:hidden'/>-1.5759475</Link>
+          {currentTime || '--:--:--'}
         </p>
       </div>
     </footer>
