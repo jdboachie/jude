@@ -1,11 +1,9 @@
 'use client'
 
-import { GeistMono } from 'geist/font/mono';
-import { cx } from 'lib/utils';
 import Link from 'next/link'
 import * as React from 'react'
-// import { m } from 'framer-motion'
-// import { staggerChildrenVariants } from 'app/page';
+import { cx } from 'lib/utils';
+import { GeistMono } from 'geist/font/mono';
 
 
 function ArrowIcon() {
@@ -109,17 +107,6 @@ export default function Footer() {
             <ArrowIcon />
           </Link>
         </li>
-        {/* <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://vercel.com/templates/next.js/portfolio-starter-kit"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">view source</p>
-          </a>
-        </li> */}
       </ul>
       <div className="items-center flex justify-between mt-8">
         <p className="">
