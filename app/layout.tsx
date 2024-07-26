@@ -50,7 +50,7 @@ export default function RootLayout({
       className={cx(sans.className, 'cursor-crosshair')}
     >
       <body className="grid grid-cols-4 md:grid-cols-6 antialiased max-w-5xl mx-auto text-neutral-700 dark:text-neutral-300">
-        <main className="flex flex-col col-span-4 md:col-start-2 pt-8 w-full min-w-0 px-8">
+        <main className="flex flex-col col-span-4 md:col-start-2 pt-8 w-full min-w-0 px-4 md:px-8">
           <Navbar />
           {children}
           <Analytics />

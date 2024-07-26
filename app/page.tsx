@@ -27,13 +27,10 @@ function EmailIcon() {
 
 
 const staggerChildrenVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95, },
+  hidden: { opacity: 0, y: 20, scale: 1, },
   show: { opacity: 1, y: 0, scale: 1.0, transition: { duration: 0.6, ease: 'easeOut' } },
 }
 
-function sectionStyles (color: string) {
-  return `grayscale hover:grayscale-0 hover:bg-gradient-to-r bg-clip-text transition-colors duration-1000 ease-in-out hover:text-transparent from-${color}-700 dark:from-${color}-400 via-neutral-700 to-neutral-700 dark:via-neutral-300 dark:to-neutral-300 bg-neutral-700`
-}
 
 
 export default function Page() {
@@ -61,7 +58,7 @@ export default function Page() {
           Jude Boachie
         </m.h1>
         {/* <m.p variants={staggerChildrenVariants} className={cx(serif.className, 'italic leading-loose pt-2')}>Bio</m.p> */}
-        <m.div variants={staggerChildrenVariants} className={sectionStyles('red')}>
+        <m.div variants={staggerChildrenVariants}>
           <span className={cx(serif.className, 'text-lg font-medium')}>Light of the world.</span>{' '}
           Engineer at <Link className='underline underline-offset-2 decoration-neutral-500/50 hover:decoration-neutral-500' href={'https://sokoaerial.com'}>Soko Aerial</Link>.
           Mastering all manner of craft. Computer Engineering @KNUST.{' '}<span className='inline-flex'>Total Success <Image alt='sparkles emoji' src={'https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/2728.png'} width={500} height={500} className='size-5' /></span>
@@ -78,9 +75,9 @@ export default function Page() {
         </m.div>
         <m.div variants={staggerChildrenVariants} className="flex flex-col">
           <p className={cx('leading-loose pt-2 text-xs font-medium')}>Connect</p>
-          <div className='flex items-center gap-1.5 items-center mb-2'><TwitterIcon /><Link className='text-sm' href={'https://x.com/iamjudeboachie'}>@iamjudeboachie</Link></div>
-          <div className='flex items-center gap-1.5 items-center mb-2'><GithubIcon /><Link className='text-sm' href={'https://x.com/iamjudeboachie'}>@jdboachie</Link></div>
-          <div className='flex items-center gap-1.5 items-center mb-2'><EmailIcon /><Link className='text-sm' href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link></div>
+          <div className='flex items-center gap-1.5 items-center mb-2'><TwitterIcon/><Link className='text-sm' href={'https://x.com/iamjudeboachie'}>@iamjudeboachie</Link></div>
+          <div className='flex items-center gap-1.5 items-center mb-2'><GithubIcon/><Link className='text-sm' href={'https://x.com/iamjudeboachie'}>@jdboachie</Link></div>
+          <div className='flex items-center gap-1.5 items-center mb-2'><EmailIcon/><Link className='text-sm' href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link></div>
         </m.div>
       </m.section>
     </LazyMotion>
