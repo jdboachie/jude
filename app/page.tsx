@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { cx } from 'lib/utils'
 import Image from 'next/image'
-import { serif } from './fonts'
+import { display, serif } from './fonts'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 
 
@@ -53,7 +53,7 @@ export default function Page() {
       >
         <m.h1
         variants={staggerChildrenVariants}
-          className={cx("mb-8 text-2xl font-medium tracking-tighter")}
+          className={cx("mb-8 text-9xl max-sm:text-8xl font-medium tracking-tigter", display.className)}
         >
           Jude Boachie
         </m.h1>
