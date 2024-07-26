@@ -1,14 +1,12 @@
 import './global.css'
+import { cx } from 'lib/utils'
+import { sans } from './fonts'
+import { baseUrl } from './sitemap'
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
+import Footer from './components/footer'
 import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
-import { baseUrl } from './sitemap'
-import { sans, serif } from './fonts'
-import { cx } from 'lib/utils'
 
 
 export const metadata: Metadata = {
@@ -49,7 +47,7 @@ export default function RootLayout({
       lang="en"
       className={cx(sans.className, 'cursor-crosshair')}
     >
-      <body className="h-full min-h-screen bg-no-repeat grid grid-cols-4 md:grid-cols-6 antialiased max-w-5xl mx-auto text-neutral-700 dark:text-neutral-300 bg-gradient-to-br from-white via-white to-sky-100 dark:from-black dark:via-black dark:to-black/90">
+      <body className="h-full min-h-screen bg-no-repeat grid grid-cols-4 md:grid-cols-6 antialiased max-w-5xl mx-auto text-neutral-700 dark:text-neutral-300 bg-gradient-to-br from-white via-white to-sky-100 dark:from-black dark:via-black dark:to-black/90 bg-fixed">
         <main
           className={cx(
             "flex flex-col col-span-4 md:col-start-2 pt-8 w-full min-w-0 px-6 md:px-8",
