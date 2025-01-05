@@ -1,0 +1,142 @@
+aside {
+  font-family: 'Crimson Pro';
+  font-style: italic;
+  display: flex;
+  gap: 6px;
+  margin-top: 1.25em !important;
+  font-size: 0.875rem;
+  padding: 0px 0px 40px 0px;
+  color: #525252;
+}
+
+
+aside > a {
+  width: 100%;
+  font-size: large;
+}
+
+section {
+  display: grid;
+  position: relative;
+  align-items: flex-start;
+  gap: 12px;
+  grid-template-columns:
+    1fr
+    min(var(--line-width), 100%)
+    1fr
+  ;
+}
+
+article {
+  font-family: 'Switzer';
+  font-weight: 400;
+  display: grid;
+  font-size: 0.875rem;
+  line-height: 28px;
+  grid-column: 1 / 4;
+  grid-template-columns:
+    1fr
+    min(720px, 100%)
+    1fr
+  ;
+  gap: 16px;
+}
+
+section > aside {
+  display: flex;
+  position: fixed;
+  top: 124px;
+  align-items: start;
+  grid-column-start: 1;
+  height: 100%;
+}
+
+section > main {
+  font-family: 'Switzer';
+  font-weight: 400;
+  display: grid;
+  line-height: 28px;
+  grid-column: 1 / 4;
+  gap: 16px;
+  grid-template-columns:
+    1fr
+    min(720px, 100%)
+    1fr
+  ;
+}
+
+section > main > * {
+  grid-column-start: 2;
+}
+
+section > main, article > :first-child {
+  /* Override removing top margin, causing layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+article > * {
+  grid-column-start: 2;
+}
+
+.blog-title {
+  font-family: var(--ui-sans);
+  font-weight: 400;
+  display: grid;
+  gap: 4px;
+}
+
+pre {
+  display: block;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-size: 13px;
+  font-family: monospace;
+  background: var(--pre-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  line-height: 24px;
+  position: relative;
+  margin: 0;
+  overflow-x: auto;
+  unicode-bidi: isolate;
+  white-space: pre;
+
+  grid-column: 1 / 4;
+  width: fit-content;
+  min-width: 720px;
+
+  margin: auto;
+}
+
+code {
+  letter-spacing: 0em;
+}
+
+@media not all and (min-width: 1024px) {
+
+  section {
+    display: grid;
+    align-items: flex-start;
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+
+  section > main, .prose {
+    grid-template-columns: 1fr;
+  }
+
+  section > main > *, .prose > * {
+    grid-column: 1 / 1;
+  }
+
+  section > aside {
+    position: relative;
+    top: 0;
+    padding: 20px 0px;
+    display: flex;
+  }
+}

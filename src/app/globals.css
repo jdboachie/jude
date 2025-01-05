@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('/fonts/Switzer-Variable.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('/fonts/CrimsonPro-VariableItalic.woff2') format('woff2');
+  font-style: normal;
+}
+
+:root {
+  --ui-sans: 'Inter';
+  --reading-sans: 'Epilogue';
+  --line-width: 65ch;
+  --blur-radius: 5px;
+
+  --background: #ffffff;
+  --foreground: #404040;
+  --border: rgb(229, 229, 229);
+  --border-radius: 8px;
+
+  --pre-bg: #f5f5f5;
+  --blur-start: var(--background);
+  --blur-end: transparent;
+
+  --mask-visible: #000;
+  --mask-hidden: transparent;
+  --mask-invisible: transparent;
+
+  --direction: to bottom;
+}
+
+/* Syntax highlighting */
+:root {
+  --sh-class: #2d5e9d;
+  --sh-identifier: #354150;
+  --sh-sign: #8996a3;
+  --sh-string: #007f7a;
+  --sh-keyword: #e02518;
+  --sh-comment: #a19595;
+  --sh-jsxliterals: #6266d1;
+  --sh-property: #e25a1c;
+  --sh-entity: #e25a1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --pre-bg: #262626;
+    --border: rgb(64, 64, 64);
+  }
+}
+
+html, body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+}
+
+body {
+  padding: 100px;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--ui-sans), Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::after {
+  position: fixed;
+  content: '';
+  z-index: 10;
+  /* inset: 0; */
+  left: 0px;
+  top: 0px;
+  height: 96px;
+  width: 100dvw;
+  background: linear-gradient(
+    to bottom,
+    var(--blur-start),
+    var(--blur-end)
+  );
+  mask-image: linear-gradient(to bottom, var(--mask-visible) 25%, var(--mask-hidden));
+  -moz-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  backdrop-filter: blur(var(--blur-radius));
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: medium;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  :root {
+    --sh-class: #4c97f8;
+    --sh-identifier: white;
+    --sh-keyword: #f47067;
+    --sh-string: #0fa295;
+  }
+}
+
+@media not all and (min-width: 1024px) {
+  body {
+    padding-left: max(24px, env(safe-area-inset-left));
+    padding-right: max(24px, env(safe-area-inset-left));
+  }
+}
