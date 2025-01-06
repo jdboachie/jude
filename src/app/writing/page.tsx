@@ -11,7 +11,7 @@ export const metadata = {
 export default function Page() {
   return (
     <section>
-      <aside><ArrowUpLeft /><Link href={'/'}>Index</Link></aside>
+      <aside><Link href={'/'}><ArrowUpLeft />Index</Link></aside>
       <main>
         <h1>Writing</h1>
         <BlogPosts />

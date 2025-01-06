@@ -40,6 +40,7 @@ const staggerChildrenVariants = {
 export default function Page() {
   return (
     <LazyMotion features={domAnimation} strict>
+      <Link href={'/writing'}>Writing</Link>
       <m.section
         variants={{
           hidden: { opacity: 0 },

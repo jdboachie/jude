@@ -92,7 +92,7 @@ export default async function Blog({ params } : {params: Promise<{ slug: string 
           }),
         }}
       />
-      <aside className='italics'><ArrowUpLeft /><Link href={'/writing'}>Writing</Link></aside>
+        <aside className='italics'><Link href={'/writing'}><ArrowUpLeft />Writing</Link></aside>
       <article>
         <div className="blog-title">
           <h1>

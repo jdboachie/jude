@@ -106,8 +106,8 @@ pre {
   white-space: pre;
 
   grid-column: 1 / 4;
-  width: fit-content;
-  min-width: 720px;
+  max-width: 100%;
+  /* min-width: 720px; */
 
   margin: auto;
 }
@@ -117,19 +117,17 @@ code {
 }
 
 @media not all and (min-width: 1024px) {
-
   section {
     display: grid;
-    align-items: flex-start;
     gap: 12px;
     grid-template-columns: 1fr;
   }
 
-  section > main, .prose {
+  section > main, article {
     grid-template-columns: 1fr;
   }
 
-  section > main > *, .prose > * {
+  section > main > *, article > * {
     grid-column: 1 / 1;
   }
 
