@@ -7,7 +7,6 @@ aside > :first-child {
   font-size: large;
   display: flex;
   gap: 6px;
-  padding-left: 24px;
 }
 
 section {
@@ -81,7 +80,7 @@ article > * {
 article > img {
   z-index: 20;
   display: block;
-  width: 100%;
+  width: 95%;
   grid-column: 1 / 4;
 
   border: 1px solid var(--border);
