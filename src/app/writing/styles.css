@@ -79,7 +79,7 @@ article > * {
 }
 
 article > img {
-  z-index: 10;
+  z-index: 20;
   display: block;
   width: 100%;
   grid-column: 1 / 4;
