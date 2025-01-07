@@ -1,17 +1,15 @@
 aside {
   font-family: 'Crimson Pro';
   font-style: italic;
-  display: flex;
+  display: grid;
   gap: 6px;
-  margin-top: 1.25em !important;
   font-size: 0.875rem;
   padding: 0px 0px 40px 0px;
-  color: #525252;
+  /* width: 100%; */
 }
 
 
 aside > a {
-  width: 100%;
   font-size: large;
 }
 
@@ -31,19 +29,17 @@ article {
   font-family: 'Switzer';
   font-weight: 400;
   display: grid;
-  font-size: 0.875rem;
   line-height: 28px;
   grid-column: 1 / 4;
   grid-template-columns:
     1fr
-    min(720px, 100%)
+    min(640px, 100%)
     1fr
   ;
   gap: 16px;
 }
 
 section > aside {
-  display: flex;
   position: fixed;
   top: 124px;
   align-items: start;
@@ -52,15 +48,14 @@ section > aside {
 }
 
 section > main {
-  font-family: 'Switzer';
   font-weight: 400;
   display: grid;
   line-height: 28px;
   grid-column: 1 / 4;
-  gap: 16px;
+  gap: 24px;
   grid-template-columns:
     1fr
-    min(720px, 100%)
+    min(640px, 100%)
     1fr
   ;
 }
@@ -82,6 +77,7 @@ article > * {
 .blog-title {
   font-family: var(--ui-sans);
   font-weight: 400;
+  font-size: medium;
   display: grid;
   gap: 4px;
 }
@@ -107,7 +103,7 @@ pre {
 
   grid-column: 1 / 4;
   max-width: 100%;
-  /* min-width: 720px; */
+  min-width: 640px;
 
   margin: auto;
 }
@@ -117,6 +113,7 @@ code {
 }
 
 @media not all and (min-width: 1024px) {
+
   section {
     display: grid;
     gap: 12px;
@@ -125,6 +122,8 @@ code {
 
   section > main, article {
     grid-template-columns: 1fr;
+    width: min(65ch, 100%);
+    margin: auto;
   }
 
   section > main > *, article > * {
@@ -136,5 +135,9 @@ code {
     top: 0;
     padding: 20px 0px;
     display: flex;
+  }
+
+  pre {
+    min-width: 0;
   }
 }

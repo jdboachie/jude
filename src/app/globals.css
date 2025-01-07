@@ -1,13 +1,12 @@
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf');
+  src: url('/fonts/InterTight-VariableFont_wght.ttf') format('ttf');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Switzer';
   src: url('/fonts/Switzer-Variable.woff2') format('woff2');
-  font-style: normal;
 }
 
 @font-face {
@@ -22,13 +21,15 @@
   --line-width: 65ch;
   --blur-radius: 5px;
 
-  --background: #ffffff;
-  --foreground: #404040;
+  --bg: #ffffff;
+  --text-muted: rgb(128, 128, 128);
+  --foreground: rgb(0, 0, 0);
   --border: rgb(229, 229, 229);
-  --border-radius: 8px;
+  --hover-bg: rgb(245, 245, 245);
+  --border-radius: 1rem;
 
   --pre-bg: #f5f5f5;
-  --blur-start: var(--background);
+  --blur-start: var(--bg);
   --blur-end: transparent;
 
   --mask-visible: #000;
@@ -53,7 +54,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: black;
     --foreground: #ededed;
     --pre-bg: #262626;
     --border: rgb(64, 64, 64);
@@ -61,14 +62,15 @@
 }
 
 html, body {
+  font-synthesis: none;
+  touch-action: manipulation;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  touch-action: manipulation;
 }
 
 body {
-  padding: 100px;
+  padding: 100px 150px;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--ui-sans), Helvetica, sans-serif;
@@ -101,7 +103,7 @@ body::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: medium;
+  font-size: 0.975rem;
 }
 
 a {
@@ -121,9 +123,8 @@ a {
   }
 }
 
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1240px) {
   body {
-    padding-left: max(24px, env(safe-area-inset-left));
-    padding-right: max(24px, env(safe-area-inset-left));
+    padding: 100px 2rem;
   }
 }
