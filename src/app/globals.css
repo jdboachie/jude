@@ -26,7 +26,7 @@
   --foreground: rgb(0, 0, 0);
   --border: rgb(229, 229, 229);
   --hover-bg: rgb(245, 245, 245);
-  --border-radius: 1rem;
+  --border-radius: 12px;
 
   --pre-bg: #f5f5f5;
   --blur-start: var(--bg);
@@ -78,8 +78,11 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
+section {
   padding: 100px 150px;
+}
+
+body {
   color: var(--foreground);
   background: var(--bg);
   font-family: var(--ui-sans), Helvetica, sans-serif;
@@ -87,14 +90,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body::after {
+body::before {
   position: fixed;
   content: '';
   z-index: 10;
   /* inset: 0; */
   left: 0px;
   top: 0px;
-  height: 96px;
+  height: 100px;
   width: 100dvw;
   background: linear-gradient(
     to bottom,
@@ -102,6 +105,26 @@ body::after {
     var(--blur-end)
   );
   mask-image: linear-gradient(to bottom, var(--mask-visible) 25%, var(--mask-hidden));
+  -moz-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  backdrop-filter: blur(var(--blur-radius));
+}
+body::after {
+  position: fixed;
+  content: '';
+  z-index: 10;
+  /* inset: 0; */
+  left: 0px;
+  bottom: 0px;
+  height: 24px;
+  width: 100dvw;
+  background: linear-gradient(
+    to top,
+    var(--blur-start),
+    var(--blur-end)
+  );
+  mask-image: linear-gradient(to top, var(--mask-visible) 25%, var(--mask-hidden));
   -moz-user-select: none;
   user-select: none;
   pointer-events: none;
@@ -121,7 +144,7 @@ a {
 }
 
 @media not all and (min-width: 1240px) {
-  body {
+  section {
     padding: 100px 2rem;
   }
 }

@@ -115,6 +115,9 @@ pre {
 }
 
 @media not all and (min-width: 1024px) {
+  aside > :first-child {
+    padding-left: 0px;
+  }
 
   section {
     display: grid;

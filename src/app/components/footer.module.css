@@ -1,0 +1,10 @@
+.footer {
+  z-index: 10;
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+  padding: 24px;
+  width: 100dvw;
+  border-top: 1px solid var(--border);
+}
