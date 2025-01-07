@@ -50,3 +50,19 @@
   align-self: center;
   background-color: var(--border);
 }
+
+@media not all and (min-width: 640px) {
+  .blogpostlist {
+    gap: 16px;
+  }
+
+  .blogpost {
+    padding: 8px;
+    flex-wrap: wrap;
+  }
+
+  /* .postdate {
+    font-family: monospace;
+    font-size: small;
+  } */
+}

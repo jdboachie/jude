@@ -117,7 +117,7 @@ body::after {
   /* inset: 0; */
   left: 0px;
   bottom: 0px;
-  height: 24px;
+  height: 96px;
   width: 100dvw;
   background: linear-gradient(
     to top,
@@ -145,6 +145,6 @@ a {
 
 @media not all and (min-width: 1240px) {
   section {
-    padding: 100px 2rem;
+    padding: 100px 1.25rem;
   }
 }

@@ -1,24 +1,17 @@
 aside {
   font-family: 'Crimson Pro';
   font-style: italic;
+  position: fixed;
+  top: 124px;
+  align-items: start;
+  grid-column-start: 1;
+  height: 100%;
 }
 
 aside > :first-child {
   font-size: large;
   display: flex;
   gap: 6px;
-}
-
-section {
-  display: grid;
-  position: relative;
-  align-items: flex-start;
-  gap: 12px;
-  grid-template-columns:
-    1fr
-    min(var(--line-width), 100%)
-    1fr
-  ;
 }
 
 article {
@@ -35,18 +28,9 @@ article {
   gap: 16px;
 }
 
-section > aside {
-  position: fixed;
-  top: 124px;
-  align-items: start;
-  grid-column-start: 1;
-  height: 100%;
-}
-
 section > main {
-  font-weight: 400;
   display: grid;
-  line-height: 28px;
+  /* line-height: 28px; */
   grid-column: 1 / 4;
   gap: 24px;
   grid-template-columns:
@@ -56,7 +40,7 @@ section > main {
   ;
 }
 
-section > main > * {
+section > main > *, article > * {
   grid-column-start: 2;
 }
 
@@ -66,9 +50,6 @@ section > main, article > :first-child {
   margin-bottom: 1.25em !important;
 }
 
-article > * {
-  grid-column-start: 2;
-}
 
 .blog-title {
   font-family: var(--ui-sans);
@@ -80,7 +61,7 @@ article > * {
 article > img {
   z-index: 20;
   display: block;
-  width: 95%;
+  width: 100%;
   grid-column: 1 / 4;
 
   border: 1px solid var(--border);
@@ -125,9 +106,9 @@ pre {
   }
 
   section > main, article {
-    grid-template-columns: 1fr;
-    width: min(65ch, 100%);
     margin: auto;
+    width: min(65ch, 100%);
+    grid-template-columns: 1fr;
   }
 
   section > main > *, article > * {
@@ -135,17 +116,23 @@ pre {
   }
 
   aside > * {
-    width: 100%;
+    margin: auto;
+    margin-bottom: 24px;
+    width: min(65ch, 100%);
   }
 
   section > aside {
-    position: relative;
     top: 0;
-    display: flex;
     width: 100%;
+    display: flex;
+    position: relative;
   }
 
   pre {
-    min-width: 0;
+    width: 100%;
+  }
+
+  article > img {
+    grid-column: 1 / 1;
   }
 }
