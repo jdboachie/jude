@@ -26,9 +26,9 @@ export async function BlogPosts() {
               {post.metadata.title}
             </p>
             <div className='hr' />
-            <p className={styles.postdate}>
+            <time className={styles.postdate}>
               {formatDate(post.metadata.publishedAt, false)}
-            </p>
+            </time>
           </Link>
         ))}
     </div>

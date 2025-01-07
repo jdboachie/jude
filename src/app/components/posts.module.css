@@ -18,10 +18,12 @@
 } */
 
 .blogpost {
-  padding: 8px 12px;
+  padding: 12px 12px;
   display: flex;
   border-radius: var(--border-radius);
   justify-content: space-between;
+
+  transition: background 150ms ease-out;
 
   &:hover {
     color: var(--foreground);

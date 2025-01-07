@@ -1,16 +1,13 @@
 aside {
   font-family: 'Crimson Pro';
   font-style: italic;
-  display: grid;
-  gap: 6px;
-  font-size: 0.875rem;
-  padding: 0px 0px 40px 0px;
-  /* width: 100%; */
 }
 
-
-aside > a {
+aside > :first-child {
   font-size: large;
+  display: flex;
+  gap: 6px;
+  padding-left: 24px;
 }
 
 section {
@@ -26,7 +23,7 @@ section {
 }
 
 article {
-  font-family: 'Switzer';
+  font-family: var(--reading-sans);
   font-weight: 400;
   display: grid;
   line-height: 28px;
@@ -77,9 +74,18 @@ article > * {
 .blog-title {
   font-family: var(--ui-sans);
   font-weight: 400;
-  font-size: medium;
   display: grid;
   gap: 4px;
+}
+
+article > img {
+  z-index: 10;
+  display: block;
+  width: 100%;
+  grid-column: 1 / 4;
+
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
 }
 
 pre {
@@ -102,14 +108,10 @@ pre {
   white-space: pre;
 
   grid-column: 1 / 4;
-  max-width: 100%;
-  min-width: 640px;
+  /* max-width: 100%; */
+  max-width: 640px;
 
   margin: auto;
-}
-
-code {
-  letter-spacing: 0em;
 }
 
 @media not all and (min-width: 1024px) {
@@ -130,11 +132,15 @@ code {
     grid-column: 1 / 1;
   }
 
+  aside > * {
+    width: 100%;
+  }
+
   section > aside {
     position: relative;
     top: 0;
-    padding: 20px 0px;
     display: flex;
+    width: 100%;
   }
 
   pre {

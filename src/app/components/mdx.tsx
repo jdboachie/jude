@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { highlight } from 'sugar-high'
+import styles from './mdx.module.css'
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc'
 
 function Table({ data }: {data: any}) {
@@ -46,7 +47,7 @@ function CustomLink(props: any) {
 }
 
 function RoundedImage(props: any) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+  return <Image alt={props.alt} {...props} className={styles.image}  />
 }
 
 function Code({ children, ...props }: {children: string, }) {

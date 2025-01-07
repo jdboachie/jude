@@ -17,7 +17,7 @@
 
 :root {
   --ui-sans: 'Inter';
-  --reading-sans: 'Epilogue';
+  --reading-sans: 'Switzer';
   --line-width: 65ch;
   --blur-radius: 5px;
 
@@ -35,7 +35,6 @@
   --mask-visible: #000;
   --mask-hidden: transparent;
   --mask-invisible: transparent;
-
   --direction: to bottom;
 }
 
@@ -53,11 +52,21 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
   :root {
-    --background: black;
-    --foreground: #ededed;
-    --pre-bg: #262626;
+    --sh-class: #4c97f8;
+    --sh-identifier: white;
+    --sh-keyword: #f47067;
+    --sh-string: #0fa295;
+  }
+  :root {
+    --bg: rgb(10, 10, 10);
+    --foreground: rgb(212, 212, 212);
+    --pre-bg: rgb(23, 23, 23);
     --border: rgb(64, 64, 64);
+    --hover-bg: rgb(23, 23, 23);
   }
 }
 
@@ -72,7 +81,7 @@ html, body {
 body {
   padding: 100px 150px;
   color: var(--foreground);
-  background: var(--background);
+  background: var(--bg);
   font-family: var(--ui-sans), Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -103,24 +112,12 @@ body::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 0.975rem;
+  font-size: 15px;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-  }
 }
 
 @media not all and (min-width: 1240px) {

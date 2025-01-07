@@ -1,0 +1,6 @@
+.image {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 16/9;
+  grid-column: 1 / 4;
+}
