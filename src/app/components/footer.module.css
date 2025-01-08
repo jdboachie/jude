@@ -1,10 +1,64 @@
 .footer {
+  font-family: 'Geist Mono';
   z-index: 20;
   position: relative;
   display: grid;
-  place-items: center;
-  margin-top: 50px;
+  place-items: stretch;
+  margin-top: 200px;
   padding: 24px;
+  /* padding-bottom: 48px; */
   width: 100dvw;
   border-top: 1px solid var(--border);
+}
+
+.footercontent {
+  display: grid;
+  gap: 16px;
+  margin: auto;
+  width: clamp(100%, 100%, 720px);
+  max-width: 720px;
+  color: var(--text-muted)
+}
+
+.linklist {
+  display: grid;
+  grid-auto-flow: column;
+  visibility: hidden;
+}
+
+.deets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: space-between;
+}
+
+.copy {
+  font-size: 13px;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.time {
+  font-size: 13px;
+  font-weight: 350;
+  display: grid;
+  justify-content: end;
+}
+
+.link {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+}
+
+.link::before {
+  content: '';
+  width: 4px;
+  margin: auto 4px;
+  height: 4px;
+  background-color: var(--text-muted);
+  border-radius: 9999px;
 }

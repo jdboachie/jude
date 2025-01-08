@@ -15,6 +15,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-VariableFont_wght.ttf') format('woff2');
+  font-style: normal;
+}
+
 :root {
   --ui-sans: 'Inter';
   --reading-sans: 'Switzer';
