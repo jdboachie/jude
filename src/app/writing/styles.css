@@ -50,14 +50,6 @@ section > main, article > :first-child {
   margin-bottom: 1.25em !important;
 }
 
-
-.blog-title {
-  font-family: var(--ui-sans);
-  font-weight: 400;
-  display: grid;
-  gap: 4px;
-}
-
 article > img {
   z-index: 20;
   display: block;
@@ -88,10 +80,14 @@ pre {
   white-space: pre;
 
   grid-column: 1 / 4;
-  /* max-width: 100%; */
-  max-width: 640px;
+  min-width: 640px;
+  max-width: 100%;
 
   margin: auto;
+}
+
+pre > * > * > * {
+  font-size: 13px;
 }
 
 @media not all and (min-width: 1024px) {
@@ -130,6 +126,7 @@ pre {
 
   pre {
     width: 100%;
+    min-width: 0px;
   }
 
   article > img {

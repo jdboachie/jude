@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import * as React from 'react'
 import styles from './footer.module.css'
+import { GitHub, Rss } from 'react-feather';
 
 export default function Footer() {
 
@@ -28,34 +29,42 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footercontent}>
-        {/* <ul className={styles.linklist}>
-          <li>
+        <p
+          className={styles.mailto}
+        >
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            href="mailto:jdboachie@gmail.com"
+          >
+            jdboachie@gmail.com
+          </Link>
+        </p>
+        <ul className={styles.linklist}>
+          <li className={styles.link}>
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/jdboachie"
+            >
+              <GitHub className={styles.icon} />
+            </Link>
+          </li>
+          <li className={styles.link}>
             <Link
               className=""
               rel="noopener noreferrer"
               target="_blank"
               href="/rss"
             >
-              <p className="">rss</p>
-              <ArrowUpLeft />
+              <Rss className={styles.icon} />
             </Link>
           </li>
-          <li>
-            <Link
-              className=""
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://github.com/jdboachie"
-            >
-              <p className="">github</p>
-              <ArrowUpLeft />
-            </Link>
-          </li>
-        </ul> */}
+        </ul>
         <div className={styles.deets}>
           <p className={styles.copy}>
             {new Date().getFullYear()}
-            <Link className={styles.link} href={'https://maps.app.goo.gl/RXv5TQN8pWe5cqms6'}>Kumasi</Link>
+            <Link className={styles.location} href={'https://maps.app.goo.gl/NUWZT3FZbK4unb5YA'}>Ghana 🖤</Link>
           </p>
           <p className={styles.time}>
             {currentTime || '--:--:--'}

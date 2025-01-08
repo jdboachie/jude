@@ -1,28 +1,20 @@
 .blogpostlist {
-  display: grid;
-  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   transition: color 150ms ease-out;
+  margin-bottom: 150px; /* provisional. will find a better way*/
   &:hover {
     color: var(--text-muted);
   }
 }
 
-/* .blogpostlist > * + * {
-  border: 1px solid;
-
-  border-color: var(--border);
-  border-top-width: 1px;
-  border-bottom-width: 0px;
-  border-left: none;
-  border-right: none;
-} */
-
 .blogpost {
-  padding: 12px 12px;
+  width: 100%;
   display: flex;
-  border-radius: var(--border-radius);
+  padding: 12px 12px;
   justify-content: space-between;
-
+  border-radius: var(--border-radius);
   transition: background 150ms ease-out;
 
   &:hover {
@@ -31,11 +23,15 @@
   }
 }
 
+.posttitle {
+  font-weight: 500;
+}
+
 .postdate {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex-grow: 1;
-  color: gray;
+  color: var(--text-muted);
   white-space: nowrap;
 }
 
@@ -53,16 +49,11 @@
 
 @media not all and (min-width: 640px) {
   .blogpostlist {
-    gap: 16px;
+    gap: 12px;
   }
 
   .blogpost {
-    padding: 8px;
+    padding: 12px 10px;
     flex-wrap: wrap;
   }
-
-  /* .postdate {
-    font-family: monospace;
-    font-size: small;
-  } */
 }
