@@ -1,19 +1,8 @@
-
-// function Footer() {
-  //   return (
-//     <footer className={styles.footer}><p>✌️❤️</p></footer>
-//   )
-// }
-
-// export default Footer
-
 'use client'
 
 import Link from 'next/link'
 import * as React from 'react'
 import styles from './footer.module.css'
-import { ArrowUpLeft } from '../icons/arrow-up-left';
-// import { GeistMono } from 'geist/font/mono';
 
 export default function Footer() {
 
