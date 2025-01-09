@@ -1,34 +1,33 @@
 .footer {
   font-family: 'Geist Mono';
-  z-index: 20;
+  z-index: 15;
   position: relative;
   display: grid;
   place-items: stretch;
   margin-top: 50px;
   padding: 24px;
+  background-color: var(--secondary-bg);
   /* padding-bottom: 48px; */
-  width: 100dvw;
-  border-top: 1px solid var(--border);
 }
 
 .footercontent {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   gap: 16px;
   margin: auto;
-  width: clamp(100%, 100%, 640px);
-  max-width: 640px;
-  color: var(--text-muted)
+  width: clamp(100%, 100%, 1024px);
+  max-width: 1024px;
+  color: var(--text-muted);
+  font-size: x-small;
 }
 
-.mailto {
-  font-size: 13px;
+.quote {
+  font-family: var(--reading-sans);
   display: grid;
   align-content: center;
 }
 
-.mailto:first-child {
+.quote:first-child {
   width: fit-content;
   transition: color 150ms ease-in-out;
   &:hover {

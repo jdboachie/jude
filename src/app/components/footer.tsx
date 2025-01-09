@@ -3,7 +3,9 @@
 import Link from 'next/link'
 import * as React from 'react'
 import styles from './footer.module.css'
-import { GitHub, Rss } from 'react-feather';
+// import { Mail, GitHub, Rss } from 'react-feather';
+import Dock from './dock';
+import MotionlessDock from './motionlessdock';
 
 export default function Footer() {
 
@@ -28,39 +30,12 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
+      <Dock />
+      <MotionlessDock />
       <div className={styles.footercontent}>
-        <p
-          className={styles.mailto}
-        >
-          <Link
-            rel="noopener noreferrer"
-            target="_blank"
-            href="mailto:jdboachie@gmail.com"
-          >
-            jdboachie@gmail.com
-          </Link>
-        </p>
-        <ul className={styles.linklist}>
-          <li className={styles.link}>
-            <Link
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://github.com/jdboachie"
-            >
-              <GitHub className={styles.icon} />
-            </Link>
-          </li>
-          <li className={styles.link}>
-            <Link
-              className=""
-              rel="noopener noreferrer"
-              target="_blank"
-              href="/rss"
-            >
-              <Rss className={styles.icon} />
-            </Link>
-          </li>
-        </ul>
+        {/* <p className={styles.quote}>
+          Favour surounds me like a shield
+        </p> */}
         <div className={styles.deets}>
           <p className={styles.copy}>
             {new Date().getFullYear()}
