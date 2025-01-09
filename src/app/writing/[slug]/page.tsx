@@ -5,7 +5,8 @@ import { baseUrl } from '@/app/sitemap'
 import { notFound } from 'next/navigation'
 import { CustomMDX } from '@/app/components/mdx'
 import { formatDate, getBlogPosts } from '@/app/writing/utils'
-import { ArrowUpLeft } from '@/app/icons/arrow-up-left'
+import { ArrowUpLeftIcon } from '@/app/icons/arrow-up-left'
+import PostHeader from './components/post-header'
 
 
 export async function generateStaticParams() {
@@ -92,16 +93,13 @@ export default async function Blog({ params } : {params: Promise<{ slug: string 
           }),
         }}
       />
-        <aside className='italics'><Link href={'/writing'}><ArrowUpLeft />Writing</Link></aside>
+      <aside><Link href={'/writing'}><ArrowUpLeftIcon />Writing</Link></aside>
       <article>
-        <div className="blog-title">
-          <h1>
-            {post.metadata.title}
-          </h1>
-          <time>
-            {formatDate(post.metadata.publishedAt)}
-          </time>
-        </div>
+        <PostHeader
+          slug={post.slug}
+          title={post.metadata.title}
+          publishedAt={formatDate(post.metadata.publishedAt)}
+        />
         <CustomMDX source={post.content} />
       </article>
     </section>
