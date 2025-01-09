@@ -71,6 +71,7 @@
   }
   :root {
     --bg: rgb(10, 10, 10);
+    --secondary-bg: rgb(17, 17, 17);
     --foreground: rgb(212, 212, 212);
     --pre-bg: rgb(23, 23, 23);
     --border: rgb(38, 38, 38);

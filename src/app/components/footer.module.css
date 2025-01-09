@@ -5,9 +5,8 @@
   display: grid;
   place-items: stretch;
   margin-top: 50px;
-  padding: 24px;
+  padding: 52px 24px 16px 24px;
   background-color: var(--secondary-bg);
-  /* padding-bottom: 48px; */
 }
 
 .footercontent {

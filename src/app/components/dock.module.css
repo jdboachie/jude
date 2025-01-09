@@ -10,7 +10,7 @@
 
 .dock {
   pointer-events: all;
-  z-index: 20;
+  z-index: 50;
   display: flex;
   gap: 8px;
   margin: 0 auto;
@@ -27,7 +27,7 @@
 .motionlessdock {
   visibility: hidden;
   pointer-events: all;
-  z-index: 20;
+  z-index: 50;
   display: flex;
   gap: 8px;
   margin: 0 auto;

@@ -51,7 +51,7 @@ section > main, article > :first-child {
 }
 
 article > img {
-  z-index: 20;
+  z-index: 10;
   display: block;
   width: 100%;
   grid-column: 1 / 4;
