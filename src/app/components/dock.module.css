@@ -1,0 +1,97 @@
+.dockregion {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  height: fit-content;
+  width: 100dvw;
+  padding-bottom: 20px;
+  pointer-events: none;
+}
+
+.dock {
+  pointer-events: all;
+  z-index: 50;
+  display: flex;
+  gap: 8px;
+  margin: 0 auto;
+  width: fit-content;
+  align-items: flex-end;
+  height: 54px;
+  padding: 6px 7px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  box-shadow: 0px 50px 38px 12px rgba(0, 0, 0, 0.1);
+}
+
+.motionlessdock {
+  visibility: hidden;
+  pointer-events: all;
+  z-index: 50;
+  display: flex;
+  gap: 8px;
+  margin: 0 auto;
+  width: fit-content;
+  align-items: flex-end;
+  height: 54px;
+  padding: 6px 7px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  box-shadow: 0px 20px 28px 12px rgba(0, 0, 0, 0.08);
+}
+
+.motionlessdock > button {
+  width: 40px;
+  height: 40px;
+  background-color: var(--hover-bg);
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+}
+
+.motionlessdock > button > a {
+  width: 40px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+}
+
+.dock > * {
+  size: 40px;
+  display: grid;
+  place-items: stretch;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  background-color: var(--hover-bg);
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+}
+
+.dock > * > * {
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+}
+
+@media not all and (min-width: 640px) {
+  .dockregion {
+    padding-bottom: 40px;
+  }
+
+  .motionlessdock {
+    visibility: visible;
+  }
+
+  .dock {
+    visibility: hidden;
+  }
+}
