@@ -44,7 +44,7 @@ export default function Page() {
           </m.p>
           <m.div variants={staggerChildrenVariants} className={styles.contentsection}>
             <p className={styles.sectiontitle}>Bio</p>
-            <span className={styles.italic}>Light of the world.</span>{' '}<br />
+            <span className={styles.italic}>Light of the world. ✌️</span>{' '}<br />
             Engineer at <Link className={styles.link} href={'https://sokoaerial.com'}>Soko Aerial</Link>.
             Computer Engineering <Link className={styles.link} href={'https://knust.edu.gh'}>@KNUST</Link>.<br/>
             Freelance fullstack/product developer (Nextjs)<br />

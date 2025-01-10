@@ -23,12 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider
+          enableSystem
           attribute="class"
           defaultTheme="system"
-          enableSystem
           disableTransitionOnChange
         >
           {children}

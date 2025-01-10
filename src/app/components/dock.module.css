@@ -62,7 +62,7 @@
 .dock > * {
   size: 40px;
   display: grid;
-  place-items: stretch;
+  place-items: center;
   aspect-ratio: 1/1;
   cursor: pointer;
   background-color: var(--hover-bg);
