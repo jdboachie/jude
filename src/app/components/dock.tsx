@@ -12,7 +12,7 @@ import * as React from 'react'
 import styles from './dock.module.css'
 import tooltipstyles from './tooltip.module.css'
 import * as Tooltip from '@radix-ui/react-tooltip';
-import { Home, PenTool, Rss, Mail, GitHub, Icon } from 'react-feather';
+import { Home, PenTool, Rss, Mail, GitHub, Icon, Twitter } from 'react-feather';
 import Link from 'next/link';
 
 // const SCALE = 2.25; // max scale factor of an icon
@@ -49,6 +49,11 @@ const APPS: DockApp[] = [
     title: 'GitHub',
     icon: GitHub,
     link: 'https://github.com/jdboachie'
+  },
+  {
+    title: 'Twitter (X)',
+    icon: Twitter,
+    link: 'https://x.com/judeboachieonx'
   },
   {
     title: 'RSS',

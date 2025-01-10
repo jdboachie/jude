@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './dock.module.css'
 import { animate, motion, useMotionValue } from 'framer-motion'
-import { Home, PenTool, Rss, Mail, GitHub } from 'react-feather';
+import { Home, PenTool, Rss, Mail, GitHub, Twitter } from 'react-feather';
 
 const APPS = [
   {
@@ -23,6 +23,11 @@ const APPS = [
     title: 'GitHub',
     icon: GitHub,
     link: 'https://github.com/jdboachie'
+  },
+  {
+    title: 'Twitter (X)',
+    icon: Twitter,
+    link: 'https://x.com/judeboachieonx'
   },
   {
     title: 'RSS',

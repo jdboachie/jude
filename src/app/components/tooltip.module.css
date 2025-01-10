@@ -1,10 +1,11 @@
 .Content {
+	border: 1px solid var(--border);
 	border-radius: calc(var(--border-radius) - 6px);
-	padding: 10px 15px;
-	font-size: 15px;
+	padding: 8px 12px;
+	font-size: 12px;
 	line-height: 1;
 	color: var(--violet-11);
-	background-color: white;
+	background-color: var(--pre-bg);
 	box-shadow:
 		hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
 		hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
@@ -27,7 +28,7 @@
 }
 
 .Arrow {
-	fill: white;
+	fill: var(--border);
 }
 
 .IconButton {

@@ -59,6 +59,17 @@
   --sh-entity: #e25a1c;
 }
 
+:root {
+  --sun-color: rgba(255, 217, 0, 0.562);
+  --moon-color: gray;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --lighting-color: gray;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -145,7 +156,7 @@ body::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 a {
