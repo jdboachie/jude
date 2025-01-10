@@ -1,9 +1,10 @@
 'use client';
+import React from 'react';
 import { getHours } from 'date-fns'
 import styles from './the-sun.module.css'
-import React from 'react';
 
 function TheSun() {
+
 
   const [bottom, setBottom] = React.useState<string>('')
   const [moonIsVisible, setMoonIsVisible] = React.useState<'hidden' | 'visible'>('hidden')
@@ -38,8 +39,8 @@ function TheSun() {
 
   return (
     <>
-      <div style={{ bottom: bottom, visibility: sunIsVisible }} className={styles.sun} />
-      <div style={{ visibility: moonIsVisible }} className={styles.moon} />
+      <button style={{ bottom: bottom, visibility: sunIsVisible }} className={styles.sun} />
+      <button style={{ visibility: moonIsVisible }} className={styles.moon} />
     </>
   )
 }
