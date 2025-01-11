@@ -1,9 +1,24 @@
 import Link from 'next/link'
 import styles from './posts.module.css'
-import { formatDate, getBlogPosts } from '../app/writing/utils'
+import { formatDate } from '../app/writing/utils'
 
 export async function BlogPosts() {
-  const allBlogs = getBlogPosts()
+  const allBlogs = [
+    {
+      slug: 'focus',
+      metadata: {
+        publishedAt: '2025-01-14',
+        title: 'Focus'
+      }
+    },
+    // {
+    //   slug: 'my-new-site',
+    //   metadata: {
+    //     publishedAt: '2025-01-24',
+    //     title: 'My New Site'
+    //   }
+    // },
+  ]
 
   return (
     <div className={styles.blogpostlist}>
