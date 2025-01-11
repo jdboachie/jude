@@ -1,5 +1,5 @@
 import './styles.css'
-import { BlogPosts } from "../components/posts"
+import { BlogPosts } from "@/components/posts"
 import { ArrowUpLeftIcon } from '../icons/arrow-up-left'
 import Link from 'next/link'
 

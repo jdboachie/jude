@@ -1,0 +1,61 @@
+@keyframes expandShadow {
+  0% {
+    box-shadow: 0px 0px 500px 75px var(--sun-color),
+                0px 0px   20px 10px var(--sun-color);
+  }
+  50% {
+    box-shadow: 0px 0px 100px 70px var(--sun-color),
+                0px 0px  10px  7px var(--sun-color);
+  }
+  100% {
+    box-shadow: 0px 0px 1000px 75px var(--sun-color),
+                0px 0px  20px  10px var(--sun-color);
+  }
+}
+
+.sun {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  left: 10dvw;
+  filter: blur(4px);
+  position: fixed;
+  border-radius: 9999px;
+  background: var(--sun-color);
+  z-index: 10;
+  border: none;
+  box-shadow: 0px 0px 1000px 75px var(--sun-color),
+              0px 0px  20px 10px var(--sun-color);
+  animation: expandShadow 2s;
+  animation-delay: 2s;
+}
+
+.moon {
+  width: 25px;
+  height: 25px;
+  top: 15dvh;
+  left: 10dvw;
+  position: fixed;
+  border-radius: 9999px;
+  border: none;
+  background: var(--moon-color);
+  z-index: -10;
+  box-shadow: 0px 0px 20px 7px var(--moon-color);
+}
+
+@media not all and (min-width: 1024px) {
+  .moon, .sun {
+    left: 80dvw;
+    /* right: 10dvh; */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .sun {
+    opacity: 0;
+  }
+
+  .moon {
+    visibility: visible !important;
+  }
+}

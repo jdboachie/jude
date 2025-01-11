@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import styles from './styles.module.css'
-import { Check, Link } from 'react-feather';
+import { Check, Link } from '@phosphor-icons/react';
 
 export default function LinkButton ({
   link,

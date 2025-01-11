@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from './posts.module.css'
-import { formatDate, getBlogPosts } from '../writing/utils'
+import { formatDate, getBlogPosts } from '../app/writing/utils'
 
 export async function BlogPosts() {
   const allBlogs = getBlogPosts()

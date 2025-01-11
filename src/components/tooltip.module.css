@@ -1,8 +1,10 @@
 .Content {
+	border: 1px solid var(--border);
 	border-radius: calc(var(--border-radius) - 6px);
 	padding: 10px 15px;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 1;
+	z-index: 100;
 	color: var(--violet-11);
 	background-color: white;
 	box-shadow:
@@ -28,6 +30,16 @@
 
 .Arrow {
 	fill: white;
+	}
+
+@media (prefers-color-scheme: dark) {
+	.Content {
+		background-color: var(--pre-bg);
+	}
+
+	.Arrow {
+		fill: var(--border);
+		}
 }
 
 .IconButton {
@@ -76,10 +88,12 @@
 @keyframes slideDownAndFade {
 	from {
 		opacity: 0.5;
+		/* scale: 0.7; */
 		transform: translateY(-8px);
 	}
 	to {
 		opacity: 1;
+		/* scale: 1; */
 		transform: translateY(0);
 	}
 }

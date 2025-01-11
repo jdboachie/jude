@@ -1,35 +1,7 @@
 import Link from 'next/link';
+import { APPS } from './dock';
 import styles from './dock.module.css'
 import { animate, motion, useMotionValue } from 'framer-motion'
-import { Home, PenTool, Rss, Mail, GitHub } from 'react-feather';
-
-const APPS = [
-  {
-    title: 'Home',
-    icon: Home,
-    link: '/'
-  },
-  {
-    title: 'Writing',
-    icon: PenTool,
-    link: '/writing'
-  },
-  {
-    title: 'Mail',
-    icon: Mail,
-    link: 'mailto:jdboachie@gmail.com'
-  },
-  {
-    title: 'GitHub',
-    icon: GitHub,
-    link: 'https://github.com/jdboachie'
-  },
-  {
-    title: 'RSS',
-    icon: Rss,
-    link: '/rss'
-  },
-];
 
 
 export default function MotionlessDock() {
@@ -44,7 +16,7 @@ export default function MotionlessDock() {
             link={app.link}
             key={index}
           >
-            <app.icon className={styles.icon}/>
+            <app.icon weight='duotone' size={32} className={styles.icon}/>
           </DockIcon>
         ))}
       </div>

@@ -1,59 +1,64 @@
 'use client';
 
 import {
-  animate,
   motion,
+  animate,
   MotionValue,
-  useMotionValue,
   useSpring,
-  useTransform
-} from 'framer-motion'
-import * as React from 'react'
-import styles from './dock.module.css'
-import tooltipstyles from './tooltip.module.css'
-import * as Tooltip from '@radix-ui/react-tooltip';
-import { Home, PenTool, Rss, Mail, GitHub, Icon } from 'react-feather';
+  useTransform,
+  useMotionValue,
+} from 'framer-motion';
 import Link from 'next/link';
-
-// const SCALE = 2.25; // max scale factor of an icon
-// const DISTANCE = 110; // pixels before mouse affects an icon
-// const NUDGE = 40; // pixels icons are moved away from mouse
-// const SPRING = {
-//   mass: 0.1,
-//   stiffness: 170,
-//   damping: 12,
-// };
+import * as React from 'react';
+import styles from './dock.module.css';
+import tooltipstyles from './tooltip.module.css';
+import * as Tooltip from '@radix-ui/react-tooltip';
+import {
+  Icon,
+  Newspaper,
+  GithubLogo,
+  TwitterLogo,
+  HouseSimple,
+  EnvelopeSimple,
+  LightbulbFilament,
+} from "@phosphor-icons/react";
 
 interface DockApp {
-  title: string,
   icon: Icon
   link: string
+  title: string
 }
-const APPS: DockApp[] = [
+
+export const APPS: DockApp[] = [
   {
     title: 'Home',
-    icon: Home,
+    icon: HouseSimple,
     link: '/'
   },
   {
+    title: 'Projects',
+    icon: LightbulbFilament,
+    link: '/#'
+  },
+  {
     title: 'Writing',
-    icon: PenTool,
+    icon: Newspaper,
     link: '/writing'
   },
   {
-    title: 'Mail',
-    icon: Mail,
-    link: 'mailto:jdboachie@gmail.com'
-  },
-  {
     title: 'GitHub',
-    icon: GitHub,
+    icon: GithubLogo,
     link: 'https://github.com/jdboachie'
   },
   {
-    title: 'RSS',
-    icon: Rss,
-    link: '/rss'
+    title: 'Mail',
+    icon: EnvelopeSimple,
+    link: 'mailto:jdboachie@gmail.com'
+  },
+  {
+    title: 'Twitter (X)',
+    icon: TwitterLogo,
+    link: 'https://x.com/judeboachieonx'
   },
 ];
 
@@ -84,6 +89,7 @@ function Dock() {
 }
 
 function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
+
   const ref = React.useRef<HTMLButtonElement>(null)
 
   const distance = useTransform(mouseX, (val) => {
@@ -107,6 +113,7 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
           <motion.button
             ref={ref}
             style={{ width, y }}
+            className={styles.dockbutton}
             onClick={() => {
               animate(y, [0, -40, 0], {
                 repeat: 2,
@@ -118,7 +125,7 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
               })
             }}
           >
-            <Link href={app.link}><app.icon className={styles.icon} /></Link>
+            <Link href={app.link} data-active='true' className={styles.link}><app.icon weight='duotone' size={32} className={styles.icon} /></Link>
           </motion.button>
         </Tooltip.Trigger>
         <Tooltip.Portal>

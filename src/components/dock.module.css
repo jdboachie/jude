@@ -15,6 +15,7 @@
   gap: 8px;
   margin: 0 auto;
   width: fit-content;
+  max-width: 100%;
   align-items: flex-end;
   height: 54px;
   padding: 6px 7px;
@@ -32,9 +33,11 @@
   gap: 8px;
   margin: 0 auto;
   width: fit-content;
+  max-width: 100%;
+  /* overflow-x: auto; */ /* interferes with the bounce animation */
   align-items: flex-end;
   height: 54px;
-  padding: 6px 7px;
+  padding: 6px 8px;
   background-color: var(--bg);
   border: 1px solid var(--border);
   border-radius: 9999px;
@@ -51,6 +54,17 @@
   place-items: center;
 }
 
+.activedot {
+  width: 8px;
+  height: 8px;
+}
+
+.link {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+}
+
 .motionlessdock > button > a {
   width: 40px;
   height: 100%;
@@ -59,10 +73,10 @@
   border-radius: 9999px;
 }
 
-.dock > * {
+.dockbutton {
   size: 40px;
   display: grid;
-  place-items: stretch;
+  place-items: center;
   aspect-ratio: 1/1;
   cursor: pointer;
   background-color: var(--hover-bg);
@@ -72,14 +86,26 @@
 
 .dock > * > * {
   display: grid;
+  width: 100%;
+  height: 100%;
   place-items: center;
   border-radius: 9999px;
 }
 
 .icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   color: var(--text-muted);
+  pointer-events: none;
+}
+
+.motionlessdock > button {
+  box-shadow:  0 2 1 0px rgba(255, 255, 255, 1) inset,
+               0 -1 1 0px rgba(0, 0, 0, 0.1) inset;
+}
+.dockbutton {
+  box-shadow:  0 2 1 0px rgba(255, 255, 255, 1) inset,
+               0 -1 1 0px rgba(0, 0, 0, 0.1) inset;
 }
 
 @media not all and (min-width: 640px) {
@@ -89,9 +115,17 @@
 
   .motionlessdock {
     visibility: visible;
+    margin: 0 max(16px, auto);
   }
 
   .dock {
     visibility: hidden;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dockbutton, .motionlessdock > button {
+    box-shadow:  0 1 1 0px rgba(216, 216, 216, 0.05) inset,
+                 0 -1 1 0px rgba(0, 0, 0, 0.5) inset;
   }
 }
