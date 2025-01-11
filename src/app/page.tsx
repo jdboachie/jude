@@ -3,7 +3,7 @@
 
 import Link from 'next/link'
 import styles from "./page.module.css";
-import TheSun from "./components/the-sun";
+// import TheSun from "./components/the-sun";
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 
 
@@ -19,7 +19,7 @@ const staggerChildrenVariants = {
 export default function Page() {
   return (
     <section className={styles.section}>
-      <TheSun />
+      {/* <TheSun /> */}
       <LazyMotion features={domAnimation} strict>
         <m.main
           variants={{
