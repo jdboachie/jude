@@ -1,16 +1,18 @@
-import { ArrowUpLeftIcon } from '@/app/icons/arrow-up-left'
-import Link from 'next/link'
-import styles from './layout.module.css'
+import Link from 'next/link';
+import styles from './styles.module.css';
+import layoutstyles from './layout.module.css';
+import { ArrowUpLeftIcon } from '@/app/icons/arrow-up-left';
 
 export const metadata = {
   title: 'Projects',
-  description: 'Read my blog - its why I wrote it',
+  description: 'Little tinkery ones and then really big ones',
 }
 
 export default function Page() {
+
   return (
     <>
-      <aside className={styles.aside}><Link href={'/'}><ArrowUpLeftIcon />Home</Link></aside>
+      <aside className={layoutstyles.aside}><Link href={'/'}><ArrowUpLeftIcon />Home</Link></aside>
       <main>
         <h1>Projects</h1>
         <p>Just a bunch of links for now</p>
@@ -21,8 +23,7 @@ export default function Page() {
               <iframe
                 src="https://guillo.vercel.app/dashboard"
                 title="Guillo App"
-                width="100%"
-                height="450px"
+                className={styles.iframe}
               >
               </iframe>
             </div>
@@ -33,8 +34,18 @@ export default function Page() {
               <iframe
                 src="https://nike-landing-page-six-orpin.vercel.app/"
                 title="Nike Landing Page"
-                width="100%"
-                height="500px"
+                className={styles.iframe}
+              >
+              </iframe>
+            </div>
+          </li>
+          <li>
+            Dictionary
+            <div className="iframe-container">
+              <iframe
+                src="https://dictionary-jade-eta.vercel.app/"
+                title="Dictionary"
+                className={styles.iframe}
               >
               </iframe>
             </div>
