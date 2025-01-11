@@ -99,7 +99,11 @@
   pointer-events: none;
 }
 
-.dockbutton, .motionlessdock > button {
+.motionlessdock > button {
+  box-shadow:  0 2 1 0px rgba(255, 255, 255, 1) inset,
+               0 -1 1 0px rgba(0, 0, 0, 0.1) inset;
+}
+.dockbutton {
   box-shadow:  0 2 1 0px rgba(255, 255, 255, 1) inset,
                0 -1 1 0px rgba(0, 0, 0, 0.1) inset;
 }
