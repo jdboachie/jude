@@ -100,12 +100,12 @@
 }
 
 .motionlessdock > button {
-  box-shadow:  0 2 1 0px rgba(255, 255, 255, 1) inset,
-               0 -1 1 0px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:  0px 2px 1px 0px rgba(255, 255, 255, 1) inset,
+               0px -1px 1px 0px rgba(0, 0, 0, 0.1) inset;
 }
 .dockbutton {
-  box-shadow:  0 2 1 0px rgba(255, 255, 255, 1) inset,
-               0 -1 1 0px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:  0px 2px 1px rgba(255, 255, 255, 1) inset,
+               0px -1px 1px rgba(0, 0, 0, 0.1) inset;
 }
 
 @media not all and (min-width: 640px) {
@@ -125,7 +125,7 @@
 
 @media (prefers-color-scheme: dark) {
   .dockbutton, .motionlessdock > button {
-    box-shadow:  0 1 1 0px rgba(216, 216, 216, 0.05) inset,
-                 0 -1 1 0px rgba(0, 0, 0, 0.5) inset;
+    box-shadow:  0px 1px 1px 0px rgba(216, 216, 216, 0.05) inset,
+                 0px -1px 1px 0px rgba(0, 0, 0, 0.5) inset;
   }
 }

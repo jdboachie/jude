@@ -2,7 +2,7 @@ import styles from './layout.module.css'
 export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
-    <section className={styles.main}>
+    <section className={styles.section}>
       {children}
     </section>
   )

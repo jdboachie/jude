@@ -86,6 +86,7 @@
 }
 
 html, body {
+  background: var(--bg);
   font-synthesis: none;
   touch-action: manipulation;
   -moz-osx-font-smoothing: grayscale;

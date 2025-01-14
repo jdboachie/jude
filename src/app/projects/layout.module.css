@@ -1,4 +1,4 @@
-.main {
+.section {
   font-family: var(--reading-sans);
   display: grid;
   position: relative;
@@ -11,14 +11,10 @@
     1fr;
 }
 
-.main > * {
-  grid-column-start: 2;
-}
-
 .aside {
   font-family: 'Crimson Pro';
   font-style: italic;
-  position: sticky;
+  position: fixed;
   top: 100;
   display: grid;
   align-items: start;
@@ -33,10 +29,10 @@
 }
 
 @media not all and (min-width: 1024px) {
-  .main {
+  .section {
     grid-template-columns: 1fr;
   }
-  .main > * {
+  .section > * {
     grid-column-start: 1;
   }
   .aside {

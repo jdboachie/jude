@@ -8,48 +8,56 @@ export const metadata = {
   description: 'Little tinkery ones and then really big ones',
 }
 
+interface Project {
+  title: string
+  description: string
+  link: string
+  ssUrl?: string
+}
+
 export default function Page() {
+
+  const projects: Project[] = [
+    {
+      title: 'Nike Landing Page',
+      description: 'Beautiful product landing page',
+      link: 'https://nike-landing-page-six-orpin.vercel.app/'
+    },
+    {
+      title: 'Dictionary',
+      description: 'Lookup any word',
+      link: 'https://dictionary-jade-eta.vercel.app'
+    },
+    {
+      title: 'Guillo Dashboard',
+      description: 'Dashboard design with nextjs and tailwind',
+      link: 'https://guillo.vercel.app/dashboard'
+    }
+  ]
 
   return (
     <>
       <aside className={layoutstyles.aside}><Link href={'/'}><ArrowUpLeftIcon />Home</Link></aside>
-      <main>
+      <main className={styles.main}>
         <h1>Projects</h1>
-        <p>Just a bunch of links for now</p>
-        <ol>
-          <li>
-            Dashboard UI: guillo.vercel.app
-            <div className="iframe-container">
-              <iframe
-                src="https://guillo.vercel.app/dashboard"
-                title="Guillo App"
-                className={styles.iframe}
-              >
-              </iframe>
-            </div>
-          </li>
-          <li>
-            Nike Landing page
-            <div className="iframe-container">
-              <iframe
-                src="https://nike-landing-page-six-orpin.vercel.app/"
-                title="Nike Landing Page"
-                className={styles.iframe}
-              >
-              </iframe>
-            </div>
-          </li>
-          <li>
-            Dictionary
-            <div className="iframe-container">
-              <iframe
-                src="https://dictionary-jade-eta.vercel.app/"
-                title="Dictionary"
-                className={styles.iframe}
-              >
-              </iframe>
-            </div>
-          </li>
+        {/* <p>Just a bunch of links for now</p> */}
+        <ol className={styles.ol}>
+          {projects.map((project, index) => (
+            <li key={index}>
+              <div className={styles.projectheader}>
+                <span className={styles.title}>{project.title}</span>
+                <Link href={project.link}>{project.link}</Link>
+              </div>
+              <div className={styles.iframecontainer}>
+                <iframe
+                  src={project.link}
+                  title={project.title}
+                  className={styles.iframe}
+                >
+                </iframe>
+              </div>
+            </li>
+          ))}
         </ol>
       </main>
     </>
