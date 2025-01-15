@@ -17,10 +17,11 @@ import {
   Icon,
   Newspaper,
   GithubLogo,
-  TwitterLogo,
+  // TwitterLogo,
   HouseSimple,
   EnvelopeSimple,
   LightbulbFilament,
+  XLogo,
 } from "@phosphor-icons/react";
 
 interface DockApp {
@@ -56,8 +57,8 @@ export const APPS: DockApp[] = [
     link: 'mailto:jdboachie@gmail.com'
   },
   {
-    title: 'Twitter (X)',
-    icon: TwitterLogo,
+    title: 'X (Twitter)',
+    icon: XLogo,
     link: 'https://x.com/judeboachieonx'
   },
 ];
@@ -101,7 +102,7 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
     }
   })
 
-  const widthSync = useTransform(distance, [-200, 0, 200], [40, 80, 40])
+  const widthSync = useTransform(distance, [-200, 0, 200], [44, 88, 44])
   const width = useSpring(widthSync, {damping: 10, mass: 0.01, stiffness: 170})
 
   const y = useMotionValue(0);
@@ -125,9 +126,9 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
               })
             }}
           >
-            <Link href={app.link} data-active='true' className={styles.link}>
+            <Link href={app.link} className={styles.link}>
               <span className='sr-only'>{app.title}</span>
-              <app.icon weight='duotone' size={64} className={styles.icon} />
+              <app.icon weight='duotone' size={40} className={styles.icon} />
             </Link>
           </motion.button>
         </Tooltip.Trigger>
