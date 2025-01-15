@@ -1,7 +1,7 @@
-import './styles.css'
-import { BlogPosts } from "@/components/posts"
-import { ArrowUpLeftIcon } from '../icons/arrow-up-left'
+import { ArrowUpLeftIcon } from '@/app/icons/arrow-up-left'
 import Link from 'next/link'
+import styles from './layout.module.css'
+import { BlogPosts } from '@/components/posts'
 
 export const metadata = {
   title: 'Blog',
@@ -10,12 +10,12 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section>
-      <aside><Link href={'/'}><ArrowUpLeftIcon />Index</Link></aside>
+    <>
+      <aside className={styles.aside}><Link href={'/'}><ArrowUpLeftIcon />Home</Link></aside>
       <main>
         <h1>Writing</h1>
         <BlogPosts />
       </main>
-    </section>
+    </>
   )
 }

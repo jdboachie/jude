@@ -6,7 +6,7 @@
   place-items: stretch;
   margin-top: 50px;
   padding: 52px 24px 16px 24px;
-  background-color: var(--secondary-bg);
+  background: linear-gradient(to top, var(--secondary-bg) 70%, transparent);
 }
 
 .footercontent {
@@ -16,7 +16,7 @@
   margin: auto;
   width: clamp(100%, 100%, 1024px);
   max-width: 1024px;
-  color: var(--text-muted);
+  color: black;
   font-size: x-small;
 }
 

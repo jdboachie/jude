@@ -1,0 +1,43 @@
+.section {
+  font-family: var(--reading-sans);
+  display: grid;
+  position: relative;
+  line-height: 28px;
+  grid-column: 1 / 4;
+  gap: 24px;
+  grid-template-columns:
+    1fr
+    min(640px, 100%)
+    1fr;
+}
+
+.aside {
+  font-family: 'Crimson Pro';
+  font-style: italic;
+  position: fixed;
+  top: 100px;
+  display: grid;
+  align-items: start;
+  grid-column-start: 1;
+  height: 100%;
+}
+
+.aside > :first-child {
+  font-size: large;
+  display: flex;
+  gap: 6px;
+}
+
+@media not all and (min-width: 1024px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+  .section > * {
+    grid-column-start: 1;
+  }
+  .aside {
+    padding-bottom: 25px;
+    top: 0;
+    position: relative;
+  }
+}
