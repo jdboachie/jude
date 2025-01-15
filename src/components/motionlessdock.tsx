@@ -15,6 +15,7 @@ export default function MotionlessDock() {
           <DockIcon
             link={app.link}
             key={index}
+            title={app.title}
           >
             <app.icon weight='duotone' size={32} className={styles.icon}/>
           </DockIcon>
@@ -24,7 +25,7 @@ export default function MotionlessDock() {
   )
 }
 
-function DockIcon ({children, link} : {children: React.ReactNode, link: string}) {
+function DockIcon ({children, link, title} : {children: React.ReactNode, link: string, title: string}) {
   const y = useMotionValue(0);
   return (
     <motion.button
@@ -44,6 +45,7 @@ function DockIcon ({children, link} : {children: React.ReactNode, link: string})
       <Link
         href={link}
       >
+        <span className='sr-only'>{title}</span>
         {children}
       </Link>
     </motion.button>

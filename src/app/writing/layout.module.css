@@ -19,7 +19,7 @@
   font-family: 'Crimson Pro';
   font-style: italic;
   position: sticky;
-  top: 100;
+  top: 100px;
   display: grid;
   align-items: start;
   grid-column-start: 1;

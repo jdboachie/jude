@@ -112,8 +112,8 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
         <Tooltip.Trigger asChild>
           <motion.button
             ref={ref}
-            style={{ width, y }}
             className={styles.dockbutton}
+            style={{ width, y }}
             onClick={() => {
               animate(y, [0, -40, 0], {
                 repeat: 2,
@@ -125,7 +125,10 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
               })
             }}
           >
-            <Link href={app.link} data-active='true' className={styles.link}><app.icon weight='duotone' size={32} className={styles.icon} /></Link>
+            <Link href={app.link} data-active='true' className={styles.link}>
+              <span className='sr-only'>{app.title}</span>
+              <app.icon weight='duotone' size={64} className={styles.icon} />
+            </Link>
           </motion.button>
         </Tooltip.Trigger>
         <Tooltip.Portal>

@@ -10,7 +10,7 @@
 
 .dock {
   pointer-events: all;
-  z-index: 50;
+  z-index: 10;
   display: flex;
   gap: 8px;
   margin: 0 auto;
@@ -18,7 +18,7 @@
   max-width: 100%;
   align-items: flex-end;
   height: 54px;
-  padding: 6px 7px;
+  padding: 6px;
   background-color: var(--bg);
   border: 1px solid var(--border);
   border-radius: 9999px;
@@ -26,18 +26,18 @@
 }
 
 .motionlessdock {
+  z-index: 1;
   visibility: hidden;
   pointer-events: all;
-  z-index: 50;
+  z-index: 10;
   display: flex;
   gap: 8px;
   margin: 0 auto;
   width: fit-content;
   max-width: 100%;
-  /* overflow-x: auto; */ /* interferes with the bounce animation */
   align-items: flex-end;
   height: 54px;
-  padding: 6px 8px;
+  padding: 6px;
   background-color: var(--bg);
   border: 1px solid var(--border);
   border-radius: 9999px;
@@ -45,6 +45,7 @@
 }
 
 .motionlessdock > button {
+  z-index: 20;
   width: 40px;
   height: 40px;
   background-color: var(--hover-bg);
@@ -63,6 +64,7 @@
   width: 100%;
   height: 100%;
   border-radius: 9999px;
+  place-content: center;
 }
 
 .motionlessdock > button > a {
@@ -74,7 +76,7 @@
 }
 
 .dockbutton {
-  size: 40px;
+  /* size: 40px; */
   display: grid;
   place-items: center;
   aspect-ratio: 1/1;
@@ -82,6 +84,8 @@
   background-color: var(--hover-bg);
   border-radius: 9999px;
   border: 1px solid var(--border);
+  box-shadow:  0px 2px 1px rgba(255, 255, 255, 1) inset,
+               0px -1px 1px rgba(0, 0, 0, 0.1) inset;
 }
 
 .dock > * > * {
@@ -102,10 +106,6 @@
 .motionlessdock > button {
   box-shadow:  0px 2px 1px 0px rgba(255, 255, 255, 1) inset,
                0px -1px 1px 0px rgba(0, 0, 0, 0.1) inset;
-}
-.dockbutton {
-  box-shadow:  0px 2px 1px rgba(255, 255, 255, 1) inset,
-               0px -1px 1px rgba(0, 0, 0, 0.1) inset;
 }
 
 @media not all and (min-width: 640px) {
