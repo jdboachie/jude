@@ -102,7 +102,7 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
     }
   })
 
-  const widthSync = useTransform(distance, [-200, 0, 200], [44, 88, 44])
+  const widthSync = useTransform(distance, [-200, 0, 200], [44, 77, 44])
   const width = useSpring(widthSync, {damping: 10, mass: 0.01, stiffness: 170})
 
   const y = useMotionValue(0);
@@ -122,7 +122,7 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
                   [0, 0, 0.2, 1],
                   [0.8, 0, 1, 1]
                 ],
-                duration: 0.7
+                duration: 0.6
               })
             }}
           >
