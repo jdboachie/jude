@@ -16,7 +16,7 @@
   margin: auto;
   width: clamp(100%, 100%, 1024px);
   max-width: 1024px;
-  color: black;
+  color: var(--foreground);
   font-size: x-small;
 }
 
