@@ -1,4 +1,5 @@
-import Link from 'next/link';
+'use client'
+
 import { APPS } from './dock';
 import styles from './dock.module.css'
 import { animate, motion, useMotionValue } from 'framer-motion'
@@ -28,8 +29,8 @@ export default function MotionlessDock() {
 function DockIcon ({children, link, title} : {children: React.ReactNode, link: string, title: string}) {
   const y = useMotionValue(0);
   return (
-    <motion.button
-      // className={styles.icon}
+    <motion.a
+      href={link}
       style={{ y }}
       onClick={() => {
         animate(y, [0, -40, 0], {
@@ -42,12 +43,8 @@ function DockIcon ({children, link, title} : {children: React.ReactNode, link: s
         })
       }}
     >
-      <Link
-        href={link}
-      >
-        <span className='sr-only'>{title}</span>
-        {children}
-      </Link>
-    </motion.button>
+      <span className='sr-only'>{title}</span>
+      {children}
+    </motion.a>
   )
 }
