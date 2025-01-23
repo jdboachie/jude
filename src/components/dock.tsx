@@ -37,6 +37,16 @@ export const APPS: DockApp[] = [
     link: '/'
   },
   {
+    title: 'Home',
+    icon: HouseSimple,
+    link: '/'
+  },
+  {
+    title: 'Home',
+    icon: HouseSimple,
+    link: '/'
+  },
+  {
     title: 'Projects',
     icon: LightbulbFilament,
     link: '/projects'
