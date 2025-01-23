@@ -39,7 +39,7 @@ export default function Footer() {
         <div className={styles.deets}>
           <p className={styles.copy}>
             {new Date().getFullYear()}
-            <Link className={styles.location} href={'https://maps.app.goo.gl/NUWZT3FZbK4unb5YA'}>Ghana 🖤</Link>
+            <Link className={styles.location} href={'https://maps.app.goo.gl/NUWZT3FZbK4unb5YA'}>Ghana</Link> {/* 🖤 */}
           </p>
           <p className={styles.time}>
             {currentTime || '--:--:--'}

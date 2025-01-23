@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/InterTight-VariableFont_wght.ttf') format('ttf');
-  font-style: normal;
 }
 
 @font-face {
@@ -87,7 +86,6 @@
 
 html, body {
   background: var(--bg);
-  font-synthesis: none;
   touch-action: manipulation;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -100,8 +98,7 @@ section {
 
 body {
   color: var(--foreground);
-  background: var(--bg);
-  font-family: var(--ui-sans), Helvetica, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -120,7 +117,7 @@ body::before {
     var(--blur-start),
     var(--blur-end)
   );
-  mask-image: linear-gradient(to bottom, var(--mask-visible) 25%, var(--mask-hidden));
+  mask-image: linear-gradient(to bottom, var(--blur-start) 25%, var(--mask-hidden) 100%);
   -moz-user-select: none;
   user-select: none;
   pointer-events: none;
@@ -151,7 +148,14 @@ body::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
+  line-height: 2rem;
+  letter-spacing: -0.35px;
+}
+
+*::selection {
+  color: var(--bg);
+  background-color: var(--foreground);
 }
 
 a {
@@ -177,6 +181,7 @@ a {
   }
 
   * {
-    font-size: 14px;
+    line-height: 1.75rem;
+    font-size: 0.975rem;
   }
 }

@@ -1,8 +1,7 @@
 .main {
-  font-family: var(--reading-sans);
+  font-family: var(--ui-sans);
   display: grid;
   position: relative;
-  line-height: 28px;
   grid-column: 1 / 4;
   gap: 24px;
   grid-template-columns:
@@ -17,7 +16,7 @@
 
 .aside {
   font-family: 'Crimson Pro';
-  font-style: italic;
+  /* font-style: italic; */
   position: sticky;
   top: 100px;
   display: grid;

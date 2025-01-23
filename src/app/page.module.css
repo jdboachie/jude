@@ -1,5 +1,4 @@
 .section {
-  font-family: var(--reading-sans);
   display: grid;
   font-weight: 400;
   grid-template-columns: 1fr 65ch 1fr;
