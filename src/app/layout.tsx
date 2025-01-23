@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from "../components/footer";
 import { ThemeProvider } from "../components/theme-provider"
+import { Inter } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: "Jude Boachie",
@@ -17,6 +18,11 @@ export const viewport: Viewport = {
   ],
 }
 
+const sans = Inter({
+  weight: ['400', '600'],
+  subsets: ['latin']
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,15 +30,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className={sans.className}>
         <ThemeProvider
           enableSystem
           attribute="class"
           defaultTheme="system"
           disableTransitionOnChange
         >
-          {children}
           <Footer />
+          {children}
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />

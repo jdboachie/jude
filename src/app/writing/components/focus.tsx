@@ -2,7 +2,7 @@ import React from 'react'
 
 function FocusElement() {
   return (
-    <div>FocusElement</div>
+    <div></div>
   )
 }
 
