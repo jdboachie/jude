@@ -45,8 +45,8 @@ export default function Page() {
 
         <m.div className='lg:grid flex flex-col lg:grid-flow-col lg:h-[298px] max-w-4xl w-full px-auto mx-auto gap-6 lg:col-span-3' variants={staggerChildrenVariants} >
           <Map />
-          <Map />
-          <Map />
+          {/* <Map />
+          <Map /> */}
         </m.div>
         <m.div id='past' variants={staggerChildrenVariants} >
           In the past, I&apos;ve worked at <Link href={'https://tevrozo.com'}>Tevrozo</Link> and Nalo Solutions.
