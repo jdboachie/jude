@@ -1,27 +1,31 @@
+import Dock from '@/components/dock';
+import type { Metadata } from "next";
+import { Inter, Crimson_Pro, JetBrains_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider"
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 import "./globals.css";
-import type { Metadata, Viewport } from "next";
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from "../components/footer";
-import { ThemeProvider } from "../components/theme-provider"
-import { Inter } from 'next/font/google'
+import Toppie from '@/components/toppie';
+
+const sans = Inter({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const serif = Crimson_Pro({
+  weight: ['400', '700'],
+  variable: "--font-serif",
+  style: ['normal', 'italic']
+});
+
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Jude Boachie",
-  description: "Crafting systems and code for people",
+  description: "Building systems and code for people",
 };
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
-}
-
-const sans = Inter({
-  weight: ['400', '600'],
-  subsets: ['latin']
-})
 
 export default function RootLayout({
   children,
@@ -30,18 +34,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={sans.className}>
+      <body
+        className={`${sans.variable} ${mono.variable} ${serif.variable} font-sans antialiased`}
+      >
         <ThemeProvider
-          enableSystem
           attribute="class"
           defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
-          <Footer />
-          {children}
+          <TooltipProvider delayDuration={150}>
+            <Toppie />
+            {children}
+            <Dock />
+          </TooltipProvider>
         </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

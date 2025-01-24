@@ -10,8 +10,6 @@ import {
 } from 'framer-motion';
 import Link from 'next/link';
 import * as React from 'react';
-import styles from './dock.module.css';
-import tooltipstyles from './tooltip.module.css';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import {
   Icon,
@@ -22,7 +20,12 @@ import {
   EnvelopeSimple,
   LightbulbFilament,
   XLogo,
+  Sun,
+  Moon,
 } from "@phosphor-icons/react";
+import { TooltipArrow, TooltipContent, TooltipTrigger } from './ui/tooltip';
+import { Separator } from './ui/separator';
+import { useTheme } from 'next-themes';
 
 interface DockApp {
   icon: Icon
@@ -30,7 +33,7 @@ interface DockApp {
   title: string
 }
 
-export const APPS: DockApp[] = [
+export const navlinks: DockApp[] = [
   {
     title: 'Home',
     icon: HouseSimple,
@@ -46,8 +49,11 @@ export const APPS: DockApp[] = [
     icon: Newspaper,
     link: '/writing'
   },
+];
+
+export const socials: DockApp[] = [
   {
-    title: 'GitHub',
+    title: 'Github',
     icon: GithubLogo,
     link: 'https://github.com/jdboachie'
   },
@@ -63,27 +69,58 @@ export const APPS: DockApp[] = [
   },
 ];
 
+const dockButtonStyles = 'grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-gradient-to-tl from-background via-secondary to-background'
+
 
 function Dock() {
 
   const mouseX = useMotionValue(Infinity)
 
   return (
-    <div className={styles.dockregion}>
+    <div className='fixed flex justify-center items-center bottom-0 h-24 w-full z-50'>
       <div
         onMouseMove={(e) => {
           mouseX.set(e.pageX)
         }}
         onMouseLeave={() => {mouseX.set(Infinity)}}
-        className={styles.dock}
+        className="rounded-full hidden sm:flex bg-background shadow-2xl items-end mb-4 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible"
       >
-        {APPS.map((app, index) => (
+        {navlinks.map((app, index) => (
           <DockIcon
             app={app}
             key={index}
             mouseX={mouseX}
           />
         ))}
+        <Separator orientation='vertical'/>
+        {socials.map((app, index) => (
+          <DockIcon
+          app={app}
+          key={index}
+          mouseX={mouseX}
+          />
+        ))}
+        <Separator orientation='vertical'/>
+        <ThemeToggleButton mouseX={mouseX} />
+      </div>
+      <div className="hidden max-sm:flex rounded-full bg-background shadow-2xl items-end mb-8 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible">
+        {navlinks.map((app, index) => (
+          <DockIcon
+            app={app}
+            key={index}
+            mouseX={mouseX}
+          />
+        ))}
+        <Separator orientation='vertical'/>
+        {socials.map((app, index) => (
+          <DockIcon
+          app={app}
+          key={index}
+          mouseX={mouseX}
+          />
+        ))}
+        <Separator orientation='vertical'/>
+        <ThemeToggleButton mouseX={mouseX} />
       </div>
     </div>
   )
@@ -102,44 +139,112 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
     }
   })
 
-  const widthSync = useTransform(distance, [-200, 0, 200], [40, 65, 40])
-  const width = useSpring(widthSync, {damping: 10, mass: 0.01, stiffness: 170})
+  const widthSync = useTransform(distance, [-115, 0, 115], [40, 70, 40])
+  const width = useSpring(widthSync, {damping: 10, mass: 0.1, stiffness: 170})
 
   const y = useMotionValue(0);
 
   return (
-    <Tooltip.Provider delayDuration={150}>
-      <Tooltip.Root>
-        <Tooltip.Trigger asChild>
-          <motion.button
-            ref={ref}
-            className={styles.dockbutton}
-            style={{ width, y }}
-            onClick={() => {
-              animate(y, [0, -40, 0], {
-                repeat: 2,
-                ease: [
-                  [0, 0, 0.2, 1],
-                  [0.8, 0, 1, 1]
-                ],
-                duration: 0.6
-              })
+    <Tooltip.Root>
+      <TooltipTrigger>
+        <motion.button
+          ref={ref}
+          style={{ width, y, zIndex: 50 }}
+          onClick={() => {
+            animate(y, [0, -40, 0], {
+              repeat: 0,
+              ease: [
+                [0, 0, 0.2, 1],
+                [0.8, 0.5, 0, 1]
+              ],
+              duration: 0.6
+            })
+          }}
+          className={dockButtonStyles}
+        >
+          <Link href={app.link} className='size-full rounded-full place-content-center grid'>
+            <span className='sr-only'>{app.title}</span>
+            <app.icon weight='duotone' className='text-muted-foreground' size={20}/>
+          </Link>
+        </motion.button>
+      </TooltipTrigger>
+      <Tooltip.Portal>
+        <TooltipContent sideOffset={5}>
+          {app.title}
+          <TooltipArrow />
+        </TooltipContent>
+      </Tooltip.Portal>
+    </Tooltip.Root>
+  )
+}
+
+function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
+
+  const ref = React.useRef<HTMLButtonElement>(null)
+
+  const distance = useTransform(mouseX, (val) => {
+    const bounds = ref.current?.getBoundingClientRect();
+    if (bounds){
+      return val - bounds.x - bounds.width/2
+    } else {
+      return Infinity
+    }
+  })
+
+  const widthSync = useTransform(distance, [-115, 0, 115], [40, 60, 40])
+  const width = useSpring(widthSync, {damping: 10, mass: 0.1, stiffness: 170})
+
+  const y = useMotionValue(0);
+
+  const { setTheme, resolvedTheme } = useTheme()
+
+  return (
+    <Tooltip.Root>
+      <TooltipTrigger>
+        <motion.button
+          ref={ref}
+          style={{ width, y }}
+          onClick={() => {
+            animate(y, [0, -40, 0], {
+              repeat: 0,
+              ease: [
+                [0, 0, 0.2, 1],
+                [0.8, 0.5, 0, 1]
+              ],
+              duration: 0.6
+            })
+          }}
+          onKeyDown={(e: React.KeyboardEvent) => {
+            if (e.key.toLowerCase() == 'r') {
+              setTheme('system')
+            }
+          }}
+          className='relative grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-gradient-to-tl from-background via-secondary to-background'
+        >
+          <span
+            className='size-full rounded-full grid place-items-center text-muted-foreground'
+            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light': 'dark')}
+            onAuxClick={(e: React.MouseEvent) => {
+              e.preventDefault()
+              setTheme('system')
             }}
           >
-            <Link href={app.link} className={styles.link}>
-              <span className='sr-only'>{app.title}</span>
-              <app.icon weight='duotone' size={40} className={styles.icon} />
-            </Link>
-          </motion.button>
-        </Tooltip.Trigger>
-        <Tooltip.Portal>
-          <Tooltip.Content className={tooltipstyles.Content} sideOffset={5}>
-            {app.title}
-            <Tooltip.Arrow className={tooltipstyles.Arrow} />
-          </Tooltip.Content>
-        </Tooltip.Portal>
-      </Tooltip.Root>
-    </Tooltip.Provider>
+            <Sun weight='duotone' className="size-5 transition-all dark:hidden" />
+            <Moon weight='duotone' className="size-5 transition-all hidden dark:block" />
+            <span className="sr-only">Toggle theme</span>
+          </span>
+        </motion.button>
+      </TooltipTrigger>
+      <Tooltip.Portal>
+        <TooltipContent sideOffset={5}>
+          <div className='flex gap-1 size-full text-xs'>
+            Toggle theme
+            <span className='text-xs'><kbd>R</kbd> to reset</span>
+          </div>
+          <TooltipArrow />
+        </TooltipContent>
+      </Tooltip.Portal>
+    </Tooltip.Root>
   )
 }
 
