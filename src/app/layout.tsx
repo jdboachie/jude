@@ -14,6 +14,7 @@ const sans = Inter({
 const serif = Crimson_Pro({
   weight: ['400', '700'],
   variable: "--font-serif",
+  subsets: ['latin'],
   style: ['normal', 'italic']
 });
 
