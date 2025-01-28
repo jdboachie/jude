@@ -6,7 +6,7 @@ import Map, { Marker } from 'react-map-gl';
 import { StyleSpecification } from 'mapbox-gl';
 import { ImmutableLike } from 'react-map-gl/dist/esm/types';
 
-export default function App() {
+export default function Myplace() {
 
   const [mapStyle] = React.useState<ImmutableLike<StyleSpecification> | null>(null);
 

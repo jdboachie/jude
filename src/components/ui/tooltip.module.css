@@ -26,16 +26,14 @@
 	&[data-state="delayed-open"][data-side="left"] {
 		animation-name: slideRightAndFade;
 	}
+
+	@apply text-primary bg-background border border-border;
 }
 
 .Arrow {
 	fill: white;
-}
 
-@media (prefers-color-scheme: dark) {
-	.Arrow {
-		fill: var(--border);
-		}
+	@apply dark:fill-border;
 }
 
 @keyframes slideUpAndFade {

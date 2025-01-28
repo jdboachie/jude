@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -56,6 +57,7 @@
     --chart-5: 340 75% 55%
   }
 }
+
 @layer base {
   * {
     @apply border-border max-lg:text-[0.975rem];
@@ -68,7 +70,7 @@
   }
 
   *::selection {
-    @apply bg-amber-300;
+    @apply bg-amber-200;
   }
 
   a {
@@ -153,8 +155,7 @@
     }
 
     *::selection {
-      background-color: white;
-      color: black;
+      @apply bg-yellow-700;
     }
 
     body::before {

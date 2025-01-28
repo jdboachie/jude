@@ -2,14 +2,11 @@
 
 import Link from 'next/link'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
-import Map from '@/components/map'
-
 
 const staggerChildrenVariants = {
-  hidden: { opacity: 0, y: 20, scale: 1, },
+  hidden: { opacity: 0, y: 20, scale: 0.975, },
   show: { opacity: 1, y: 0, scale: 1.0, transition: { duration: 0.6, ease: 'easeOut' } },
 }
-
 
 export default function Page() {
   return (
@@ -26,7 +23,7 @@ export default function Page() {
         }}
         initial='hidden'
         animate='show'
-        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.3 }}
+        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.15 }}
         className='gap-12'
       >
         <m.p
@@ -42,19 +39,12 @@ export default function Page() {
           Fullstack/product developer (Nextjs)<br />
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
-
-        <m.div className='lg:grid flex flex-col lg:grid-flow-col lg:h-[298px] max-w-4xl w-full px-auto mx-auto gap-6 lg:col-span-3' variants={staggerChildrenVariants} >
-          <Map />
-          {/* <Map />
-          <Map /> */}
-        </m.div>
         <m.div id='past' variants={staggerChildrenVariants} >
           In the past, I&apos;ve worked at <Link href={'https://tevrozo.com'}>Tevrozo</Link> and Nalo Solutions.
           {' '}Volunteered as the Pre-Collegiate Initiative Chair at <Link href={'https://nsbeknust.wordpress.com'}>NSBE-KNUST</Link>.
         </m.div>
         <m.div id='now' variants={staggerChildrenVariants} >
           Learning to copy quickly and innovate creatively, guiltlessly exploring passion and interests, appreciating hidden gems in people&apos;s work. Mindful that I can do all things <span className={'pretty-text'}>through Christ who strengthens me</span>.
-          Figuring out how things work.
         </m.div>
         <m.div variants={staggerChildrenVariants} >
           Send me an email at <Link href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link>. Let{"'"}s talk.
