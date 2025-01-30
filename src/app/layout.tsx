@@ -1,6 +1,7 @@
 import Dock from '@/components/dock';
 import type { Metadata } from "next";
 import { Inter, Crimson_Pro, JetBrains_Mono } from "next/font/google";
+import LocalFont from "next/font/local"
 import { ThemeProvider } from "@/components/theme-provider"
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import "./globals.css";
@@ -10,6 +11,10 @@ const sans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
 });
+
+const grotesk = LocalFont({
+  src: '../../public/font/AlteHaasGroteskRegular.ttf'
+})
 
 const serif = Crimson_Pro({
   weight: ['400', '700'],
@@ -39,7 +44,7 @@ export default function RootLayout({
         <script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
       </head> */}
       <body
-        className={`${sans.variable} ${mono.variable} ${serif.variable} font-sans antialiased`}
+        className={`${sans.variable} ${grotesk.className} ${mono.variable} ${serif.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

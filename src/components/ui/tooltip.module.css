@@ -27,14 +27,19 @@
 		animation-name: slideRightAndFade;
 	}
 
-	@apply text-primary bg-background border border-border;
+	@apply text-primary bg-primary-foreground border border-border;
 }
 
 .Arrow {
 	fill: white;
-
-	@apply dark:fill-border;
 }
+
+@media (prefers-color-scheme: dark) {
+	.Arrow {
+		fill: hsl(0 0% 9%);
+	}
+}
+
 
 @keyframes slideUpAndFade {
 	from {

@@ -60,17 +60,21 @@
 
 @layer base {
   * {
-    @apply border-border max-lg:text-[0.975rem];
+    @apply border-border text-base leading-relaxed max-sm:tracking-tight;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.65rem;
-    letter-spacing: -0.35px;
+    /* letter-spacing: -0.35px; */
   }
 
   *::selection {
     @apply bg-amber-200;
+  }
+
+  #experience {
+    grid-column: 1/4;
+    grid-template-columns: 1fr 1fr;
+    width: min(1280px, 100%);
   }
 
   a {
@@ -128,7 +132,7 @@
   }
 
   .dockbutton {
-    box-shadow: 0px 2px 1px 0px rgba(255, 255, 255, 1) inset,
+    box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 1) inset,
                 0px 1px 1px 0px transparent inset;
   }
 
@@ -136,7 +140,7 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply max-w-7xl w-full m-auto px-4 md:px-16 py-24
+    @apply max-w-6xl w-full m-auto px-4 md:px-16 py-24
   }
 
   main > * {
@@ -169,10 +173,10 @@
       width: 100dvw;
       background: linear-gradient(
         to bottom,
-        black,
+        hsl(0 0 2%),
         transparent
       );
-      mask-image: linear-gradient(to bottom, black 25%, transparent 100%);
+      mask-image: linear-gradient(to bottom, hsl(0 0 2%) 25%, transparent 100%);
       -moz-user-select: none;
       user-select: none;
       pointer-events: none;
@@ -190,10 +194,10 @@
       width: 100dvw;
       background: linear-gradient(
         to top,
-        black,
+        hsl(0 0 2%),
         transparent
       );
-      mask-image: linear-gradient(to top, black 25%, transparent 100%);
+      mask-image: linear-gradient(to top, hsl(0 0 2%) 25%, transparent 100%);
       -moz-user-select: none;
       user-select: none;
       pointer-events: none;
@@ -201,6 +205,12 @@
     }
   }
 
+  @media not all and (min-width: 1280px) {
+    #experience {
+      grid-column: 2/4;
+      grid-template-columns: 1fr;
+    }
+  }
   @media not all and (min-width: 768px) {
     main {
       grid-template-columns: 1fr;
@@ -209,5 +219,11 @@
     main > * {
       grid-column-start: 1;
     }
+
+    #experience {
+      grid-column: 1/1;
+      grid-template-columns: 1fr;
+    }
   }
+
 }

@@ -69,7 +69,7 @@ export const socials: DockApp[] = [
   },
 ];
 
-const dockButtonStyles = 'grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-gradient-to-tl from-background via-secondary to-background'
+const dockButtonStyles = 'grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-gradient-to-tl from-background via-primary-foreground to-background'
 
 
 function Dock() {
@@ -219,7 +219,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
               setTheme('system')
             }
           }}
-          className='relative grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-gradient-to-tl from-background via-secondary to-background'
+          className='relative grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-gradient-to-tl from-background via-primary-foreground to-background'
         >
           <span
             className='size-full rounded-full grid place-items-center text-muted-foreground'
