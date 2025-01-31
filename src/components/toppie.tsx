@@ -1,13 +1,13 @@
 'use client'
 
 import * as React from 'react'
-import { Cross } from '@phosphor-icons/react'
+// import { Cross } from '@phosphor-icons/react'
 
 const Toppie = () => {
   return (
-    <div className='z-[100] relative p-4 md:p-8 md:px-16 flex justify-between items-center text-muted-foreground'>
+    <div className='z-[100] relative p-7 md:p-8 md:px-16 flex justify-between items-center text-muted-foreground'>
       <Time />
-      <Cross weight='fill' className='size-3 sm:size-4' />
+      {/* <Cross weight='fill' className='size-3 sm:size-4' /> */}
     </div>
   )
 }

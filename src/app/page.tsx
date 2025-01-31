@@ -1,8 +1,15 @@
 'use client';
 
 import Link from 'next/link'
+import LocalFont from "next/font/local"
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { ArrowUpRight } from '@phosphor-icons/react';
+
+
+const rudiment = LocalFont({
+  src: '../../public/font/Redaction_50-regular.woff2'
+})
+
 
 const staggerChildrenVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.975, },
@@ -29,22 +36,26 @@ export default function Page() {
       >
         <m.p
           variants={staggerChildrenVariants}
-          className='text-lg'
+          className='text-xl grid text-right'
         >
-          Jude Boachie
+          <span className={`text-5xl lg:text-6xl ${rudiment.className} tracking-normal`}>Jude Boachie</span>
+          <span className={'pretty-text text-muted-foreground'}>Light of the world. </span>{' '}<br />
         </m.p>
         <m.div id='now' variants={staggerChildrenVariants} >
-          <span className={'pretty-text'}>Light of the world. </span>{' '}<br />
+          <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-sm font-medium">Now</m.p>
           Engineer at <Link className={''} href={'https://sokoaerial.com'}>Soko Aerial</Link>.
-          Getting a degree in Computer Engineering <Link href={'https://knust.edu.gh'}>@KNUST</Link>.
-          Fullstack/product developer (Nextjs)<br />
+          Computer Engineering <Link href={'https://knust.edu.gh'}>@KNUST</Link>.
+          Fullstack/product developer (Nextjs).<br />
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
-        <m.div id='past' variants={staggerChildrenVariants} >
+        <m.div id='now' variants={staggerChildrenVariants} >
+          Learning to copy quickly and innovate creatively, guiltlessly exploring passion and interests, appreciating hidden gems in people&apos;s work. Mindful that I can do all things <span className={'pretty-text'}>through Christ who strengthens me</span>.
+        </m.div>
+        {/* <m.div id='past' variants={staggerChildrenVariants} >
           In the past, I&apos;ve worked at <Link href={'https://tevrozo.com'}>Tevrozo</Link> and Nalo Solutions.
           {' '}Volunteered as the Pre-Collegiate Initiative Chair at <Link href={'https://nsbeknust.wordpress.com'}>NSBE-KNUST</Link>.
-        </m.div>
-        <m.div id='experience' className='mx-auto grid grid-cols-2 max-xl:grid-flow-row gap-12' variants={staggerChildrenVariants} >
+        </m.div> */}
+        <m.div id='experience' className='mx-auto grid grid-cols-2 xl:my-14 max-xl:grid-flow-row gap-12' variants={staggerChildrenVariants} >
           <div className='flex flex-col gap-3'>
             <p className="text-muted-foreground text-sm font-medium">Work Experience</p>
             <div className='gap-12 flex flex-col'>
@@ -70,16 +81,13 @@ export default function Page() {
               <div className="flex max-sm:flex-col gap-1 sm:gap-6">
                 <time className='text-muted-foreground'>2022-2023</time>
                 <div className=''>
-                  <Link href={'https://nsbe.org'} className='flex gap-1'>Pre-collegiate Initiative Committee Chair at NSBE<ArrowUpRight /></Link>
+                  <Link href={'https://nsbe.org'} className='flex gap-1 divide-x'>Pre-collegiate Initiative C&apos;ttee Chair at NSBE<ArrowUpRight /></Link>
                   <p className='text-muted-foreground'>Kumasi, Ghana</p>
-                  <p className='text-muted-foreground'>Volunteered to help train high school students with STEM skills</p>
+                  <p className='text-muted-foreground'>Training high school students in STEM</p>
                 </div>
               </div>
             </div>
           </div>
-        </m.div>
-        <m.div id='now' variants={staggerChildrenVariants} >
-          Learning to copy quickly and innovate creatively, guiltlessly exploring passion and interests, appreciating hidden gems in people&apos;s work. Mindful that I can do all things <span className={'pretty-text'}>through Christ who strengthens me</span>.
         </m.div>
         <m.div variants={staggerChildrenVariants} >
           Send me an email at <Link href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link>. Let{"'"}s talk.

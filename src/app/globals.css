@@ -78,7 +78,7 @@
   }
 
   a {
-    @apply hover:underline underline-offset-4;
+    @apply underline decoration-[1px] underline-offset-4 decoration-muted-foreground;
   }
 
   kbd {
@@ -86,7 +86,7 @@
   }
 
   body {
-    @apply bg-background text-foreground pb-20;
+    @apply bg-primary-foreground text-primary pb-20;
   }
 
   body::before {
@@ -140,7 +140,7 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply max-w-6xl w-full m-auto px-4 md:px-16 py-24
+    @apply max-w-6xl w-full m-auto px-7 md:px-16 py-24
   }
 
   main > * {
@@ -173,10 +173,10 @@
       width: 100dvw;
       background: linear-gradient(
         to bottom,
-        hsl(0 0 2%),
+        hsl(0 0 9%),
         transparent
       );
-      mask-image: linear-gradient(to bottom, hsl(0 0 2%) 25%, transparent 100%);
+      mask-image: linear-gradient(to bottom, hsl(0 0 9%) 25%, transparent 100%);
       -moz-user-select: none;
       user-select: none;
       pointer-events: none;
@@ -194,10 +194,10 @@
       width: 100dvw;
       background: linear-gradient(
         to top,
-        hsl(0 0 2%),
+        hsl(0 0 4%),
         transparent
       );
-      mask-image: linear-gradient(to top, hsl(0 0 2%) 25%, transparent 100%);
+      mask-image: linear-gradient(to top, hsl(0 0 4%) 25%, transparent 100%);
       -moz-user-select: none;
       user-select: none;
       pointer-events: none;
