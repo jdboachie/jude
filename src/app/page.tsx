@@ -7,7 +7,7 @@ import { ArrowUpRight } from '@phosphor-icons/react';
 
 
 const rudiment = LocalFont({
-  src: 'src/font/Redaction_50-regular.woff2'
+  src: '../font/Redaction_50-Regular.woff2'
 })
 
 

@@ -1,10 +1,10 @@
+import "./globals.css";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 import Dock from '@/components/dock';
 import type { Metadata } from "next";
-import { Inter, Crimson_Pro, JetBrains_Mono } from "next/font/google";
 import LocalFont from "next/font/local"
+import { Inter, Crimson_Pro, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
-import { TooltipProvider } from "@radix-ui/react-tooltip";
-import "./globals.css";
 import Toppie from '@/components/toppie';
 
 const sans = Inter({
@@ -13,7 +13,7 @@ const sans = Inter({
 });
 
 const grotesk = LocalFont({
-  src: 'src/font/AlteHaasGroteskRegular.ttf'
+  src: '../font/AlteHaasGroteskRegular.ttf'
 })
 
 const serif = Crimson_Pro({
