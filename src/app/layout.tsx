@@ -13,7 +13,7 @@ const sans = Inter({
 });
 
 const grotesk = LocalFont({
-  src: 'font/AlteHaasGroteskRegular.ttf'
+  src: 'public/font/AlteHaasGroteskRegular.ttf'
 })
 
 const serif = Crimson_Pro({
