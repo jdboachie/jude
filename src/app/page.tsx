@@ -7,7 +7,7 @@ import { ArrowUpRight } from '@phosphor-icons/react';
 
 
 const rudiment = LocalFont({
-  src: '../../public/font/Redaction_50-regular.woff2'
+  src: 'font/Redaction_50-regular.woff2'
 })
 
 
@@ -62,14 +62,14 @@ export default function Page() {
               <div className="flex max-sm:flex-col gap-1 sm:gap-6">
                 <time className='text-muted-foreground'>2023-Now</time>
                 <div className=''>
-                  <Link href={'https://sokoaerial.com'} className='flex gap-1'>Software Engineer at Soko Aerial Robotics <ArrowUpRight /></Link>
+                  <Link href={'https://sokoaerial.com'} className='w-fit flex flex-wrap gap-1'>Software Engineer at Soko Aerial Robotics<ArrowUpRight /></Link>
                   <p className='text-muted-foreground'>Remote, Ghana</p>
                 </div>
               </div>
               <div className="flex max-sm:flex-col gap-1 sm:gap-6">
                 <time className='text-muted-foreground'>2024-2024</time>
                 <div className=''>
-                  <Link href={'https://tevrozo.com'} className='flex gap-1'>Fullstack Web Developer at Tevrozo <ArrowUpRight /></Link>
+                  <Link href={'https://tevrozo.com'} className='w-fit flex flex-wrap gap-1'>Fullstack Web Developer at Tevrozo <ArrowUpRight /></Link>
                   <p className='text-muted-foreground'>Nextjs, TailwindCSS, TypeScript, Firebase</p>
                 </div>
               </div>
@@ -81,9 +81,9 @@ export default function Page() {
               <div className="flex max-sm:flex-col gap-1 sm:gap-6">
                 <time className='text-muted-foreground'>2022-2023</time>
                 <div className=''>
-                  <Link href={'https://nsbe.org'} className='flex gap-1 divide-x'>Pre-collegiate Initiative C&apos;ttee Chair at NSBE<ArrowUpRight /></Link>
+                  <Link href={'https://nsbe.org'} className='w-fit flex flex-wrap gap-1'>PCI Chair at NSBE-KNUST<ArrowUpRight /></Link>
                   <p className='text-muted-foreground'>Kumasi, Ghana</p>
-                  <p className='text-muted-foreground'>Training high school students in STEM</p>
+                  <p className='text-muted-foreground'>(Pre-Collegiate Initiative Chair) Helped train high school students in STEM</p>
                 </div>
               </div>
             </div>
