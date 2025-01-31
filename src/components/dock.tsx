@@ -20,8 +20,6 @@ import {
   EnvelopeSimple,
   LightbulbFilament,
   XLogo,
-  Sun,
-  Moon,
 } from "@phosphor-icons/react";
 import { TooltipArrow, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { Separator } from './ui/separator';
@@ -196,7 +194,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
 
   const y = useMotionValue(0);
 
-  const { setTheme, resolvedTheme } = useTheme()
+  const { theme, setTheme, resolvedTheme } = useTheme()
 
   return (
     <Tooltip.Root>
@@ -223,14 +221,24 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
         >
           <span
             className='size-full rounded-full grid place-items-center text-muted-foreground'
-            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light': 'dark')}
+            onClick={() => {
+              setTheme(resolvedTheme === 'dark' ? 'light': 'dark')}
+            }
             onAuxClick={(e: React.MouseEvent) => {
               e.preventDefault()
               setTheme('system')
             }}
           >
-            <Sun weight='duotone' className="size-5 transition-all dark:hidden" />
-            <Moon weight='duotone' className="size-5 transition-all hidden dark:block" />
+            { theme === 'dark' ?
+              <div className="size-4 transition-all hidden dark:block bg-white rounded-full" />
+              :
+              <>
+                {theme === 'light' &&
+                  <div className="size-4 transition-all block dark:hidden bg-black rounded-full" />
+                }
+              </>
+            }
+            {theme === 'system' && <div className='size-4 rounded-full system-gradient' />}
             <span className="sr-only">Toggle theme</span>
           </span>
         </motion.button>

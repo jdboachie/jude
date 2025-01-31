@@ -136,6 +136,14 @@
                 0px 1px 1px 0px transparent inset;
   }
 
+  .system-gradient {
+    background: linear-gradient(
+      to top,
+      black 50%,
+      white
+    )
+  }
+
   main {
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
@@ -156,6 +164,14 @@
     .dockbutton {
       box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.1) inset,
                   0px 1px 1px 0px transparent inset;
+    }
+
+    .system-gradient {
+      background: linear-gradient(
+        to top,
+        black 50%,
+        white
+      )
     }
 
     *::selection {
