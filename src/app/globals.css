@@ -86,7 +86,7 @@
   }
 
   body {
-    @apply bg-primary-foreground text-primary pb-20;
+    @apply dark:bg-primary-foreground text-primary pb-20;
   }
 
   body::before {

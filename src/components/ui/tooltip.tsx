@@ -15,5 +15,5 @@ export const TooltipContent = ({children, sideOffset} : {children: React.ReactNo
 }
 
 export const TooltipArrow = () => {
-  return <Tooltip.Arrow className={styles.Arrow} />
+  return <Tooltip.Arrow className={'fill-border'} />
 }

@@ -15,7 +15,7 @@ import {
   Icon,
   Newspaper,
   GithubLogo,
-  // TwitterLogo,
+  CircleHalf,
   HouseSimple,
   EnvelopeSimple,
   LightbulbFilament,
@@ -67,7 +67,7 @@ export const socials: DockApp[] = [
   },
 ];
 
-const dockButtonStyles = 'grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-gradient-to-tl from-background via-primary-foreground to-background'
+const dockButtonStyles = 'grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-secondary'
 
 
 function Dock() {
@@ -81,7 +81,7 @@ function Dock() {
           mouseX.set(e.pageX)
         }}
         onMouseLeave={() => {mouseX.set(Infinity)}}
-        className="rounded-full hidden sm:flex bg-background shadow-2xl items-end mb-4 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible"
+        className="rounded-full hidden sm:flex bg-primary-foreground shadow-2xl items-end mb-4 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible"
       >
         {navlinks.map((app, index) => (
           <DockIcon
@@ -101,7 +101,7 @@ function Dock() {
         <Separator orientation='vertical'/>
         <ThemeToggleButton mouseX={mouseX} />
       </div>
-      <div className="hidden max-sm:flex rounded-full bg-background shadow-2xl items-end mb-8 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible">
+      <div className="hidden max-sm:flex rounded-full bg-primary-foreground shadow-2xl items-end mb-8 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible">
         {navlinks.map((app, index) => (
           <DockIcon
             app={app}
@@ -217,7 +217,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
               setTheme('system')
             }
           }}
-          className='relative grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-gradient-to-tl from-background via-primary-foreground to-background'
+          className='relative grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-secondary'
         >
           <span
             className='size-full rounded-full grid place-items-center text-muted-foreground'
@@ -238,7 +238,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
                 }
               </>
             }
-            {theme === 'system' && <div className='size-4 rounded-full system-gradient' />}
+            {theme === 'system' && <CircleHalf weight='fill' className='size-5 text-muted-foreground'/>}
             <span className="sr-only">Toggle theme</span>
           </span>
         </motion.button>
@@ -246,7 +246,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
       <Tooltip.Portal>
         <TooltipContent sideOffset={5}>
           <div className='flex gap-1 size-full text-xs'>
-            Toggle theme
+            Switch to {resolvedTheme === 'dark' ? 'light' : 'dark'}
             <span className='text-xs'><kbd>R</kbd> to reset</span>
           </div>
           <TooltipArrow />
