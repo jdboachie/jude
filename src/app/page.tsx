@@ -39,7 +39,7 @@ export default function Page() {
           className='text-xl grid text-right'
         >
           <span className={`text-5xl lg:text-6xl ${rudiment.className} tracking-normal`}>Jude Boachie</span>
-          <span className={'pretty-text text-muted-foreground'}>Light of the world. </span>{' '}<br />
+          <span className={'pretty-text text-muted-foreground'}>Light of the world.</span>
         </m.p>
         <m.div id='now' variants={staggerChildrenVariants} >
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-sm font-medium">Now</m.p>

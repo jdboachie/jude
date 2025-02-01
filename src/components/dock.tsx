@@ -219,8 +219,8 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
           }}
           className='relative grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-secondary'
         >
-          <span
-            className='size-full rounded-full grid place-items-center text-muted-foreground'
+          <div
+              className='size-full rounded-full grid place-items-center text-muted-foreground'
             onClick={() => {
               setTheme(resolvedTheme === 'dark' ? 'light': 'dark')}
             }
@@ -239,8 +239,8 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
               </>
             }
             {theme === 'system' && <CircleHalf weight='fill' className='size-5 text-muted-foreground'/>}
-            <span className="sr-only">Toggle theme</span>
-          </span>
+            {/* <span className="sr-only">Toggle theme</span> */}
+          </div>
         </motion.button>
       </TooltipTrigger>
       <Tooltip.Portal>

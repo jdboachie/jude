@@ -3,16 +3,12 @@ import { TooltipProvider } from "@radix-ui/react-tooltip";
 import Dock from '@/components/dock';
 import type { Metadata } from "next";
 import LocalFont from "next/font/local"
-import { Inter, Crimson_Pro, JetBrains_Mono } from "next/font/google";
+import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import Toppie from '@/components/toppie';
 
-const sans = Inter({
+const sans = LocalFont({
   variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const grotesk = LocalFont({
   src: '../font/AlteHaasGroteskRegular.ttf'
 })
 
@@ -44,7 +40,7 @@ export default function RootLayout({
         <script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
       </head> */}
       <body
-        className={`${sans.variable} ${grotesk.className} ${mono.variable} ${serif.variable} antialiased`}
+        className={`${sans.variable} ${mono.variable} ${serif.variable} font-sans antialiased`}
       >
         <ThemeProvider
           attribute="class"
