@@ -33,8 +33,10 @@ function Projects() {
                       <TooltipTrigger>
                         <Link
                           href={link}
+                          target='_blank'
                           className={`inline-flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring hover:bg-accent hover:text-accent-foreground size-6 rounded-lg`}
                         >
+                          <div className="sr-only">{link}</div>
                           <ArrowUpRightIcon />
                         </Link>
                       </TooltipTrigger>
@@ -47,7 +49,10 @@ function Projects() {
                     </Tooltip.Root>
                     <Tooltip.Root>
                       <TooltipTrigger>
-                        <Button size={'icon'} variant={'ghost'} className='size-6 rounded-lg' ><LinkIcon /></Button>
+                        <Button size={'icon'} variant={'ghost'} className='size-6 rounded-lg' >
+                          <LinkIcon />
+                          <p className="sr-only">{link}</p>
+                        </Button>
                       </TooltipTrigger>
                       <Tooltip.Portal>
                         <TooltipContent sideOffset={5}>
@@ -61,6 +66,7 @@ function Projects() {
             </div>
             <iframe
               src={link}
+              name={link}
               className="w-full h-full rounded-b-xl border-none focus:outline-none"
             />
           </div>

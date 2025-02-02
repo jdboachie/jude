@@ -160,9 +160,9 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
           }}
           className={dockButtonStyles}
         >
-          <Link href={app.link} className='size-full rounded-full place-content-center grid'>
-            <span className='sr-only'>{app.title}</span>
-            <app.icon weight='duotone' className='text-muted-foreground' size={20}/>
+          <span className='sr-only'>{app.title}</span>
+          <Link href={app.link} className='size-full rounded-full place-content-stretch grid'>
+            <app.icon weight='duotone' className='text-muted-foreground size-full max-sm:p-2 sm:p-[22.5%]'/>
           </Link>
         </motion.button>
       </TooltipTrigger>
@@ -219,6 +219,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
           }}
           className='relative grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-secondary'
         >
+          <span className="sr-only">Toggle theme</span>
           <div
               className='size-full rounded-full grid place-items-center text-muted-foreground'
             onClick={() => {
@@ -230,16 +231,15 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
             }}
           >
             { theme === 'dark' ?
-              <div className="size-4 transition-all hidden dark:block bg-white rounded-full" />
+              <div className="hidden dark:block bg-white rounded-full text-muted-foreground size-5" />
               :
               <>
                 {theme === 'light' &&
-                  <div className="size-4 transition-all block dark:hidden bg-black rounded-full" />
+                  <div className="block dark:hidden bg-black rounded-full text-muted-foreground size-5" />
                 }
               </>
             }
-            {theme === 'system' && <CircleHalf weight='fill' className='size-5 text-muted-foreground'/>}
-            {/* <span className="sr-only">Toggle theme</span> */}
+            {theme === 'system' && <CircleHalf weight='fill' className='text-muted-foreground size-full max-sm:p-2 sm:p-[22.5%]'/>}
           </div>
         </motion.button>
       </TooltipTrigger>
