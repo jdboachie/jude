@@ -137,7 +137,7 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
     }
   })
 
-  const widthSync = useTransform(distance, [-120, 0, 120], [40, 80, 40])
+  const widthSync = useTransform(distance, [-110, 0, 110], [40, 70, 40])
   const width = useSpring(widthSync, {damping: 10, mass: 0.1, stiffness: 170})
 
   const y = useMotionValue(0);
@@ -150,10 +150,10 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
           style={{ width, y, zIndex: 50 }}
           onClick={() => {
             animate(y, [0, -40, 0], {
-              repeat: 0,
+              repeat: 2,
               ease: [
                 [0, 0, 0.2, 1],
-                [0.8, 0.5, 0, 1]
+                [0.8, 0, 1, 1]
               ],
               duration: 0.6
             })
@@ -189,7 +189,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
     }
   })
 
-  const widthSync = useTransform(distance, [-115, 0, 115], [40, 60, 40])
+  const widthSync = useTransform(distance, [-110, 0, 110], [40, 70, 40])
   const width = useSpring(widthSync, {damping: 10, mass: 0.1, stiffness: 170})
 
   const y = useMotionValue(0);
@@ -204,10 +204,10 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
           style={{ width, y }}
           onClick={() => {
             animate(y, [0, -40, 0], {
-              repeat: 0,
+              repeat: 2,
               ease: [
                 [0, 0, 0.2, 1],
-                [0.8, 0.5, 0, 1]
+                [0.8, 0, 1, 1]
               ],
               duration: 0.6
             })

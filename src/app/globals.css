@@ -60,11 +60,10 @@
 
 @layer base {
   * {
-    @apply border-border text-base leading-relaxed max-sm:tracking-tight;
+    @apply border-border text-base leading-relaxed;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* letter-spacing: -0.35px; */
   }
 
   *::selection {
@@ -78,7 +77,7 @@
   }
 
   a {
-    @apply underline decoration-[1px] underline-offset-4 decoration-muted-foreground;
+    @apply underline decoration-[1px] underline-offset-4 decoration-muted-foreground/50;
   }
 
   kbd {
@@ -86,7 +85,7 @@
   }
 
   html, body {
-    @apply bg-primary-foreground text-primary pb-10;
+    @apply bg-background text-foreground pb-10;
   }
 
   body::before {
@@ -100,10 +99,10 @@
     width: 100dvw;
     background: linear-gradient(
       to bottom,
-      hsl(0 0 98%),
+      white,
       transparent
     );
-    mask-image: linear-gradient(to bottom, hsl(0 0 98%) 25%, transparent 100%);
+    mask-image: linear-gradient(to bottom, white 25%, transparent 100%);
     -moz-user-select: none;
     user-select: none;
     pointer-events: none;
@@ -121,10 +120,10 @@
     width: 100dvw;
     background: linear-gradient(
       to top,
-      hsl(0 0 98%),
+      white,
       transparent
     );
-    mask-image: linear-gradient(to top, hsl(0 0 98%) 25%, transparent 100%);
+    mask-image: linear-gradient(to top, white 25%, transparent 100%);
     -moz-user-select: none;
     user-select: none;
     pointer-events: none;
@@ -140,7 +139,7 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply max-w-screen-2xl w-full m-auto px-6 md:px-16 py-24
+    @apply max-w-screen-2xl w-full m-auto px-6 md:px-16 pb-24 pt-8
   }
 
   main > * {
@@ -158,14 +157,6 @@
                   0px 1px 1px 0px transparent inset;
     }
 
-    .system-gradient {
-      background: linear-gradient(
-        to top,
-        black 50%,
-        white
-      )
-    }
-
     *::selection {
       @apply bg-sky-500;
     }
@@ -181,10 +172,10 @@
       width: 100dvw;
       background: linear-gradient(
         to bottom,
-        hsl(0 0 9%),
+        hsl(0 0 3.9%),
         transparent
       );
-      mask-image: linear-gradient(to bottom, hsl(0 0 9%) 25%, transparent 100%);
+      mask-image: linear-gradient(to bottom, hsl(0 0 3.9%) 25%, transparent 100%);
       -moz-user-select: none;
       user-select: none;
       pointer-events: none;
