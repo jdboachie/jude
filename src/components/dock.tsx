@@ -101,7 +101,7 @@ function Dock() {
         <Separator orientation='vertical'/>
         <ThemeToggleButton mouseX={mouseX} />
       </div>
-      <div className="hidden max-sm:flex rounded-full bg-background dark:bg-primary-foreground shadow-2xl items-end mb-8 border z-[10] gap-3 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible">
+      <div className="hidden max-sm:flex rounded-full bg-background dark:bg-primary-foreground shadow-2xl items-end mb-8 border z-[10] gap-2 sm:gap-3 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible">
         {navlinks.map((app, index) => (
           <DockIcon
             app={app}
