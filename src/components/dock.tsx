@@ -101,7 +101,7 @@ function Dock() {
         <Separator orientation='vertical'/>
         <ThemeToggleButton mouseX={mouseX} />
       </div>
-      <div className="hidden max-sm:flex rounded-full bg-primary-foreground shadow-2xl items-end mb-8 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible">
+      <div className="hidden max-sm:flex rounded-full bg-background dark:bg-primary-foreground shadow-2xl items-end mb-8 border z-[10] gap-3 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible">
         {navlinks.map((app, index) => (
           <DockIcon
             app={app}
@@ -137,7 +137,7 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
     }
   })
 
-  const widthSync = useTransform(distance, [-115, 0, 115], [40, 70, 40])
+  const widthSync = useTransform(distance, [-120, 0, 120], [40, 80, 40])
   const width = useSpring(widthSync, {damping: 10, mass: 0.1, stiffness: 170})
 
   const y = useMotionValue(0);

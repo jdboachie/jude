@@ -67,6 +67,7 @@ function Projects() {
             <iframe
               src={link}
               name={link}
+              title={link}
               className="w-full h-full rounded-b-xl border-none focus:outline-none"
             />
           </div>

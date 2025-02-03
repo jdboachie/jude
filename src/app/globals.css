@@ -85,8 +85,8 @@
     @apply border bg-muted text-muted-foreground text-xs font-mono px-1 rounded-sm shadow-sm;
   }
 
-  body {
-    @apply dark:bg-primary-foreground text-primary pb-20;
+  html, body {
+    @apply bg-primary-foreground text-primary pb-10;
   }
 
   body::before {
@@ -100,14 +100,14 @@
     width: 100dvw;
     background: linear-gradient(
       to bottom,
-      white,
+      hsl(0 0 98%),
       transparent
     );
-    mask-image: linear-gradient(to bottom, white 25%, transparent 100%);
+    mask-image: linear-gradient(to bottom, hsl(0 0 98%) 25%, transparent 100%);
     -moz-user-select: none;
     user-select: none;
     pointer-events: none;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
   }
 
   body::after {
@@ -121,14 +121,14 @@
     width: 100dvw;
     background: linear-gradient(
       to top,
-      white,
+      hsl(0 0 98%),
       transparent
     );
-    mask-image: linear-gradient(to top, white 25%, transparent 100%);
+    mask-image: linear-gradient(to top, hsl(0 0 98%) 25%, transparent 100%);
     -moz-user-select: none;
     user-select: none;
     pointer-events: none;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
   }
 
   .dockbutton {
