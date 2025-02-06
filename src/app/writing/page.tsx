@@ -1,21 +1,28 @@
-import { ArrowUpLeftIcon } from '@/app/icons/arrow-up-left'
-import Link from 'next/link'
-import styles from './layout.module.css'
-import { BlogPosts } from '@/components/posts'
+import Link from 'next/link';
+import {
+  ArrowBendUpLeft as ArrowBendUpLeftIcon
+} from '@phosphor-icons/react/dist/ssr';
 
-export const metadata = {
-  title: 'Blog',
-  description: 'Read my blog - its why I wrote it',
-}
-
-export default function Page() {
+function Writing() {
   return (
-    <>
-      <aside className={styles.aside}><Link href={'/'}><ArrowUpLeftIcon />Home</Link></aside>
-      <main>
-        <h1>Writing</h1>
-        <BlogPosts />
-      </main>
-    </>
+    <main>
+      <section className='sm:col-span-3 flex flex-col xl:grid sm:grid-cols-[1fr_65ch_1fr]'>
+        <aside className='max-xl:pb-8 grid items-start'>
+          <Link
+            href={'/'}
+            className='flex items-center w-fit gap-2 text-muted-foreground hover:text-primary no-underline hover:no-underline'
+          >
+            <ArrowBendUpLeftIcon />
+            <span className='text-sm'>Index</span>
+          </Link>
+        </aside>
+        <div className='sm:col-start-2 mb-8'>
+          <p className="sm:col-start-2">Writing</p>
+          <p className="text-muted-foreground text-sm">My infrequent thoughts</p>
+        </div>
+      </section>
+    </main>
   )
 }
+
+export default Writing

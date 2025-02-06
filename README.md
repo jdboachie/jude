@@ -1,7 +1,4 @@
-# TODO
+# Ideas
 
-- [ ] Fix Accessibility issues
-- [ ] Dark mode?
-
-I'M NOT HAPPY WITH MY PORTFOLIO SITE
-REDESIGNING AFTER A BIT
+- [ ] Prioritizer. list of tasks and deadlines with adjustable levels of importance and urgency. Creates a proper list of things to do for you.
+- [ ] ...

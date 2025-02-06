@@ -1,27 +1,33 @@
 import "./globals.css";
-import type { Metadata, Viewport } from "next";
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from "../components/footer";
-import { ThemeProvider } from "../components/theme-provider"
-import { Inter } from 'next/font/google'
+import { TooltipProvider } from "@radix-ui/react-tooltip";
+import Dock from '@/components/dock';
+import type { Metadata } from "next";
+import LocalFont from "next/font/local"
+import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider"
+import Toppie from '@/components/toppie';
+
+const sans = LocalFont({
+  variable: "--font-sans",
+  src: '../font/AlteHaasGroteskRegular.ttf'
+})
+
+const serif = Crimson_Pro({
+  weight: ['400', '700'],
+  variable: "--font-serif",
+  subsets: ['latin'],
+  style: ['normal', 'italic']
+});
+
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Jude Boachie",
-  description: "Crafting systems and code for people",
+  description: "Building systems and code for people",
 };
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
-}
-
-const sans = Inter({
-  weight: ['400', '600'],
-  subsets: ['latin']
-})
 
 export default function RootLayout({
   children,
@@ -30,18 +36,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={sans.className}>
+      {/* <head>
+        <script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
+      </head> */}
+      <body
+        className={`${sans.variable} ${mono.variable} ${serif.variable} font-sans antialiased`}
+      >
         <ThemeProvider
-          enableSystem
           attribute="class"
           defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
-          <Footer />
-          {children}
+          <TooltipProvider delayDuration={150}>
+            <Toppie />
+            {children}
+            <Dock />
+          </TooltipProvider>
         </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );
