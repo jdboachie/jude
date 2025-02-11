@@ -18,8 +18,11 @@ function Writing() {
         </aside>
         <div className='sm:col-start-2 mb-8'>
           <p className="sm:col-start-2">Writing</p>
-          <p className="text-muted-foreground text-sm">My infrequent thoughts</p>
+          <p className="text-muted-foreground text-sm">Infrequent thoughts on software development</p>
         </div>
+      </section>
+      <section>
+        <p className='text-xs text-muted-foreground text-center w-full'>Nothing to see here yet</p>
       </section>
     </main>
   )

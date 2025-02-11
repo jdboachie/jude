@@ -45,7 +45,7 @@ export default function Page() {
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-sm font-medium">Now</m.p>
           Engineer at <Link className={''} href={'https://sokoaerial.com'}>Soko Aerial</Link>.
           Computer Engineering <Link href={'https://knust.edu.gh'}>@KNUST</Link>.
-          Fullstack/product developer (Nextjs).<br />
+          Freelance fullstack web and product developer (Nextjs).<br />
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
         <m.div id='now' variants={staggerChildrenVariants} >
