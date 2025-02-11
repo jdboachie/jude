@@ -36,7 +36,7 @@ const projects: Project[] = [
   {
     title: 'Dashboard UI',
     link: 'https://guillo.vercel.app/dashboard',
-    description: 'Invoice application dashboard UI with Nivo charts',
+    description: 'Invoice app dashboard UI with Nivo charts',
     technologies: ['Nextjs', 'TailwindCSS', 'Nivo'],
     date: new Date('04/07/2024')
   },
@@ -71,7 +71,7 @@ function Projects() {
                 <p className='text-muted-foreground text-xs'>{project.description}</p>
               </div>
               <Separator className='shrink' />
-              <time>{project.date.getFullYear()}</time>
+              <time className='max-sm:text-xs'>{project.date.getFullYear()}</time>
             </div>
             <div className='border-t col-span-3 w-full min-w-0 bg-primary-foreground aspect-video max-sm:aspect-[9/16] h-fit rounded-xl'>
               <div className="relative px-3 py-2 rounded-t-xl border border-t-0 items-center justify-center flex">
@@ -80,7 +80,7 @@ function Projects() {
                     <span key={index} className='size-3.5 bg-input rounded-full'></span>
                   ))}
                 </div>
-                <div className='border flex gap-1.5 items-center justify-between p-1 rounded-md w-full sm:max-w-sm'>
+                <div className='border flex bg-background gap-1.5 items-center justify-between p-1 rounded-md w-full sm:max-w-sm'>
                   <p className='text-xs px-2 text-muted-foreground truncate'>{project.link}</p>
                     <div className='flex w-fit gap-1 text-muted-foreground'>
                       <Tooltip.Root>
@@ -122,7 +122,7 @@ function Projects() {
                 src={project.link}
                 name={project.title}
                 title={project.title}
-                className="w-full h-full rounded-b-xl border border-t-0 focus:outline-none"
+                className="w-full h-full rounded-b-xl bg-background border border-t-0 focus:outline-none"
               />
             </div>
           </div>

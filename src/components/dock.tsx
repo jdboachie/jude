@@ -63,7 +63,7 @@ export const socials: DockApp[] = [
   {
     title: 'X (Twitter)',
     icon: XLogo,
-    link: 'https://x.com/judeboachieonx'
+    link: 'https://x.com/judeboachie_'
   },
 ];
 

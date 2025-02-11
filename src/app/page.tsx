@@ -45,7 +45,7 @@ export default function Page() {
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-sm font-medium">Now</m.p>
           Engineer at <Link className={''} href={'https://sokoaerial.com'}>Soko Aerial</Link>.
           Computer Engineering <Link href={'https://knust.edu.gh'}>@KNUST</Link>.
-          Fullstack/product developer (Nextjs).<br />
+          Freelance fullstack web and product developer (Nextjs).<br />
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
         <m.div id='now' variants={staggerChildrenVariants} >
@@ -60,14 +60,21 @@ export default function Page() {
             <p className="text-muted-foreground text-sm font-medium">Work Experience</p>
             <div className='gap-12 flex flex-col'>
               <div className="flex max-sm:flex-col gap-1 sm:gap-6">
-                <time className='text-muted-foreground'>2023-Now</time>
+                <time className='text-muted-foreground w-[8ch]'>2023-Now</time>
                 <div className=''>
                   <Link href={'https://sokoaerial.com'} className='w-fit flex flex-wrap gap-1'>Software Engineer at Soko Aerial Robotics<ArrowUpRight /></Link>
                   <p className='text-muted-foreground'>Remote, Ghana</p>
                 </div>
               </div>
               <div className="flex max-sm:flex-col gap-1 sm:gap-6">
-                <time className='text-muted-foreground'>2024-2024</time>
+                <time className='text-muted-foreground w-[8ch]'>Dec 2024</time>
+                <div className=''>
+                  <Link href={'https://gh.linkedin.com/in/caleb-eli-248a481bb'} className='w-fit flex flex-wrap gap-1'>Web Developer with Eli&apos;s Konsepts <ArrowUpRight /></Link>
+                  <p className='text-muted-foreground'>Helped build Quattro Formaggi&apos;s new website and admin dashboard</p>
+                </div>
+              </div>
+              <div className="flex max-sm:flex-col gap-1 sm:gap-6">
+                <time className='text-muted-foreground w-[8ch]'>Feb 2024</time>
                 <div className=''>
                   <Link href={'https://tevrozo.com'} className='w-fit flex flex-wrap gap-1'>Fullstack Web Developer at Tevrozo <ArrowUpRight /></Link>
                   <p className='text-muted-foreground'>Nextjs, TailwindCSS, TypeScript, Firebase</p>
@@ -79,7 +86,7 @@ export default function Page() {
             <p className="text-muted-foreground text-sm font-medium">Volunteering</p>
             <div className='gap-12 flex flex-col'>
               <div className="flex max-sm:flex-col gap-1 sm:gap-6">
-                <time className='text-muted-foreground'>2022-2023</time>
+                <time className='text-muted-foreground w-[8ch]'>2022-2023</time>
                 <div className=''>
                   <Link href={'https://nsbe.org'} className='w-fit flex flex-wrap gap-1'>PCI Chair at NSBE-KNUST<ArrowUpRight /></Link>
                   <p className='text-muted-foreground'>Kumasi, Ghana</p>

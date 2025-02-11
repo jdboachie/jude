@@ -9,7 +9,7 @@ import Toppie from '@/components/toppie';
 
 const sans = LocalFont({
   variable: "--font-sans",
-  src: '../font/AlteHaasGroteskRegular.ttf'
+  src: '../font/sohne-subset-0.woff2'
 })
 
 const serif = Crimson_Pro({
