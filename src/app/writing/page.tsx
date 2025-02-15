@@ -5,7 +5,7 @@ import {
 
 function Writing() {
   return (
-    <main>
+    <>
       <section className='sm:col-span-3 flex flex-col xl:grid sm:grid-cols-[1fr_65ch_1fr]'>
         <aside className='max-xl:pb-8 grid items-start'>
           <Link
@@ -23,8 +23,9 @@ function Writing() {
       </section>
       <section>
         <p className='text-xs text-muted-foreground text-center w-full'>Nothing to see here yet</p>
+        <Link href={'/writing/focus'}> &apos;cept this ofcourse</Link>
       </section>
-    </main>
+    </>
   )
 }
 

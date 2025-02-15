@@ -33,7 +33,7 @@ const Time = () => {
   }, []);
 
   return (
-    <time className='text-xs max-sm:text-[10px] font-mono font-light'>{currentTime || 'XX:XX:XX XX'}</time>
+    <time className='text-xs max-sm:text-[10px] font-mono tracking-tighter'>{currentTime || 'XX:XX:XX XX'}</time>
   )
 }
 
