@@ -16,7 +16,7 @@ const sans = LocalFont({
       weight: '800',
     },
     {
-      path: '../font/InterDisplay-Semibold.woff2',
+      path: '../font/InterDisplay-SemiBold.woff2',
       weight: '600',
     },
     {
