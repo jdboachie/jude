@@ -49,7 +49,7 @@ export default function Page() {
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
         <m.div id='now' variants={staggerChildrenVariants} >
-          Learning to copy quickly and innovate creatively, guiltlessly exploring passion and interests, appreciating hidden gems in people&apos;s work. Mindful that I can do all things <span className={'pretty-text'}>through Christ who strengthens me</span>.
+          Learning to <span className='line-through'>copy</span> be inspired by others, innovating creatively, guiltlessly exploring passion and interests, appreciating hidden gems in people&apos;s work. Mindful that I can do all things <span className={'pretty-text'}>through Christ who strengthens me</span>.
         </m.div>
         <m.div id='experience' className='mx-auto grid grid-cols-2 xl:my-14 max-xl:grid-flow-row gap-12' variants={staggerChildrenVariants} >
           <WorkExperience />

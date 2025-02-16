@@ -5,7 +5,7 @@ import * as React from 'react'
 
 const Toppie = () => {
   return (
-    <div className='z-[100] relative p-7 md:p-8 md:px-16 flex justify-between items-center text-muted-foreground'>
+    <div className='z-[100] relative p-7 md:p-8 md:px-16 mb-8 flex justify-between items-center text-muted-foreground'>
       <Time />
       <span className='text-xs'>Kumasi, Ghana</span>
     </div>

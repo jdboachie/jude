@@ -67,7 +67,7 @@
   }
 
   *::selection {
-    @apply bg-fuchsia-500 text-background;
+    @apply bg-yellow-400;
   }
 
   #experience {
