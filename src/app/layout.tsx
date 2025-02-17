@@ -6,10 +6,28 @@ import LocalFont from "next/font/local"
 import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import Toppie from '@/components/toppie';
+import Footer from "@/components/footer";
 
 const sans = LocalFont({
   variable: "--font-sans",
-  src: '../font/sohne-subset-0.woff2'
+  src: [
+    {
+      path: '../font/InterDisplay-Bold.woff2',
+      weight: '800',
+    },
+    {
+      path: '../font/InterDisplay-SemiBold.woff2',
+      weight: '600',
+    },
+    {
+      path: '../font/InterDisplay-Medium.woff2',
+      weight: '500',
+    },
+    {
+      path: '../font/InterDisplay-Regular.woff2',
+      weight: '400',
+    },
+  ]
 })
 
 const serif = Crimson_Pro({
@@ -52,6 +70,7 @@ export default function RootLayout({
             <Toppie />
             {children}
             <Dock />
+            <Footer />
           </TooltipProvider>
         </ThemeProvider>
       </body>
