@@ -28,8 +28,8 @@ const Header = (
   }
 ) => {
   return (
-    <header className='sm:col-span-3 flex flex-col w-full max-lg:max-w-[65ch] max-sm:min-w-0 max-lg:mx-auto lg:grid sm:grid-cols-[1fr_65ch_1fr]'>
-      <aside className='max-lg:pb-8 grid items-start'>
+    <header className='relative sm:col-span-3 flex flex-col w-full max-lg:max-w-[65ch] max-sm:min-w-0 max-lg:mx-auto lg:grid sm:grid-cols-[1fr_65ch_1fr]'>
+      <aside className='lg:fixed lg:top-[145px] z-0 p-1 pb-8 self-start grid items-start'>
         <Link
           href={backlink}
           className='flex items-center w-fit gap-2 text-muted-foreground hover:text-primary no-underline hover:no-underline'

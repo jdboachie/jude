@@ -2,12 +2,12 @@ import Link from 'next/link';
 import {
   ArrowUpRight as ArrowUpRightIcon,
   Link as LinkIcon,
-  ArrowBendUpLeft as ArrowBendUpLeftIcon
 } from '@phosphor-icons/react/dist/ssr';
+import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
 import * as Tooltip from '@radix-ui/react-tooltip';
-import { TooltipArrow, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Separator } from '@/components/ui/separator';
+import { TooltipArrow, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 
 interface Project {
@@ -45,22 +45,13 @@ const projects: Project[] = [
 function Projects() {
   return (
     <main>
-      <section className='sm:col-span-3 flex flex-col xl:grid sm:grid-cols-[1fr_65ch_1fr]'>
-        <aside className='max-xl:pb-8 grid items-start'>
-          <Link
-            href={'/'}
-            className='flex items-center w-fit gap-2 text-muted-foreground hover:text-primary no-underline hover:no-underline'
-          >
-            <ArrowBendUpLeftIcon />
-            <span className='text-sm'>Index</span>
-          </Link>
-        </aside>
-        <div className='sm:col-start-2 mb-8'>
-          <p className="sm:col-start-2">Projects</p>
-          <p className="text-muted-foreground text-sm">From my learnings and earnings</p>
-        </div>
-      </section>
-      <section className='grid mt-16 sm:col-span-3 gap-52'>
+      <Header
+        backlink='/'
+        backlinktext='Index'
+        title='Projects'
+        desc='From my learnings and earnings'
+      />
+      <section className='grid mt-12 sm:col-span-3 gap-52'>
         {[...projects]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
           .map((project, index) => (
@@ -73,7 +64,7 @@ function Projects() {
               <Separator className='shrink' />
               <time className='max-sm:text-xs'>{project.date.getFullYear()}</time>
             </div>
-            <div className='border-t col-span-3 w-full min-w-0 bg-primary-foreground aspect-video max-sm:aspect-[9/14] h-fit rounded-xl'>
+            <div className='z-10 border-t col-span-3 w-full min-w-0 bg-primary-foreground aspect-video max-sm:aspect-[9/14] h-fit rounded-xl'>
               <div className="relative px-3 py-2 rounded-t-xl border border-t-0 items-center justify-center flex">
                 <div className="grid grid-cols-3 gap-2 w-fit absolute max-sm:hidden left-0 px-5">
                   {[1, 2, 3].map((_, index) => (
