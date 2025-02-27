@@ -44,6 +44,7 @@ const Header = (
         {date && <p className="text-muted-foreground text-sm">{date}</p>}
         {children}
         {link &&
+        // fix this: it should display copy link instead
           <Href
             href={link}
             className={

@@ -29,10 +29,10 @@ function Writing() {
         title='Writing'
         desc='Infrequent thoughts on software development'
       />
-      <section className='grid mt-8 mb-40 divide-y hover:text-muted-foreground'>
+      <section className='grid sm:mt-8 mt-4 mb-36 divide-y hover:text-muted-foreground'>
       <div className='sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit py-4'>
         <div className="flex items-center gap-6">
-          <time className="text-muted-foreground sm:w-20 text-sm">date</time>
+          <time className="text-muted-foreground w-20 text-sm">date</time>
           <div className='flex items-center w-full gap-3'>
             <p className='text-muted-foreground text-sm'>title</p>
             {/* <p className="max-sm:hidden text-muted-foreground text-xs">description</p> */}
@@ -44,7 +44,7 @@ function Writing() {
           .map((post, index) => (
           <Link href={`/writing/${post.title.toLowerCase().replace(/\s+/g, '-')}`} key={index} className='hover:text-primary no-underline sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit py-4'>
             <div className="flex items-center gap-6">
-              <time className="text-muted-foreground sm:w-20 text-xs">{post.date.toLocaleDateString()}</time>
+              <time className="text-muted-foreground w-20 text-xs">{post.date.toLocaleDateString()}</time>
               <div className='flex items-center w-full gap-3'>
                 <p className='font-medium font-serif text-lg'>{post.title}</p>
                 {post.description && <p className="max-sm:hidden text-sm">{post.description}</p>}

@@ -51,7 +51,7 @@ function Projects() {
         title='Projects'
         desc='From my learnings and earnings'
       />
-      <section className='grid mt-12 sm:col-span-3 gap-52'>
+      <section className='grid sm:mt-12 mt-6 sm:col-span-3 gap-52'>
         {[...projects]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
           .map((project, index) => (
