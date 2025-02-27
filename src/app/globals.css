@@ -67,7 +67,7 @@
   }
 
   *::selection {
-    @apply bg-yellow-400;
+    @apply bg-yellow-500 text-background;
   }
 
   #experience {
@@ -154,10 +154,6 @@
                   0px 1px 1px 0px transparent inset;
     }
 
-    *::selection {
-      @apply bg-sky-500;
-    }
-
     body::before {
       position: fixed;
       content: '';
@@ -220,4 +216,15 @@
     }
   }
 
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

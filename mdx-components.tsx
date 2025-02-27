@@ -28,7 +28,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         style={{ width: '100%', height: 'auto' }}
         width={5000}
         height={5000}
-        className='border rounded-md sm:col-start-1 sm:col-span-2'
+        className='border z-10 rounded-md sm:col-start-1 sm:col-span-2'
         {...(props as ImageProps)}
       />
     ),

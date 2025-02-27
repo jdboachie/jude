@@ -7,6 +7,7 @@ import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import Toppie from '@/components/toppie';
 import Footer from "@/components/footer";
+import Dev from "@/components/dev";
 
 const sans = LocalFont({
   variable: "--font-sans",
@@ -68,6 +69,7 @@ export default function RootLayout({
         >
           <TooltipProvider delayDuration={150}>
             <Toppie />
+            <Dev />
             {children}
             <Dock />
             <Footer />
