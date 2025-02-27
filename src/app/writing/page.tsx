@@ -11,12 +11,12 @@ const posts: Post[] = [
   {
     title: 'Focus',
     description: 'Becoming a master of one',
-    date: new Date('04/07/2023')
+    date: new Date('3/25/2025')
   },
   {
     title: 'Inspired by',
     description: 'Why you should copy people',
-    date: new Date('04/07/2023')
+    date: new Date('3/25/2025')
   },
 ]
 
@@ -30,15 +30,24 @@ function Writing() {
         desc='Infrequent thoughts on software development'
       />
       <section className='grid mt-8 mb-40 divide-y hover:text-muted-foreground'>
+      <div className='sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit py-4'>
+        <div className="flex items-center gap-6">
+          <time className="text-muted-foreground sm:w-20 text-sm">date</time>
+          <div className='flex items-center w-full gap-3'>
+            <p className='text-muted-foreground text-sm'>title</p>
+            {/* <p className="max-sm:hidden text-muted-foreground text-xs">description</p> */}
+          </div>
+        </div>
+      </div>
       {[...posts]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
           .map((post, index) => (
           <Link href={`/writing/${post.title.toLowerCase().replace(/\s+/g, '-')}`} key={index} className='hover:text-primary no-underline sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit py-4'>
             <div className="flex items-center gap-6">
-              <time className="text-muted-foreground sm:w-[10ch] text-sm">{post.date.toLocaleDateString()}</time>
-              <div className='flex items-center gap-3'>
-                <p className='font-medium '>{post.title}</p>
-                {post.description && <p className="max-sm:hidden text-muted-foreground text-sm">{post.description}</p>}
+              <time className="text-muted-foreground sm:w-20 text-xs">{post.date.toLocaleDateString()}</time>
+              <div className='flex items-center w-full gap-3'>
+                <p className='font-medium font-serif text-lg'>{post.title}</p>
+                {post.description && <p className="max-sm:hidden text-sm">{post.description}</p>}
               </div>
             </div>
           </Link>
