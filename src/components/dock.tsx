@@ -20,7 +20,7 @@ import {
   EnvelopeSimple,
   LightbulbFilament,
   XLogo,
-  WarningCircle,
+  Warning,
 } from "@phosphor-icons/react";
 import { TooltipArrow, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { Separator } from './ui/separator';
@@ -260,8 +260,8 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
 
 const DevIndicator = () => {
   return (
-    <div className="absolute z-[100] bottom-2 flex gap-1 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-destructive bg-destructive/90 p-1 px-1.5 truncate">
-      <WarningCircle weight='light'/> Site under construction
+    <div className="absolute z-10 -top-5 sm:-top-3 flex gap-1 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-red-700 bg-red-500 dark:border-red-400 dark:bg-red-600 p-1.5 px-2 truncate">
+      <Warning weight='light'/> Site under construction
     </div>
   )
 }
