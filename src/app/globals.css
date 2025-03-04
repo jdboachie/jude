@@ -60,7 +60,7 @@
 
 @layer base {
   * {
-    @apply border-border text-base leading-relaxed;
+    @apply border-border leading-relaxed text-base font-normal;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -85,7 +85,7 @@
   }
 
   body {
-    @apply bg-background dark:bg-primary-foreground text-foreground pb-10;
+    @apply bg-primary-foreground dark:bg-primary-foreground text-foreground pb-10;
   }
 
   body::before {

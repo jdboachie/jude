@@ -20,6 +20,7 @@ import {
   EnvelopeSimple,
   LightbulbFilament,
   XLogo,
+  WarningCircle,
 } from "@phosphor-icons/react";
 import { TooltipArrow, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { Separator } from './ui/separator';
@@ -76,6 +77,7 @@ function Dock() {
 
   return (
     <div className='fixed flex justify-center items-center bottom-0 h-24 w-full z-50'>
+      <DevIndicator />
       <div
         onMouseMove={(e) => {
           mouseX.set(e.pageX)
@@ -253,6 +255,14 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
         </TooltipContent>
       </Tooltip.Portal>
     </Tooltip.Root>
+  )
+}
+
+const DevIndicator = () => {
+  return (
+    <div className="absolute z-[100] bottom-2 flex gap-1 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-destructive bg-destructive/90 p-1 px-1.5 truncate">
+      <WarningCircle weight='light'/> Site under construction
+    </div>
   )
 }
 

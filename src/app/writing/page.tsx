@@ -37,7 +37,7 @@ function Writing() {
             <div className="flex items-center gap-6">
               <div className='flex items-center w-full gap-2'>
                 <p className='font-medium'>{post.title}</p>
-                {post.description && <p className="max-sm:hidden text-muted-foreground">{post.description}</p>}
+                {post.description && <p className="max-sm:hidden text-muted-foreground font-normal">{post.description}</p>}
               </div>
               <time className="text-muted-foreground text-right sm:w-40 w-20 text-xs font-mono">{post.date.toLocaleDateString()}</time>
             </div>
