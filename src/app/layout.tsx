@@ -1,31 +1,24 @@
 import "./globals.css";
-import { TooltipProvider } from "@radix-ui/react-tooltip";
-import Dock from '@/components/dock';
 import type { Metadata } from "next";
-import LocalFont from "next/font/local"
+import LocalFont from "next/font/local";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider"
+import Dock from '@/components/dock';
 import Toppie from '@/components/toppie';
 import Footer from "@/components/footer";
-import Dev from "@/components/dev";
 
 const sans = LocalFont({
   variable: "--font-sans",
   src: [
     {
-      path: '../font/InterDisplay-Bold.woff2',
-      weight: '800',
-    },
-    {
-      path: '../font/InterDisplay-SemiBold.woff2',
-      weight: '600',
-    },
-    {
-      path: '../font/InterDisplay-Medium.woff2',
+      path: '../font/X-Medium.woff2',
       weight: '500',
     },
     {
-      path: '../font/InterDisplay-Regular.woff2',
+      path: '../font/X-Regular.woff2',
       weight: '400',
     },
   ]
@@ -67,10 +60,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TooltipProvider delayDuration={150}>
+          <TooltipProvider delayDuration={200}>
             <Toppie />
-            <Dev />
             {children}
+            <Analytics />
+            <SpeedInsights />
             <Dock />
             <Footer />
           </TooltipProvider>

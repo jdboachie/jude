@@ -56,7 +56,7 @@ const ExperienceItem = ({ experience }: { experience: Experience }) => (
 const WorkExperience = () => {
   return (
     <div className="flex flex-col gap-3">
-      <p id='work' className="text-muted-foreground text-xs font-semibold">Work Experience</p>
+      <p id='work' className="text-muted-foreground text-xs font-medium">Work Experience</p>
       <div className="gap-12 flex flex-col">
         {experiences.map((exp, index) => (
           <ExperienceItem key={index} experience={exp} />
@@ -69,7 +69,7 @@ const WorkExperience = () => {
 const Volunteering = () => {
   return (
     <div className="flex flex-col gap-3">
-      <p id='volunteering' className="text-muted-foreground text-xs font-semibold">Volunteering</p>
+      <p id='volunteering' className="text-muted-foreground text-xs font-medium">Volunteering</p>
       <div className="gap-12 flex flex-col">
         {volunteering.map((vol, index) => (
           <ExperienceItem key={index} experience={vol} />

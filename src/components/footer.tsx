@@ -9,7 +9,7 @@ export default async function Footer() {
   try {
     const res = await fetch(API_URL, {
       headers: { 'Accept': 'application/vnd.github.v3+json' },
-      next: { revalidate: 3600 }, // Cache for an hour
+      next: { revalidate: 900 }, // Cache for an hour
     });
 
     if (!res.ok) throw new Error('Failed to fetch commit data');
