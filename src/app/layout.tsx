@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import LocalFont from "next/font/local";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
 import Dock from '@/components/dock';
 import Toppie from '@/components/toppie';
@@ -61,6 +63,8 @@ export default function RootLayout({
           <TooltipProvider delayDuration={200}>
             <Toppie />
             {children}
+            <Analytics />
+            <SpeedInsights />
             <Dock />
             <Footer />
           </TooltipProvider>

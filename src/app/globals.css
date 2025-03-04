@@ -60,7 +60,7 @@
 
 @layer base {
   * {
-    @apply border-border leading-relaxed text-base font-normal outline-ring/50;
+    @apply border-border text-base font-normal outline-ring/50;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -137,7 +137,7 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply max-w-screen-2xl w-full m-auto px-6 md:px-16 pb-24 pt-8
+    @apply max-w-screen-2xl w-full m-auto px-5 md:px-16 pb-24 pt-8
   }
 
   main > * {
@@ -145,7 +145,7 @@
   }
 
   .pretty-text {
-    @apply font-serif italic text-lg leading-4;
+    @apply font-serif italic text-lg leading-normal;
   }
 
   .dark {
@@ -201,6 +201,7 @@
       grid-template-columns: 1fr;
     }
   }
+
   @media not all and (min-width: 768px) {
     main {
       grid-template-columns: 1fr;

@@ -39,7 +39,7 @@ const Header = (
       </aside>
       <div className='relative sm:col-start-2 mb-8'>
         {title && <p className="sm:col-start-2 font-medium">{title}</p>}
-        {desc && <p className="text-muted-foreground">{desc}</p>}
+        {desc && <p className="text-muted-foreground text-sm">{desc}</p>}
         {date && <p className="text-muted-foreground text-sm">{date}</p>}
         {children}
         {link &&

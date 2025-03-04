@@ -21,6 +21,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     p: ({ children }) => (
       <p className='leading-7 [&:not(:first-child)]:mt-6'>{children}</p>
     ),
+    em: ({children}) => (
+      <em className="pretty-text">{children}</em>
+    ),
     img: (props) => (
       // eslint-disable-next-line jsx-a11y/alt-text
       <Image
