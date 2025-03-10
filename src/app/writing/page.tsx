@@ -36,8 +36,8 @@ function Writing() {
           <Link href={`/writing/${post.title.toLowerCase().replace(/\s+/g, '-')}`} key={index} className='no-underline sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit py-4'>
             <div className="flex items-center gap-6">
               <div className='flex items-center w-full gap-2'>
-                <p className='text-sm font-medium'>{post.title}</p>
-                {post.description && <p className="text-sm max-sm:hidden text-muted-foreground">{post.description}</p>}
+                <p className='font-medium text-sm'>{post.title}</p>
+                {post.description && <p className="max-sm:hidden text-muted-foreground font-normal text-sm">{post.description}</p>}
               </div>
               <time className="text-muted-foreground text-right sm:w-40 w-20 text-xs font-mono">{post.date.toLocaleDateString()}</time>
             </div>

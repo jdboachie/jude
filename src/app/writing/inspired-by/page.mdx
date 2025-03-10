@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Header from '@/components/header';
 
 <Header
@@ -9,3 +10,11 @@ import Header from '@/components/header';
 />
 
 a little post on why you should copy people
+
+<Image
+  src={'/spacejoy.jpg'}
+  alt='interior design picture'
+  width={5000}
+  height={5000}
+  className='mt-6 sm:col-span-3 md:max-w-[960px] mx-auto border border-neutral-400 dark:border-neutral-600 rounded-xl z-10'
+/>
