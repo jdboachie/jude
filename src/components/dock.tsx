@@ -260,7 +260,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
 
 const DevIndicator = () => {
   return (
-    <div className="fixed z-[100] outline-[0.5px] outline outline-primary bottom-2 left-2 flex gap-1 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-red-700 bg-red-500 dark:border-red-400 dark:bg-red-600 p-1.5 px-2 truncate">
+    <div className="fixed z-[100] shadow-inner shadow-white/25 outline outline-primary outline-[0.1px] bottom-2 left-13 flex gap-1 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-red-700 bg-red-500 dark:border-red-400 dark:bg-red-600 p-1.5 px-2 truncate">
       <Warning weight='light'/> Site under construction
     </div>
   )
