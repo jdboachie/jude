@@ -19,7 +19,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h3 className='scroll-m-20 text-base font-medium [&:not(:first-child)]:mt-8'>{children}</h3>
     ),
     p: ({ children }) => (
-      <p className='leading-7 [&:not(:first-child)]:mt-6'>{children}</p>
+      <p className='leading-[26px] [&:not(:first-child)]:mt-6'>{children}</p>
     ),
     em: ({children}) => (
       <em className="pretty-text">{children}</em>

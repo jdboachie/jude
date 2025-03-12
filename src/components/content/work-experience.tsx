@@ -12,7 +12,7 @@ interface Experience {
 const experiences: Experience[] = [
   {
     date: '2023-Now',
-    company: 'Software Engineer at Soko Aerial Robotics',
+    company: 'Software Engineer at Soko Aerial',
     link: 'https://sokoaerial.com',
     location: 'Remote, Ghana',
   },
