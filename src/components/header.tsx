@@ -28,7 +28,7 @@ const Header = (
 ) => {
   return (
     <header className='relative sm:col-span-3 flex flex-col w-full max-lg:max-w-[65ch] max-sm:min-w-0 max-lg:mx-auto lg:grid sm:grid-cols-[1fr_65ch_1fr]'>
-      <aside className='lg:fixed lg:top-[145px] w-full z-0 pt-0 pb-8 self-start grid items-start'>
+      <aside className='xl:fixed xl:top-[145px] w-full z-0 pt-0 pb-8 self-start grid items-start'>
         <Link
           href={backlink}
           className='flex items-center w-fit gap-2 hover:text-primary no-underline hover:no-underline'
@@ -43,9 +43,8 @@ const Header = (
         {date && <p className="text-muted-foreground text-sm">{date}</p>}
         {children}
         {link &&
-        // fix this: it should display copy link instead
+        // TODO: should display functinal copy button
           <div
-            // href={link}
             className={
               cn(buttonVariants(
                 {size: 'icon', variant: 'secondary'}),

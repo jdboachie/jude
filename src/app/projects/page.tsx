@@ -64,7 +64,7 @@ function Projects() {
               <Separator className='shrink' />
               <time className='max-sm:text-xs'>{project.date.getFullYear()}</time>
             </div>
-            <div className='z-10 border-t col-span-3 w-full min-w-0 bg-primary-foreground aspect-video max-sm:aspect-[9/14] h-fit rounded-xl'>
+            <div className='z-10 border-t col-span-3 w-full min-w-0 md:max-w-[960px] mx-auto bg-primary-foreground aspect-video max-sm:aspect-[9/14] h-fit rounded-xl'>
               <div className="relative px-3 py-2 rounded-t-xl border border-t-0 items-center justify-center flex">
                 <div className="grid grid-cols-3 gap-2 w-fit absolute max-sm:hidden left-0 px-5">
                   {[1, 2, 3].map((_, index) => (

@@ -1,4 +1,3 @@
-import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import Href from '../href';
 
 interface Experience {
@@ -45,7 +44,7 @@ const ExperienceItem = ({ experience }: { experience: Experience }) => (
     <time className="text-muted-foreground sm:w-[10ch]">{experience.date}</time>
     <div>
       <Href href={experience.link} className="w-fit flex flex-wrap gap-1">
-        <>{experience.company} <ArrowUpRight weight='light' /></>
+        <>{experience.company}</>
       </Href>
       {experience.location && <p className="text-muted-foreground">{experience.location}</p>}
       {experience.description && <p className="text-muted-foreground">{experience.description}</p>}

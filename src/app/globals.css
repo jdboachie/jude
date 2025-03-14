@@ -138,7 +138,7 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply max-w-screen-2xl w-full m-auto px-6 md:px-16 pb-24 pt-8
+    @apply max-w-7xl w-full m-auto px-6 md:px-16 pb-24 pt-8
   }
 
   main > * {

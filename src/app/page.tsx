@@ -36,9 +36,9 @@ export default function Page() {
       >
         <m.p
           variants={staggerChildrenVariants}
-          className='text-right'
+          className='text-left'
         >
-          <span className={`text-3xl sm:text-5xl ${rudiment.className} tracking-normal`}>Jude Boachie</span>
+          <span className={`text-6xl ${rudiment.className} tracking-normal`}>Jude Boachie</span>
         </m.p>
         <m.div id='now' variants={staggerChildrenVariants} >
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-medium">Now</m.p>

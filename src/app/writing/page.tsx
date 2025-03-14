@@ -39,7 +39,7 @@ function Writing() {
                 <p className='font-medium text-sm'>{post.title}</p>
                 {post.description && <p className="max-sm:hidden text-muted-foreground font-normal text-sm">{post.description}</p>}
               </div>
-              <time className="text-muted-foreground text-right sm:w-40 w-20 text-xs font-mono">{post.date.toLocaleDateString()}</time>
+              <time className="text-muted-foreground text-right sm:w-40 w-32 text-sm">{post.date.toLocaleString('en-US', { month: 'long' })} {post.date.getUTCFullYear()}</time>
             </div>
           </Link>
         ))}
