@@ -1,15 +1,17 @@
-{/* focus: becoming a master of one */}
+import Image from 'next/image';
 import Header from '@/components/header';
 import NoAIUsed from '@/components/no-ai-used';
-import Image from 'next/image';
+import BackLink from '@/components/backlink';
+import IMNotDone from '@/components/im-not-done';
 
+<BackLink link='/writing' text='Writing' />
 <Header
-  backlink='/writing'
-  backlinktext='Writing'
   title='Focus'
   date='March 2025'
   link='https://jude.vercel.app/writing/focus'
 />
+
+<IMNotDone />
 
 I have realized that over the past two to three years, I've been hopping from one programming language to another, one technology to another. More recently, I've been doing Python development and web development at the same time. This year, I plan to focus 😐. I chose product development, [as Lee put it](https://leerob.com/n/product-engineers). Without focus, progress is spread across many different areas of interest.
 
@@ -18,7 +20,7 @@ I have realized that over the past two to three years, I've been hopping from on
   alt='distracted boyfriend meme'
   width={5000}
   height={5000}
-  className='mt-6 sm:col-span-3 max-lg:w-full max-w-[960px] mx-auto border border-neutral-300 dark:border-neutral-600 bg-neutral-100 dark:bg-neutral-800 rounded-xl z-10'
+  className='mt-6 sm:col-span-3 max-lg:w-full mx-auto border border-neutral-300 dark:border-neutral-600 bg-neutral-100 dark:bg-neutral-800 rounded-xl z-10'
 />
 
 ### Becoming a Master of One

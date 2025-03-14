@@ -1,14 +1,17 @@
 import Image from 'next/image';
 import Quote from '@/components/quote';
 import Header from '@/components/header';
+import BackLink from '@/components/backlink';
+import IMNotDone from '@/components/im-not-done';
 
+<BackLink link='/writing' text='Writing' />
 <Header
-  backlink='/writing'
-  backlinktext='Writing'
   title='Inspired by'
   date='April 2025'
   link='https://jude.vercel.app/writing/inspired-by'
 />
+
+<IMNotDone />
 
 Creativity is communicated in our work. Our design, engineering and architectural choices are a representation of who we are and what we value.
 Work we are satisfied with enough to present reveals the tings we deem beautiful and worth sharing.
@@ -22,3 +25,12 @@ Work we are satisfied with enough to present reveals the tings we deem beautiful
 It makes for good inspiration and taste development when you learn from others. I like to say _copy quickly and creatively_. Ofcourse, it is not a good idea
 to imitate to the point of losing your originality and identity, but fundamentally, we stand on the shoulders of great people. We build on what others have done.
 
+Or you could be like Jaguar and _copy nothing_.
+
+<Image
+  src={'/future_jag.webp'}
+  alt='A picture of the new jaguars'
+  width={5000}
+  height={3000}
+  className='mt-6 sm:col-span-3 max-lg:w-full mx-auto border border-neutral-300 dark:border-neutral-600 bg-neutral-100 dark:bg-neutral-800 rounded-xl z-10'
+/>

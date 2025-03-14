@@ -178,6 +178,8 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
   )
 }
 
+// use a useRef to detect when it has been mounted to avoid
+// that pesky react hydration error
 function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
 
   const ref = React.useRef<HTMLButtonElement>(null)
@@ -223,7 +225,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
         >
           <span className="sr-only">Toggle theme</span>
           <div
-              className='size-full rounded-full grid place-items-center text-muted-foreground'
+            className='size-full rounded-full grid place-items-center text-muted-foreground max-sm:p-2 sm:p-[22.5%]'
             onClick={() => {
               setTheme(resolvedTheme === 'dark' ? 'light': 'dark')}
             }
@@ -233,15 +235,15 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
             }}
           >
             { theme === 'dark' ?
-              <div className="hidden dark:block bg-white rounded-full text-muted-foreground size-5" />
+              <div className="hidden dark:block bg-white rounded-full text-muted-foreground size-full" />
               :
               <>
                 {theme === 'light' &&
-                  <div className="block dark:hidden bg-black rounded-full text-muted-foreground size-5" />
+                  <div className="block dark:hidden bg-black rounded-full text-muted-foreground size-full" />
                 }
               </>
             }
-            {theme === 'system' && <CircleHalf weight='fill' className='text-muted-foreground size-full max-sm:p-2 sm:p-[22.5%]'/>}
+            {theme === 'system' && <CircleHalf weight='fill' className='text-muted-foreground size-full'/>}
           </div>
         </motion.button>
       </TooltipTrigger>
@@ -260,8 +262,8 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
 
 const DevIndicator = () => {
   return (
-    <div className="fixed z-[100] shadow-inner shadow-white/25 outline outline-red-600 outline-[0.1px] top-3 left-13 flex gap-1 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-red-700 bg-red-500 dark:border-red-400 dark:bg-red-600 p-1.5 px-2 truncate">
-      <Warning /> Site under construction
+    <div className="fixed z-[200] shadow-inner shadow-white/20 outline outline-red-600 outline-[0.1px] top-4 left-13 flex gap-1 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-red-700 bg-red-500 dark:border-red-400 dark:bg-red-600 p-1.5 px-2 truncate">
+      <Warning /> Under construction
     </div>
   )
 }
