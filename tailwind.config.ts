@@ -29,6 +29,9 @@ export default {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
+        vibe: {
+          DEFAULT: 'hsl(var(--vibe-text))'
+        },
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
   				foreground: 'hsl(var(--muted-foreground))'
@@ -71,9 +74,9 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-      // fontSize: {
-      //   base: '15px'
-      // }
+      fontSize: {
+        base: '16.75px'
+      }
   	}
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports

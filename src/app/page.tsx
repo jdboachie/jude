@@ -51,7 +51,7 @@ export default function Page() {
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-medium">Inspiration</m.p>
           Learning to be inspired by others, innovating creatively, guiltlessly exploring passion and interests, appreciating hidden gems in people&apos;s work. Mindful that I can do all things <span className={'pretty-text'}>through Christ who strengthens me</span>.
         </m.div>
-        <m.div id='experience' className='mx-auto grid grid-cols-2 xl:my-14 max-xl:grid-flow-row gap-12' variants={staggerChildrenVariants} >
+        <m.div id='experience' className='mx-auto xl:my-14 grid gap-12' variants={staggerChildrenVariants} >
           <WorkExperience />
           <Volunteering />
         </m.div>
