@@ -14,6 +14,7 @@
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
+    --vibe-text: 0 0% 20%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
     --accent: 0 0% 96.1%;
@@ -41,6 +42,7 @@
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
+    --vibe-text: 0 0% 87.5%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
     --accent: 0 0% 14.9%;
@@ -60,20 +62,15 @@
 
 @layer base {
   * {
-    @apply border-border text-base font-normal outline-ring/50;
-    box-sizing: border-box;
-    padding: 0;
+    @apply border-border outline-ring/50 text-base;
     margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: none;
   }
 
   *::selection {
     @apply bg-orange-500 text-background;
-  }
-
-  #experience {
-    grid-column: 1/4;
-    grid-template-columns: 1fr 1fr;
-    width: min(1280px, 100%);
   }
 
   a {
@@ -85,7 +82,11 @@
   }
 
   body {
-    @apply bg-background dark:bg-primary-foreground text-foreground pb-10;
+    @apply bg-background dark:bg-primary-foreground text-vibe text-opacity-90 pb-12;
+    --font-settings: "cv01","ss03";
+    font-feature-settings: var(--font-settings);
+    --font-variations: "opsz" auto;
+    font-variation-settings: var(--font-variations);
   }
 
   body::before {
@@ -137,27 +138,28 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply max-w-screen-2xl w-full m-auto px-5 md:px-16 pb-24 pt-8
+    @apply relative max-w-5xl w-full max-sm:max-w-[100dvw] m-auto p-6 mb-24 antialiased
   }
 
   main > * {
     grid-column-start: 2;
   }
 
-  .pretty-text {
-    @apply font-serif italic text-lg leading-normal;
+  .serif-italic {
+    @apply font-serif italic leading-[0];
+    font-size: 18px;
   }
 
   .dark {
     .dockbutton {
       box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.1) inset,
-                  0px 1px 1px 0px transparent inset;
+                  0px 2px 1px 0px transparent inset;
     }
 
     body::before {
       position: fixed;
       content: '';
-      z-index: 0;
+      z-index: 10;
       left: 0px;
       top: 0px;
       height: 96px;
@@ -177,7 +179,7 @@
     body::after {
       position: fixed;
       content: '';
-      z-index: 0;
+      z-index: 10;
       left: 0px;
       bottom: 0px;
       height: 96px;
@@ -195,13 +197,6 @@
     }
   }
 
-  @media not all and (min-width: 1280px) {
-    #experience {
-      grid-column: 2/4;
-      grid-template-columns: 1fr;
-    }
-  }
-
   @media not all and (min-width: 768px) {
     main {
       grid-template-columns: 1fr;
@@ -209,11 +204,6 @@
 
     main > * {
       grid-column-start: 1;
-    }
-
-    #experience {
-      grid-column: 1/1;
-      grid-template-columns: 1fr;
     }
   }
 

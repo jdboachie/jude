@@ -22,9 +22,9 @@ export default async function Footer() {
   }
 
   return (
-    <footer className="z-[100] p-7 md:p-8 md:px-16 mb-8 flex justify-between items-center font-mono text-muted-foreground text-xs">
+    <footer className="z-[100] max-w-5xl mx-auto p-6 mb-8 flex justify-between items-center font-mono text-muted-foreground text-xs">
       <Link href={'https://github.com/jdboachie/jude'} className="text-xs font-normal no-underline">{commitHash}</Link>
-      <p className="text-xs font-normal">Last updated {commitDate}</p>
+      <p className="text-xs font-normal">Updated {commitDate}</p>
     </footer>
   );
 }

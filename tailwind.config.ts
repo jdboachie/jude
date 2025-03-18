@@ -29,6 +29,9 @@ export default {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
+        vibe: {
+          DEFAULT: 'hsl(var(--vibe-text))'
+        },
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
   				foreground: 'hsl(var(--muted-foreground))'
@@ -72,7 +75,7 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
       fontSize: {
-        base: 'medium'
+        base: '16.75px'
       }
   	}
   },

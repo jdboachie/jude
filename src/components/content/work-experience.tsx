@@ -1,4 +1,3 @@
-import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import Href from '../href';
 
 interface Experience {
@@ -12,7 +11,7 @@ interface Experience {
 const experiences: Experience[] = [
   {
     date: '2023-Now',
-    company: 'Software Engineer at Soko Aerial Robotics',
+    company: 'Software Engineer at Soko Aerial',
     link: 'https://sokoaerial.com',
     location: 'Remote, Ghana',
   },
@@ -20,7 +19,7 @@ const experiences: Experience[] = [
     date: 'Dec 2024',
     company: "Web Developer with Eli's Konsepts",
     link: 'https://gh.linkedin.com/in/caleb-eli-248a481bb',
-    description: "Helped build Quattro Formaggi's new website and admin dashboard",
+    description: "Contracted for Quattro Formaggi's new website and admin dashboard",
   },
   {
     date: 'Feb 2024',
@@ -42,10 +41,10 @@ const volunteering: Experience[] = [
 
 const ExperienceItem = ({ experience }: { experience: Experience }) => (
   <div className="flex max-sm:flex-col gap-1 sm:gap-6">
-    <time className="text-muted-foreground sm:w-[10ch]">{experience.date}</time>
+    <time className="text-muted-foreground sm:w-20">{experience.date}</time>
     <div>
       <Href href={experience.link} className="w-fit flex flex-wrap gap-1">
-        <>{experience.company} <ArrowUpRight weight='light' /></>
+        <>{experience.company}</>
       </Href>
       {experience.location && <p className="text-muted-foreground">{experience.location}</p>}
       {experience.description && <p className="text-muted-foreground">{experience.description}</p>}

@@ -19,10 +19,13 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h3 className='scroll-m-20 text-base font-medium [&:not(:first-child)]:mt-8'>{children}</h3>
     ),
     p: ({ children }) => (
-      <p className='leading-7 [&:not(:first-child)]:mt-6'>{children}</p>
+      <p className='leading-[1.65] [&:not(:first-child)]:mt-6'>{children}</p>
     ),
     em: ({children}) => (
-      <em className="pretty-text">{children}</em>
+      <em className="serif-italic">{children}</em>
+    ),
+    code: ({children}) => (
+      <code className='font-mono text-xs bg-secondary rounded-md p-1'>{children}</code>
     ),
     img: (props) => (
       // eslint-disable-next-line jsx-a11y/alt-text
