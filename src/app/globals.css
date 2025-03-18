@@ -138,7 +138,7 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply relative max-w-5xl w-full m-auto p-6 mb-24 antialiased
+    @apply relative max-w-5xl w-full max-sm:max-w-[100dvw] m-auto p-6 mb-24 antialiased
   }
 
   main > * {
