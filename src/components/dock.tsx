@@ -68,7 +68,7 @@ export const socials: DockApp[] = [
   },
 ];
 
-const dockButtonStyles = 'grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-secondary'
+const dockButtonStyles = 'grid dockbutton place-items-center w-10 aspect-square rounded-full border bg-secondary'
 
 
 function Dock() {
@@ -83,7 +83,7 @@ function Dock() {
           mouseX.set(e.pageX)
         }}
         onMouseLeave={() => {mouseX.set(Infinity)}}
-        className="rounded-full hidden sm:flex bg-primary-foreground shadow-2xl items-end mb-4 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible"
+        className="rounded-full hidden sm:flex bg-primary-foreground shadow-2xl items-end mb-4 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll"
       >
         {navlinks.map((app, index) => (
           <DockIcon
@@ -103,7 +103,7 @@ function Dock() {
         <Separator orientation='vertical'/>
         <ThemeToggleButton mouseX={mouseX} />
       </div>
-      <div className="hidden max-sm:flex rounded-full bg-background dark:bg-primary-foreground shadow-2xl items-end mb-8 border z-[10] gap-2 sm:gap-3 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll max-sm:overflow-y-visible">
+      <div className="hidden max-sm:flex rounded-full bg-background dark:bg-primary-foreground shadow-2xl items-end mb-8 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll">
         {navlinks.map((app, index) => (
           <DockIcon
             app={app}
@@ -119,8 +119,8 @@ function Dock() {
           mouseX={mouseX}
           />
         ))}
-        <Separator orientation='vertical'/>
-        <ThemeToggleButton mouseX={mouseX} />
+        {/* <Separator orientation='vertical'/>
+        <ThemeToggleButton mouseX={mouseX} /> */}
       </div>
     </div>
   )
@@ -164,7 +164,7 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
         >
           <span className='sr-only'>{app.title}</span>
           <Link href={app.link} className='size-full rounded-full place-content-stretch grid'>
-            <app.icon weight='duotone' className='text-muted-foreground size-full max-sm:p-2 sm:p-[22.5%]'/>
+            <app.icon weight='duotone' className='text-muted-foreground size-full p-[22.5%]'/>
           </Link>
         </motion.button>
       </TooltipTrigger>
@@ -221,11 +221,11 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
               setTheme('system')
             }
           }}
-          className='relative grid dockbutton place-items-center w-10 z-50 max-sm:size-10 aspect-square rounded-full border bg-secondary'
+          className='w-10 max-sm:size-10 aspect-square rounded-full bg-secondary'
         >
           <span className="sr-only">Toggle theme</span>
           <div
-            className='size-full rounded-full grid place-items-center text-muted-foreground max-sm:p-2 sm:p-[22.5%]'
+            className='size-full rounded-full grid place-items-stretch text-muted-foreground p-[22.5%]'
             onClick={() => {
               setTheme(resolvedTheme === 'dark' ? 'light': 'dark')}
             }
@@ -262,7 +262,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
 
 const DevIndicator = () => {
   return (
-    <div className="fixed z-[200] shadow-inner shadow-white/20 outline outline-red-600 outline-[0.1px] top-4 left-13 flex gap-1.5 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-red-700 bg-red-500 dark:border-red-400 dark:bg-red-600 p-1.5 px-3 truncate">
+    <div className="fixed z-[200] shadow-inner shadow-red-500/20 outline outline-red-600 outline-[0.1px] top-4 left-13 flex gap-1.5 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-red-700 bg-red-500 dark:border-red-400 dark:bg-red-600 p-1.5 px-3 truncate">
       <Warning /> Preview
     </div>
   )
