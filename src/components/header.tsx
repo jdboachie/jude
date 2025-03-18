@@ -1,9 +1,4 @@
-import React from 'react';
-import {
-  LinkSimple as LinkIcon
-} from '@phosphor-icons/react/dist/ssr';
-import { buttonVariants } from './ui/button';
-import { cn } from '@/lib/utils';
+import CopyButton from './copy-button';
 
 const Header = (
   {
@@ -32,22 +27,7 @@ const Header = (
         {desc && <p className="text-muted-foreground text-sm">{desc}</p>}
         {date && <p className="text-muted-foreground text-sm">{date}</p>}
         {children}
-        {link &&
-        // TODO: should display functinal copy button
-          <div
-            className={
-              cn(buttonVariants(
-                {size: 'icon', variant: 'secondary'}),
-                'rounded-full absolute bottom-2 right-0 border'
-              )
-            }
-          >
-            <>
-              <span className="sr-only">{link}</span>
-              <LinkIcon className='size-4' />
-            </>
-          </div>
-        }
+        {link && <CopyButton url={link} />}
       </div>
     </header>
   )

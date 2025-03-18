@@ -22,7 +22,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <p className='leading-[1.65] [&:not(:first-child)]:mt-6'>{children}</p>
     ),
     em: ({children}) => (
-      <em className="pretty-text">{children}</em>
+      <em className="serif-italic">{children}</em>
+    ),
+    code: ({children}) => (
+      <code className='font-mono text-xs bg-secondary rounded-md p-1'>{children}</code>
     ),
     img: (props) => (
       // eslint-disable-next-line jsx-a11y/alt-text

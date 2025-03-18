@@ -145,9 +145,9 @@
     grid-column-start: 2;
   }
 
-  .pretty-text {
-    @apply font-serif italic leading-relaxed;
-    font-size: 20px;
+  .serif-italic {
+    @apply font-serif italic leading-[0];
+    font-size: 18px;
   }
 
   .dark {

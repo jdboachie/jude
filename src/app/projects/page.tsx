@@ -49,7 +49,7 @@ function Projects() {
       <BackLink link='/' text='Index' />
       <Header
         title='Projects'
-        desc='From my learnings and earnings'
+        desc='Stuff I built while learning'
       />
       <section className='grid sm:mt-12 mt-6 sm:col-span-3 gap-52'>
         {[...projects]

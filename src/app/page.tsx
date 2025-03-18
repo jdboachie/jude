@@ -43,13 +43,13 @@ export default function Page() {
         <m.div id='now' variants={staggerChildrenVariants} >
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-medium">Now</m.p>
           Software engineer at <Href href={'https://sokoaerial.com'}>Soko Aerial</Href>.
-          Freelance fullstack web and product developer (Nextjs). Computer Engineering <Href href={'https://knust.edu.gh'}>@KNUST</Href>.
-          <span className={'pretty-text'}><br className='sm:hidden' /> Light of the world.</span>
+          Freelance fullstack web and product developer (Nextjs). Bsc. Computer Engineering @<Href href={'https://knust.edu.gh'}>KNUST</Href>.
+          <span className={'serif-italic'}><br className='sm:hidden' /> Light of the world.</span>
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
         <m.div id='now' variants={staggerChildrenVariants} >
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-medium">Inspiration</m.p>
-          Learning to be inspired by others, innovating creatively, guiltlessly exploring passion and interests, appreciating hidden gems in people&apos;s work. Mindful that I can do all things <span className={'pretty-text'}>through Christ who strengthens me</span>.
+          Learning to be inspired by others, innovating creatively, guiltlessly exploring passion and interests, appreciating hidden gems in people&apos;s work. Mindful that I can do all things <span className={'serif-italic'}>through Christ who strengthens me</span>.
         </m.div>
         <m.div id='experience' className='mx-auto xl:my-14 grid gap-12' variants={staggerChildrenVariants} >
           <WorkExperience />
