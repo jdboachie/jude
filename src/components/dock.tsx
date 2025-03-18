@@ -2,7 +2,7 @@
 
 import {
   motion,
-  animate,
+  // animate,
   MotionValue,
   useSpring,
   useTransform,
@@ -150,16 +150,16 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
         <motion.button
           ref={ref}
           style={{ width, y, zIndex: 50 }}
-          onClick={() => {
-            animate(y, [0, -40, 0], {
-              repeat: 2,
-              ease: [
-                [0, 0, 0.2, 1],
-                [0.8, 0, 1, 1]
-              ],
-              duration: 0.6
-            })
-          }}
+          // onClick={() => {
+          //   animate(y, [0, -40, 0], {
+          //     repeat: 2,
+          //     ease: [
+          //       [0, 0, 0.2, 1],
+          //       [0.8, 0, 1, 1]
+          //     ],
+          //     duration: 0.6
+          //   })
+          // }}
           className={dockButtonStyles}
         >
           <span className='sr-only'>{app.title}</span>
@@ -206,16 +206,16 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
         <motion.button
           ref={ref}
           style={{ width, y }}
-          onClick={() => {
-            animate(y, [0, -40, 0], {
-              repeat: 2,
-              ease: [
-                [0, 0, 0.2, 1],
-                [0.8, 0, 1, 1]
-              ],
-              duration: 0.6
-            })
-          }}
+          // onClick={() => {
+          //   animate(y, [0, -40, 0], {
+          //     repeat: 2,
+          //     ease: [
+          //       [0, 0, 0.2, 1],
+          //       [0.8, 0, 1, 1]
+          //     ],
+          //     duration: 0.6
+          //   })
+          // }}
           onKeyDown={(e: React.KeyboardEvent) => {
             if (e.key.toLowerCase() == 'r') {
               setTheme('system')
