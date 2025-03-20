@@ -130,9 +130,9 @@
   }
 
   .dockbutton {
-    @apply active:scale-[0.95]
     box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 1) inset,
-                0px 1px 1px 0px transparent inset;
+    0px 1px 1px 0px transparent inset;
+    @apply active:scale-[0.95];
   }
 
   main {

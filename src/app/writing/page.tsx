@@ -31,7 +31,7 @@ function Writing() {
       />
       {/* whenI'mdone */}
       <p className="text-muted-foreground text-sm">These posts are not finished! My first post will be in April 2025</p>
-      <section className='grid sm:mt-8 mt-4 mb-36 divide-y whenImdone:border-t'>
+      <section className='grid sm:mt-8 mt-4 mb-36 divide-y border-t'>
       {[...posts]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
           .map((post, index) => (
