@@ -163,7 +163,7 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
           className={dockButtonStyles}
         >
           <span className='sr-only'>{app.title}</span>
-          <Link href={app.link} className='size-full rounded-full place-content-stretch grid'>
+          <Link prefetch={true} href={app.link} className='size-full rounded-full place-content-stretch grid'>
             <app.icon weight='duotone' className='text-muted-foreground size-full p-[22.5%]'/>
           </Link>
         </motion.button>
