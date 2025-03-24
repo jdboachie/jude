@@ -14,7 +14,7 @@
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
-    --vibe-text: 0 0% 20%;
+    --vibe-text: 0 0% 15%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
     --accent: 0 0% 96.1%;
@@ -42,7 +42,7 @@
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
-    --vibe-text: 0 0% 87.5%;
+    --vibe-text: 0 0% 85%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
     --accent: 0 0% 14.9%;
@@ -62,19 +62,24 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 text-base;
+    @apply border-border outline-ring/50 text-base antialiased;
     margin: 0;
     padding: 0;
     text-rendering: optimizeLegibility;
     font-variant-ligatures: none;
+    font-feature-settings: "ss02", "ss03", "cv01", "cv09", "cv10";
+  }
+
+  .inter-tnum {
+    font-feature-settings: "tnum", "ss02";
   }
 
   *::selection {
-    @apply bg-sky-500 text-background;
+    @apply bg-violet-500 text-background;
   }
 
   a {
-    @apply underline decoration-[1px] underline-offset-4 decoration-muted-foreground/50 hover:decoration-primary duration-300 transition-colors ease-linear;
+    @apply underline decoration-[1px] underline-offset-2 decoration-muted-foreground/50 hover:decoration-primary duration-300 transition-colors ease-linear;
   }
 
   kbd {
@@ -139,7 +144,7 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply relative max-w-6xl w-full max-sm:max-w-[100dvw] m-auto p-6 mb-24 antialiased
+    @apply relative max-w-6xl w-full max-sm:max-w-[100dvw] m-auto p-6 mb-24 leading-[1.65]
   }
 
   main > * {

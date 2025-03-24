@@ -20,7 +20,6 @@ import {
   EnvelopeSimple,
   LightbulbFilament,
   XLogo,
-  Warning,
 } from "@phosphor-icons/react";
 import { TooltipArrow, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { Separator } from './ui/separator';
@@ -77,7 +76,6 @@ function Dock() {
 
   return (
     <div className='fixed flex justify-center items-center bottom-0 h-24 w-full z-50'>
-      <DevIndicator />
       <div
         onMouseMove={(e) => {
           mouseX.set(e.pageX)
@@ -260,12 +258,5 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
   )
 }
 
-const DevIndicator = () => {
-  return (
-    <div className="fixed z-[200] shadow-inner shadow-red-500/20 outline outline-red-600 outline-[0.1px] top-4 left-13 flex gap-1.5 text-destructive-foreground backdrop-blur-sm text-xs rounded-full border border-red-700 bg-red-500 dark:border-red-400 dark:bg-red-600 p-1.5 px-3 truncate">
-      <Warning /> Preview
-    </div>
-  )
-}
 
 export default Dock

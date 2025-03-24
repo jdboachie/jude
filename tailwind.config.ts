@@ -75,7 +75,7 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
       fontSize: {
-        base: '16.75px'
+        base: '16.45px'
       }
   	}
   },

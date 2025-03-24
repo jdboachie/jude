@@ -9,10 +9,10 @@ const BackLink = ({text, link} : {text: string, link: string}) => {
       <Link
         href={link}
         prefetch={true}
-        className='flex items-center w-fit gap-2 no-underline hover:no-underline text-muted-foreground hover:text-primary transition-colors duration-300'
+        className='flex items-center w-fit gap-1 no-underline hover:no-underline text-muted-foreground hover:text-primary transition-colors duration-300'
       >
         <BackIcon />
-        <span className='text-lg font-serif italic leading-[0]'>{text}</span>
+        <span className='text-base font-serif italic leading-[0]'>{text}</span>
       </Link>
     </aside>
   )

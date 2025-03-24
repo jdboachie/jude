@@ -29,8 +29,6 @@ function Writing() {
         title='Writing'
         desc='Infrequent thoughts on software development'
       />
-      {/* whenI'mdone */}
-      <p className="text-muted-foreground text-sm">These posts are not finished! My first post will be in April 2025</p>
       <section className='grid sm:mt-8 mt-4 mb-36 divide-y border-t'>
       {[...posts]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
@@ -41,7 +39,7 @@ function Writing() {
                 <p className='font-medium text-sm'>{post.title}</p>
                 {post.description && <p className="max-sm:hidden text-muted-foreground font-normal text-sm">{post.description}</p>}
               </div>
-              <time className="text-muted-foreground text-right sm:w-40 w-32 text-sm">{post.date.toLocaleString('en-US', { month: 'long' })} {post.date.getUTCFullYear()}</time>
+              <time className="text-muted-foreground text-right sm:w-40 w-36 text-sm">{post.date.toLocaleString('en-US', { month: 'long' })} {post.date.getUTCFullYear()}</time>
             </div>
           </Link>
         ))}
