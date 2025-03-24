@@ -9,7 +9,7 @@ const Header = (
     date,
     children
   }:{
-    draft: boolean,
+    draft?: boolean,
     link?: string,
     title?: string,
     desc?: string,
