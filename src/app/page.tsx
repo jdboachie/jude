@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import LocalFont from "next/font/local"
 import { LazyMotion, domAnimation, m } from 'framer-motion'
-import {WorkExperience, Volunteering } from '@/components/content/work-experience';
+import { WorkExperience, Volunteering } from '@/components/content/work-experience';
 import Href from '@/components/href';
 
 
@@ -12,8 +12,8 @@ const rudiment = LocalFont({
 })
 
 const staggerChildrenVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.975, },
-  show: { opacity: 1, y: 0, scale: 1.0, transition: { duration: 0.6, ease: 'easeOut' } },
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 }
 
 export default function Page() {
@@ -31,7 +31,7 @@ export default function Page() {
         }}
         initial='hidden'
         animate='show'
-        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.15 }}
+        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.125 }}
         className='gap-16'
       >
         <m.p
