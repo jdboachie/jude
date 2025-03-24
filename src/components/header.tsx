@@ -2,12 +2,14 @@ import CopyButton from './copy-button';
 
 const Header = (
   {
+    draft,
     link,
     title,
     desc,
     date,
     children
   }:{
+    draft: boolean,
     link?: string,
     title?: string,
     desc?: string,
@@ -23,7 +25,12 @@ const Header = (
       '
     >
       <div className='relative sm:col-start-1 mb-8'>
-        {title && <p className="sm:col-start-2 font-medium">{title}</p>}
+        {title &&
+          <p className="sm:col-start-2 font-medium flex gap-2 items-center">
+            {title}
+            {draft && <div className='h-fit text-xs items-center flex border border-amber-500/50 px-2 bg-amber-400 dark:bg-amber-700 rounded-full'>Draft</div>}
+          </p>
+        }
         {desc && <p className="text-muted-foreground text-sm">{desc}</p>}
         {date && <p className="text-muted-foreground text-sm">{date}</p>}
         {children}
