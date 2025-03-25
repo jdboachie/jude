@@ -42,8 +42,8 @@ export default function Page() {
         </m.p>
         <m.div id='now' variants={staggerChildrenVariants} >
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-medium">Now</m.p>
-          Software engineer at <Href href={'https://sokoaerial.com'}>Soko Aerial</Href>.
-          Freelance fullstack web and product developer. Computer Engineering @<Href href={'https://knust.edu.gh'}>KNUST</Href>.
+          Software engineer at <Href href={'https://sokoaerial.com'}>Soko Aerial Robotics</Href>.
+          Freelance fullstack web developer. Studying computer Engineering @<Href href={'https://knust.edu.gh'}>KNUST</Href>.
           <span className={'serif-italic'}><br className='sm:hidden' /> Light of the world.</span>
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
@@ -56,7 +56,7 @@ export default function Page() {
           <Volunteering />
         </m.div>
         <m.div variants={staggerChildrenVariants} >
-          Send me an email at <Link href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link>. Let{"'"}s talk.
+          Send a dm on Twitter or send me an email at <Link href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link>. Let{"'"}s talk.
         </m.div>
       </m.main>
     </LazyMotion>

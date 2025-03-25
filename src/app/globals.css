@@ -67,7 +67,7 @@
     padding: 0;
     text-rendering: optimizeLegibility;
     font-variant-ligatures: none;
-    font-feature-settings: "ss02", "ss03", "cv01", "cv09", "cv10";
+    font-feature-settings: "cv05", "zero", "ss03", "cv01", "cv09", "cv10";
   }
 
   .inter-tnum {

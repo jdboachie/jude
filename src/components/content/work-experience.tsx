@@ -55,7 +55,7 @@ const ExperienceItem = ({ experience }: { experience: Experience }) => (
 const WorkExperience = () => {
   return (
     <div className="flex flex-col gap-3">
-      <p id='work' className="text-muted-foreground text-xs font-medium">Work Experience</p>
+      <p id='work' className="text-muted-foreground text-xs font-medium">Work</p>
       <div className="gap-12 flex flex-col">
         {experiences.map((exp, index) => (
           <ExperienceItem key={index} experience={exp} />
