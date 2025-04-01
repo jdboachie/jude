@@ -43,7 +43,7 @@ export default function Page() {
         <m.div id='now' variants={staggerChildrenVariants} >
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-medium">Now</m.p>
           Software engineer at <Href href={'https://sokoaerial.com'}>Soko Aerial Robotics</Href>.
-          Freelance fullstack web developer. Studying computer Engineering @<Href href={'https://knust.edu.gh'}>KNUST</Href>.
+          Freelance fullstack web developer. Studying computer Engineering at <Href href={'https://knust.edu.gh'}>KNUST</Href>.
           <span className={'serif-italic'}><br className='sm:hidden' /> Light of the world.</span>
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
