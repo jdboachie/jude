@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import LocalFont from "next/font/local"
 import { LazyMotion, domAnimation, m } from 'framer-motion'
-import {WorkExperience, Volunteering } from '@/components/content/work-experience';
+import { WorkExperience, Volunteering } from '@/components/content/work-experience';
 import Href from '@/components/href';
 
 
@@ -12,8 +12,8 @@ const rudiment = LocalFont({
 })
 
 const staggerChildrenVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.975, },
-  show: { opacity: 1, y: 0, scale: 1.0, transition: { duration: 0.6, ease: 'easeOut' } },
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 }
 
 export default function Page() {
@@ -31,19 +31,19 @@ export default function Page() {
         }}
         initial='hidden'
         animate='show'
-        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.15 }}
+        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.125 }}
         className='gap-16'
       >
         <m.p
           variants={staggerChildrenVariants}
-          className='text-left'
+          className='text-right'
         >
-          <span className={`text-6xl ${rudiment.className} tracking-normal`}>Jude Boachie</span>
+          <span className={`text-4xl ${rudiment.className}`}>Jude Boachie</span>
         </m.p>
         <m.div id='now' variants={staggerChildrenVariants} >
           <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-medium">Now</m.p>
-          Software engineer at <Href href={'https://sokoaerial.com'}>Soko Aerial</Href>.
-          Freelance fullstack web and product developer (Nextjs). Bsc. Computer Engineering @<Href href={'https://knust.edu.gh'}>KNUST</Href>.
+          Software engineer at <Href href={'https://sokoaerial.com'}>Soko Aerial Robotics</Href>.
+          Freelance fullstack web developer. Studying computer Engineering at <Href href={'https://knust.edu.gh'}>KNUST</Href>.
           <span className={'serif-italic'}><br className='sm:hidden' /> Light of the world.</span>
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
@@ -56,7 +56,7 @@ export default function Page() {
           <Volunteering />
         </m.div>
         <m.div variants={staggerChildrenVariants} >
-          Send me an email at <Link href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link>. Let{"'"}s talk.
+          Send a dm on Twitter or send me an email at <Link href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link>. Let{"'"}s talk.
         </m.div>
       </m.main>
     </LazyMotion>
