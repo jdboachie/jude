@@ -176,8 +176,6 @@ function DockIcon ({mouseX, app} : {mouseX: MotionValue, app: DockApp}) {
   )
 }
 
-// use a useRef to detect when it has been mounted to avoid
-// that pesky react hydration error
 function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
 
   const ref = React.useRef<HTMLButtonElement>(null)
@@ -198,6 +196,13 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
 
   const { theme, setTheme, resolvedTheme } = useTheme()
 
+  const [mounted, setMounted] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (mounted)
   return (
     <Tooltip.Root>
       <TooltipTrigger>
