@@ -3,15 +3,21 @@ import Quote from '@/components/quote';
 import Header from '@/components/header';
 import BackLink from '@/components/backlink';
 import IMNotDone from '@/components/im-not-done';
+import BlockQuote from '@/components/block-quote';
 import CompareImages from '@/components/compare-images';
 
 <BackLink link='/writing' text='Writing' />
 
 <Header
-  draft
   title='Inspired by'
   date='April 2025'
   link='https://jude.vercel.app/writing/inspired-by'
+/>
+I'll start with a quote.
+<Quote
+  quote="Learning from the best is the best way to learn."
+  by="Julie Zhuo"
+  from="On Taste, Part 3"
 />
 
 Creativity is communicated in our work. Our design, engineering and architectural choices are a representation of who we are and what we value.
@@ -19,10 +25,9 @@ Work we are satisfied with enough to present reveals the things we deem beautifu
 I've noticed, many times, how that people tend to copy others. A unique re-implementation _inspired by_ someone's work, rather than a direct reproduction.
 
 
-### A few examples
-[Paco Coursey](https://paco.me)'s `/writing` page looks like it was inpired by [Guillermo Rauch](https://rauno.me)'s blog :
+An example is realizing that [Paco Coursey](https://paco.me)'s `/writing` page looks like it was inpired by [Guillermo Rauch](https://rauchg.com)'s blog:
 
-<blockquote className='lg:col-start-3 text-xs mt-6 text-muted-foreground'>gotta turn this into a carousel</blockquote>
+<BlockQuote>gotta turn this into a carousel component</BlockQuote>
 
 <CompareImages
   images={
@@ -39,16 +44,17 @@ I've noticed, many times, how that people tend to copy others. A unique re-imple
   }
 />
 
-<Quote
-  quote="Learning from the best is the best way to learn."
-  by="Julie Zhuo"
-  from="On Taste, Part 3"
-/>
+Interesting to note that Rauno Frieberg uses the same orange dot <span className="mx-1 inline-flex size-4 bg-orange-500 rounded-full" /> as Rasmus Andersson.
+
 
 It makes for good inspiration and taste development when you learn from others. I like to say _copy quickly and creatively_. Ofcourse, it is not a good idea
 to imitate to the point of losing your originality and identity, but fundamentally, we stand on the shoulders of great people. We build on what others have done.
 
-Or you could be like Jaguar: _copy nothing_.
+I personally draw lots of inspiration from what I see. Study how people created their work. What makes it nice? What makes it work? How can I make it better?
+
+On the other hand, there are those that advocate being _"original"_.
+
+<BlockQuote>To be fair, these cars look pretty slick</BlockQuote>
 
 <Image
   src={'/future_jag.webp'}
@@ -57,3 +63,9 @@ Or you could be like Jaguar: _copy nothing_.
   height={3000}
   className='mt-6 sm:col-span-3 max-lg:w-full mx-auto border border-neutral-300 dark:border-neutral-600 bg-neutral-100 dark:bg-neutral-800 rounded-xl z-10'
 />
+
+### Building my site
+
+My personal site is heavily inspired by [paco.me](https://paco.me) and [rauno.me](https://rauno.me). I'm happy with what I've built for now. I'll redesign when I find new inspiration. Keep learning.
+
+PS: I have felt very indecisive releasing this post. It constantly felt unfinished and unpolished. But I need to move on to other things. Hope you enjoyed it!

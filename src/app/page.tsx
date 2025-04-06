@@ -25,13 +25,13 @@ export default function Page() {
           show: {
             opacity: 1,
             transition: {
-              staggerChildren: 0.1,
+              staggerChildren: 0.2,
             }
           }
         }}
         initial='hidden'
         animate='show'
-        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.125 }}
+        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.15 }}
         className='gap-16'
       >
         <m.p
