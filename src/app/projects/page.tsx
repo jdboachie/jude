@@ -1,14 +1,14 @@
-import Link from 'next/link';
-import {
-  ArrowUpRight as ArrowUpRightIcon,
-  Link as LinkIcon,
-} from '@phosphor-icons/react/dist/ssr';
+// import Link from 'next/link';
+// import {
+//   ArrowUpRight as ArrowUpRightIcon,
+//   Link as LinkIcon,
+// } from '@phosphor-icons/react/dist/ssr';
 import Header from '@/components/header';
-import { Button } from '@/components/ui/button';
-import * as Tooltip from '@radix-ui/react-tooltip';
+// import { Button } from '@/components/ui/button';
+// import * as Tooltip from '@radix-ui/react-tooltip';
 import { Separator } from '@/components/ui/separator';
 import BackLink from '@/components/backlink';
-import { TooltipArrow, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+// import { TooltipArrow, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 
 interface Project {
