@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Native html elements</h2>
+  <section>
+    <h3>HTML Modals with <code>dialog</code></h3>
+    <button popovertarget="modal">Open Modal</button>
+    <dialog id="modal" popover="auto">
+      <button popovertarget="modal" popovertargetaction="hide">x</button>
+      <p>Click the "X" to close me.</p>
+    </dialog>
+  </section>
+  <section>
+    <h3>Native HTML Range Inputs</h3>
+    <input
+      type="range"
+      value="1"
+      min="1"
+      max="5"
+      list="steps"
+      oninput="this.nextElementSibling.value = this.value"
+    />
+    <output>1</output>
+    <datalist id="steps">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </datalist>
+  </section>
+  <section>
+    <h3>Native HTML Progress Bars</h3>
+    <progress value="60" max="100"></progress>
+  </section>
+  <section>
+    <h3>Searchable Dropdowns</h3>
+    <label for="browser">Type something to search the list:</label>
+
+    <input list="browser-names" name="browser" id="browser" />
+    <datalist id="browser-names">
+      <option value="Edge browser" />
+      <option value="Firefox browser" />
+      <option value="Chrome browser" />
+      <option value="Opera browser" />
+      <option value="Safari browser" />
+      <option value="Arc browser" />
+    </datalist>
+  </section>
+  <section>
+    <h3>Grouped Lists</h3>
+    <label for="food">Choose a food:</label>
+
+    <select class="border rounded-md" name="food" id="food">
+      <optgroup label="Fruits">
+        <option value="apple">🍏 Apple</option>
+      </optgroup>
+      <optgroup label="Vegetables">
+        <option value="eggplant">🍆 Eggplant</option>
+      </optgroup>
+      <optgroup label="Desserts">
+        <option value="doughnut">🍩 Doughnut</option>
+      </optgroup>
+    </select>
+
+  </section>
+</body>
+</html>

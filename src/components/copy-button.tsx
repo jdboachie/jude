@@ -34,7 +34,7 @@ const CopyButton = ({ url }: { url: string }) => {
           size="icon"
           variant="secondary"
           onClick={handleClick}
-          className="rounded-full absolute top-1 right-0 border"
+          className="rounded-full absolute top-1.5 right-0"
         >
           <span className="sr-only">{url}</span>
           {copied ? <CheckIcon className="size-4 transition-transform scale-110" /> : <LinkIcon className="size-4" />}

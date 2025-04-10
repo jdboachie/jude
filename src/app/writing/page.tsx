@@ -9,11 +9,11 @@ interface Post {
 }
 
 const posts: Post[] = [
-  {
-    title: 'Focus',
-    description: 'Becoming a master of one',
-    date: new Date('March 20, 2025')
-  },
+  // {
+  //   title: 'Focus',
+  //   description: 'Becoming a master of one',
+  //   date: new Date('March 20, 2025')
+  // },
   {
     title: 'Inspired by',
     description: 'Why you should copy people',
