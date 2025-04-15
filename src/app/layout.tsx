@@ -5,7 +5,7 @@ import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-// import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
+import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
 import Dock from '@/components/dock';
 import Toppie from '@/components/toppie';
 import Footer from "@/components/footer";
@@ -28,17 +28,17 @@ const sans = LocalFont({
   ]
 })
 
-// const serif = Crimson_Pro({
-//   weight: ['400', '700'],
-//   variable: "--font-serif",
-//   subsets: ['latin'],
-//   style: ['normal', 'italic']
-// });
+const serif = Crimson_Pro({
+  weight: ['400', '700'],
+  variable: "--font-serif",
+  subsets: ['latin'],
+  style: ['normal', 'italic']
+});
 
-// const mono = JetBrains_Mono({
-//   variable: "--font-mono",
-//   subsets: ["latin"],
-// });
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Jude Boachie",
@@ -56,7 +56,7 @@ export default function RootLayout({
         <script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
       </head> */}
       <body
-        className={`${sans.variable} {mono.variable} {serif.variable} font-sans`}
+        className={`${sans.variable} ${mono.variable} ${serif.variable} font-sans`}
       >
         <ThemeProvider
           attribute="class"
