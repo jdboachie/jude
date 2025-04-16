@@ -3,6 +3,7 @@ import CopyButton from './copy-button';
 const Header = (
   {
     draft,
+    isNew,
     link,
     title,
     desc,
@@ -10,6 +11,7 @@ const Header = (
     children
   }:{
     draft?: boolean,
+    isNew?: boolean,
     link?: string,
     title?: string,
     desc?: string,
@@ -29,6 +31,7 @@ const Header = (
           <div className="sm:col-start-2 flex gap-2 items-center">
             <p className='font-medium'>{title}</p>
             {draft && <div className='h-fit text-xs items-center flex border border-amber-500/50 px-2 bg-amber-400 dark:bg-amber-700 rounded-full'>Draft</div>}
+            {isNew && <div className='h-fit text-xs items-center flex border border-blue-500/50 px-2 bg-sky-400 dark:bg-sky-700 rounded-full'>New</div>}
           </div>
         }
         {desc && <p className="text-muted-foreground text-sm">{desc}</p>}

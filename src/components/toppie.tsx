@@ -43,7 +43,7 @@ const Time = () => {
 const DevIndicator = () => {
   return (
     <p className="dark:shadow-inner -translate-y-[1.2px] bg-secondary flex text-xs max-sm:text-[10px] rounded-full border px-2 truncate">
-      Preview
+      v2
     </p>
   )
 }
