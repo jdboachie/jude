@@ -1,13 +1,13 @@
-// import Link from 'next/link';
+import Link from 'next/link';
+import Header from '@/components/header';
+import BackLink from '@/components/backlink';
+import { Separator } from '@/components/ui/separator';
 // import {
 //   ArrowUpRight as ArrowUpRightIcon,
 //   Link as LinkIcon,
 // } from '@phosphor-icons/react/dist/ssr';
-import Header from '@/components/header';
 // import { Button } from '@/components/ui/button';
 // import * as Tooltip from '@radix-ui/react-tooltip';
-import { Separator } from '@/components/ui/separator';
-import BackLink from '@/components/backlink';
 // import { TooltipArrow, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 
@@ -55,7 +55,7 @@ function Projects() {
         {[...projects]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
           .map((project, index) => (
-          <div key={index} className='sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit'>
+          <Link href={project.link} key={index} className='no-underline sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit'>
             <div className='sm:col-start-2 max-w-[65ch] flex gap-2 items-center mx-auto w-full'>
               <div className='grow whitespace-nowrap'>
                 <p className='text-sm'>{project.title}</p>
@@ -116,7 +116,7 @@ function Projects() {
                 className="w-full h-full rounded-b-xl bg-background border border-t-0 focus:outline-none"
               />
             </div> */}
-          </div>
+          </Link>
         ))}
       </section>
     </main>
