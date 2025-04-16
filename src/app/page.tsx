@@ -31,7 +31,7 @@ export default function Page() {
         }}
         initial='hidden'
         animate='show'
-        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.15 }}
+        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.25 }}
         className='gap-16'
       >
         <m.p

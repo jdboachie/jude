@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import {
-  ArrowUpRight as ArrowUpRightIcon,
-  Link as LinkIcon,
-} from '@phosphor-icons/react/dist/ssr';
 import Header from '@/components/header';
-import { Button } from '@/components/ui/button';
-import * as Tooltip from '@radix-ui/react-tooltip';
-import { Separator } from '@/components/ui/separator';
 import BackLink from '@/components/backlink';
-import { TooltipArrow, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { Separator } from '@/components/ui/separator';
+// import {
+//   ArrowUpRight as ArrowUpRightIcon,
+//   Link as LinkIcon,
+// } from '@phosphor-icons/react/dist/ssr';
+// import { Button } from '@/components/ui/button';
+// import * as Tooltip from '@radix-ui/react-tooltip';
+// import { TooltipArrow, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 
 interface Project {
@@ -51,11 +51,11 @@ function Projects() {
         title='Projects'
         desc='Stuff I built while learning'
       />
-      <section className='grid sm:mt-12 mt-6 sm:col-span-3 gap-52'>
+      <section className='grid sm:mt-12 mt-6 sm:col-span-3 gap-6 pb-32'>
         {[...projects]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
           .map((project, index) => (
-          <div key={index} className='sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit'>
+          <Link href={project.link} key={index} className='no-underline sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit'>
             <div className='sm:col-start-2 max-w-[65ch] flex gap-2 items-center mx-auto w-full'>
               <div className='grow whitespace-nowrap'>
                 <p className='text-sm'>{project.title}</p>
@@ -64,7 +64,7 @@ function Projects() {
               <Separator className='shrink' />
               <time className='max-sm:text-xs'>{project.date.getFullYear()}</time>
             </div>
-            <div className='z-10 border-t col-span-3 w-full min-w-0 mx-auto bg-primary-foreground aspect-video max-sm:aspect-[9/14] h-fit rounded-xl'>
+            {/* <div className='z-10 border-t col-span-3 w-full min-w-0 mx-auto bg-primary-foreground aspect-video max-sm:aspect-[9/14] h-fit rounded-xl'>
               <div className="relative px-3 py-2 rounded-t-xl border border-t-0 items-center justify-center flex">
                 <div className="grid grid-cols-3 gap-2 w-fit absolute max-sm:hidden left-0 px-5">
                   {[1, 2, 3].map((_, index) => (
@@ -115,8 +115,8 @@ function Projects() {
                 title={project.title}
                 className="w-full h-full rounded-b-xl bg-background border border-t-0 focus:outline-none"
               />
-            </div>
-          </div>
+            </div> */}
+          </Link>
         ))}
       </section>
     </main>

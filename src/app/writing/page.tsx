@@ -6,18 +6,21 @@ interface Post {
   title: string
   description: string
   date: Date
+  link: string
 }
 
 const posts: Post[] = [
   {
-    title: 'Focus',
-    description: 'Becoming a master of one',
-    date: new Date('March 20, 2025')
+    title: "AI's frontend",
+    description: 'Why LLMs are so popular',
+    date: new Date('April 16, 2025'),
+    link: 'ai-frontend'
   },
   {
     title: 'Inspired by',
     description: 'Why you should copy people',
-    date: new Date('April 1, 2025')
+    date: new Date('April 1, 2025'),
+    link: 'inspired-by'
   },
 ]
 
@@ -33,7 +36,7 @@ function Writing() {
       {[...posts]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
           .map((post, index) => (
-          <Link prefetch={true} href={`/writing/${post.title.toLowerCase().replace(/\s+/g, '-')}`} key={index} className='no-underline sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit py-4'>
+          <Link prefetch={true} href={`/writing/${post.link}`} key={index} className='no-underline sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit py-4'>
             <div className="flex items-center gap-6">
               <div className='flex items-center w-full gap-2'>
                 <p className='font-medium text-sm'>{post.title}</p>
