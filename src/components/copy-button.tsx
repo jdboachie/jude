@@ -19,6 +19,7 @@ const CopyButton = ({ url }: { url: string }) => {
       .then(() => {
         setCopied(true);
         setOpen(true);
+        navigator.vibrate([200, 100, 200]);
         setTimeout(() => {
           setCopied(false);
           setOpen(false);
