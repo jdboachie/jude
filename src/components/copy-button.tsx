@@ -19,6 +19,11 @@ const CopyButton = ({ url }: { url: string }) => {
       .then(() => {
         setCopied(true);
         setOpen(true);
+        try {
+          navigator.vibrate([50, 75, 75]);
+        } catch {
+
+        }
         setTimeout(() => {
           setCopied(false);
           setOpen(false);
@@ -34,7 +39,7 @@ const CopyButton = ({ url }: { url: string }) => {
           size="icon"
           variant="secondary"
           onClick={handleClick}
-          className="rounded-full absolute top-1.5 right-0"
+          className="rounded-full absolute top-1.5 right-0 hover:scale-105 active:scale-95 transition-all duration-150 ease-out"
         >
           <span className="sr-only">{url}</span>
           {copied ? <CheckIcon className="size-4 transition-transform scale-110" /> : <LinkIcon className="size-4" />}

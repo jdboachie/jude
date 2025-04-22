@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link'
+import Href from '@/components/href';
 import LocalFont from "next/font/local"
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { WorkExperience, Volunteering } from '@/components/content/work-experience';
-import Href from '@/components/href';
 
 
 const rudiment = LocalFont({
@@ -31,7 +31,7 @@ export default function Page() {
         }}
         initial='hidden'
         animate='show'
-        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.25 }}
+        transition={{ ease: 'easeOut', duration: 0.3, delay: 0.3 }}
         className='gap-16'
       >
         <m.p
@@ -41,22 +41,24 @@ export default function Page() {
           <span className={`text-4xl ${rudiment.className}`}>Jude Boachie</span>
         </m.p>
         <m.div id='now' variants={staggerChildrenVariants} >
-          <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-medium">Now</m.p>
+          <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-ui font-medium">Now</m.p>
           Software engineer at <Href href={'https://sokoaerial.com'}>Soko Aerial Robotics</Href>.
           Freelance fullstack web developer. Studying computer Engineering at <Href href={'https://knust.edu.gh'}>KNUST</Href>.
           <span className={'serif-italic'}><br className='sm:hidden' /> Light of the world.</span>
           {/*Mastering all manner of craft. */} Building systems and code for people.
         </m.div>
         <m.div id='now' variants={staggerChildrenVariants} >
-          <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-medium">Inspiration</m.p>
+          <m.p variants={staggerChildrenVariants} className="text-muted-foreground text-xs font-ui font-medium">Inspiration</m.p>
           Learning to be inspired by others, innovating creatively, guiltlessly exploring passion and interests, appreciating hidden gems in people&apos;s work. Mindful that I can do all things <span className={'serif-italic'}>through Christ who strengthens me</span>.
         </m.div>
-        <m.div id='experience' className='mx-auto xl:my-14 grid gap-12' variants={staggerChildrenVariants} >
+        <hr />
+        <m.div id='experience' className='mx-auto xl:my-6 grid gap-12' variants={staggerChildrenVariants} >
           <WorkExperience />
           <Volunteering />
         </m.div>
+        <hr />
         <m.div variants={staggerChildrenVariants} >
-          Send a dm on Twitter or send me an email at <Link href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link>. Let{"'"}s talk.
+          Send a dm on <Link href={'https://x.com/judeboachie_'}> Twitter</Link> or send me an email at <Link href={'mailto:jdboachie@gmail.com'}>jdboachie@gmail.com</Link>. Let{"'"}s talk.
         </m.div>
       </m.main>
     </LazyMotion>

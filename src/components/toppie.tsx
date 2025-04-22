@@ -4,10 +4,9 @@ import * as React from 'react'
 
 const Toppie = () => {
   return (
-    <div className='z-[100] max-w-6xl mx-auto relative p-6 md:p-6 sm:mb-8 flex justify-between items-center text-muted-foreground'>
+    <div className='font-ui z-[100] max-w-6xl mx-auto relative p-6 md:p-6 sm:mb-8 flex justify-between items-center text-muted-foreground'>
       <div className='flex gap-2'>
         <Time />
-        <DevIndicator />
      </div>
       <span className='text-xs'>Kumasi, Ghana</span>
     </div>
@@ -36,15 +35,7 @@ const Time = () => {
   }, []);
 
   return (
-    <time className='text-xs max-sm:text-[10px] inter-tnum'>{currentTime || '00:00:00 XM'}</time>
-  )
-}
-
-const DevIndicator = () => {
-  return (
-    <p className="dark:shadow-inner -translate-y-[1.2px] bg-secondary flex text-xs max-sm:text-[10px] rounded-full border px-2 truncate">
-      v2
-    </p>
+    <time className='text-xs max-sm:text-[10px] tnum'>{currentTime || '00:00:00 XM'}</time>
   )
 }
 

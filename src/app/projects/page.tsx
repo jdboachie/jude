@@ -37,7 +37,7 @@ const projects: Project[] = [
   {
     title: 'Dashboard UI',
     link: 'https://guillo.vercel.app/dashboard',
-    description: 'Invoice app dashboard UI with Nivo charts',
+    description: 'Invoice app dashboard UI',
     technologies: ['Nextjs', 'TailwindCSS', 'Nivo'],
     date: new Date('04/07/2024')
   },
@@ -51,15 +51,15 @@ function Projects() {
         title='Projects'
         desc='Stuff I built while learning'
       />
-      <section className='grid sm:mt-12 mt-6 sm:col-span-3 gap-6 pb-32'>
+      <section className='grid sm:mt-12 mt-6 gap-6 pb-32'>
         {[...projects]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
           .map((project, index) => (
-          <Link href={project.link} key={index} className='no-underline sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit'>
+          <Link href={project.link} key={index} className='no-underline hover-link flex flex-col gap-8 min-w-0 h-fit'>
             <div className='sm:col-start-2 max-w-[65ch] flex gap-2 items-center mx-auto w-full'>
               <div className='grow whitespace-nowrap'>
-                <p className='text-sm'>{project.title}</p>
-                <p className='text-muted-foreground text-xs'>{project.description}</p>
+                <p className='font-medium text-sm'>{project.title}</p>
+                <p className='text-muted-foreground text-sm'>{project.description}</p>
               </div>
               <Separator className='shrink' />
               <time className='max-sm:text-xs'>{project.date.getFullYear()}</time>
