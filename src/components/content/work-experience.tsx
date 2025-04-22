@@ -11,7 +11,7 @@ interface Experience {
 const experiences: Experience[] = [
   {
     date: '2023-Now',
-    company: 'Software Engineer at Soko Aerial',
+    company: 'Software Engineer at Soko Aerial Robotics',
     link: 'https://sokoaerial.com',
     location: 'Remote, Ghana',
   },
@@ -55,7 +55,7 @@ const ExperienceItem = ({ experience }: { experience: Experience }) => (
 const WorkExperience = () => {
   return (
     <div className="flex flex-col gap-3">
-      <p id='work' className="text-muted-foreground text-xs font-medium">Work</p>
+      <p id='work' className="text-muted-foreground text-xs font-ui font-medium">Work</p>
       <div className="gap-12 flex flex-col">
         {experiences.map((exp, index) => (
           <ExperienceItem key={index} experience={exp} />
@@ -68,7 +68,7 @@ const WorkExperience = () => {
 const Volunteering = () => {
   return (
     <div className="flex flex-col gap-3">
-      <p id='volunteering' className="text-muted-foreground text-xs font-medium">Volunteering</p>
+      <p id='volunteering' className="text-muted-foreground text-xs font-ui font-medium">Volunteering</p>
       <div className="gap-12 flex flex-col">
         {volunteering.map((vol, index) => (
           <ExperienceItem key={index} experience={vol} />

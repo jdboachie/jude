@@ -56,6 +56,11 @@ export default {
   			}
   		},
   		fontFamily: {
+        ui: [
+          'var(--font-ui-sans)',
+          'var(--font-sans)',
+          'sans'
+        ],
   			sans: [
   				'var(--font-sans)',
 					'sans-serif'
@@ -74,8 +79,8 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-      fontSize: {
-        base: '16.5px'
+      screens: {
+        md: '880px'
       }
   	}
   },

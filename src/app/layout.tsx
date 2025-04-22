@@ -1,17 +1,17 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import LocalFont from "next/font/local";
-import { TooltipProvider } from "@radix-ui/react-tooltip";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
 import Dock from '@/components/dock';
 import Toppie from '@/components/toppie';
 import Footer from "@/components/footer";
+import LocalFont from "next/font/local";
+import { Analytics } from '@vercel/analytics/next';
+import { ThemeProvider } from "@/components/theme-provider";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { TooltipProvider } from "@radix-ui/react-tooltip";
+import { Crimson_Pro, JetBrains_Mono } from "next/font/google";
 
-const sans = LocalFont({
-  variable: "--font-sans",
+const ui = LocalFont({
+  variable: "--font-ui-sans",
   src: [
     {
       path: '../font/InterDisplay-SemiBold.woff2',
@@ -26,6 +26,11 @@ const sans = LocalFont({
       weight: '400',
     },
   ]
+})
+
+const sans = LocalFont({
+  variable: "--font-sans",
+  src: "../font/ss0.ttf"
 })
 
 const serif = Crimson_Pro({
@@ -56,7 +61,7 @@ export default function RootLayout({
         <script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
       </head> */}
       <body
-        className={`${sans.variable} ${mono.variable} ${serif.variable} font-sans`}
+        className={`${sans.variable} ${ui.variable} ${mono.variable} ${serif.variable} font-sans`}
       >
         <ThemeProvider
           attribute="class"

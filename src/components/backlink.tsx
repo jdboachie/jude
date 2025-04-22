@@ -5,14 +5,14 @@ import {
 
 const BackLink = ({text, link} : {text: string, link: string}) => {
   return (
-    <aside className='lg:col-start-1 lg:sticky lg:top-[126px] w-full z-0 pt-1 pb-8 self-start grid items-start'>
+    <aside className='md:col-start-1 md:sticky md:top-[120px] w-full z-0 pb-8 self-start grid items-start'>
       <Link
         href={link}
         prefetch={true}
         className='flex items-center w-fit gap-1 no-underline hover:no-underline text-muted-foreground hover:text-primary transition-colors duration-300'
       >
         <BackIcon />
-        <span className='text-base font-serif italic leading-[0]'>{text}</span>
+        <span className='sm:text-lg text-[1rem] font-serif italic leading-[0]'>{text}</span>
       </Link>
     </aside>
   )

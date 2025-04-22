@@ -62,20 +62,30 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 text-base antialiased;
+    @apply border-border outline-ring/50 antialiased;
     margin: 0;
     padding: 0;
     text-rendering: optimizeLegibility;
-    font-variant-ligatures: none;
-    font-feature-settings: "cv05", "zero", "ss03", "cv01", "cv09", "cv10";
+    scrollbar-width: thin;
+    scrollbar-color: var(--muted-foreground) transparent;
   }
 
-  .inter-tnum {
-    font-feature-settings: "tnum", "ss02";
+  .tnum {
+    font-feature-settings: "tnum", "zero";
   }
+
+  .hover-link::before {
+    content: '';
+    position: absolute;
+    width: clamp(16rem, 96.5vw, 68ch);
+    height: 60px;
+    z-index: -1;
+    @apply hover:bg-purple-500/5 rounded-2xl -translate-x-4 -translate-y-2;
+  }
+
 
   *::selection {
-    @apply bg-violet-500 text-background;
+    @apply bg-purple-500/50 dark:text-background;
   }
 
   a {
@@ -88,10 +98,8 @@
 
   body {
     @apply bg-background dark:bg-primary-foreground text-vibe pb-12;
-    --font-settings: "cv01","ss03";
+    --font-settings: "ss02";
     font-feature-settings: var(--font-settings);
-    --font-variations: "opsz" auto;
-    font-variation-settings: var(--font-variations);
   }
 
   body::before {
@@ -144,16 +152,21 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply relative max-w-6xl w-full max-sm:max-w-[100dvw] m-auto p-6 mb-24 leading-[1.65]
+    @apply relative max-w-6xl w-full max-sm:max-w-[100dvw] m-auto p-6 mb-24;
   }
 
   main > * {
     grid-column-start: 2;
+    letter-spacing: 0;
+    font-feature-settings: "kern", "frac", "kern", "ss02", "zero";
+
+    @apply leading-relaxed
   }
 
   .serif-italic {
     @apply font-serif italic leading-[0];
     font-size: 18px;
+    font-feature-settings: "zero";
   }
 
   .dark {

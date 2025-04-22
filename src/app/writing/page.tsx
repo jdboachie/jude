@@ -36,11 +36,11 @@ function Writing() {
       {[...posts]
           .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0))
           .map((post, index) => (
-          <Link prefetch={true} href={`/writing/${post.link}`} key={index} className='no-underline sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit py-4'>
+          <Link prefetch={true} href={`/writing/${post.link}`} key={index} className='no-underline fixthis!!!-link sm:col-span-3 flex flex-col gap-8 min-w-0 h-fit py-4'>
             <div className="flex items-center gap-6">
               <div className='flex items-center w-full gap-2'>
-                <p className='font-medium text-sm'>{post.title}</p>
-                {post.description && <p className="max-sm:hidden text-muted-foreground font-normal text-sm">{post.description}</p>}
+                <p className='font-medium'>{post.title}</p>
+                {post.description && <p className="max-sm:hidden text-muted-foreground font-normal">{post.description}</p>}
               </div>
               <time className="text-muted-foreground text-right sm:w-40 w-36 text-sm">{post.date.toLocaleString('en-US', { month: 'long' })} {post.date.getUTCFullYear()}</time>
             </div>
