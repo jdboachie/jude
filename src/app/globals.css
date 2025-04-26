@@ -80,12 +80,12 @@
     width: clamp(16rem, 96.5vw, 68ch);
     height: 60px;
     z-index: -1;
-    @apply hover:bg-purple-500/5 rounded-2xl -translate-x-4 -translate-y-2;
+    @apply hover:bg-cyan-500/5 rounded-2xl -translate-x-4 -translate-y-2;
   }
 
 
   *::selection {
-    @apply bg-purple-500/50;
+    @apply bg-cyan-500/50;
   }
 
   a {
@@ -97,7 +97,7 @@
   }
 
   body {
-    @apply bg-background dark:bg-primary-foreground text-vibe pb-12;
+    @apply bg-background dark:bg-primary-foreground text-vibe;
     --font-settings: "ss02";
     font-feature-settings: var(--font-settings);
   }
@@ -105,7 +105,7 @@
   body::before {
     position: fixed;
     content: '';
-    z-index: 10;
+    z-index: 5;
     left: 0px;
     top: 0px;
     height: 96px;
@@ -125,7 +125,7 @@
   body::after {
     position: fixed;
     content: '';
-    z-index: 10;
+    z-index: 5;
     left: 0px;
     bottom: 0px;
     height: 96px;
@@ -152,7 +152,7 @@
     display: grid;
     grid-template-columns: 1fr 65ch 1fr;
 
-    @apply relative max-w-6xl w-full max-sm:max-w-[100dvw] m-auto p-6 mb-24;
+    @apply relative max-w-6xl w-full max-sm:max-w-[100dvw] m-auto p-6 pb-12 mb-24 sm:mt-[96px] mt-16;
   }
 
   main > * {

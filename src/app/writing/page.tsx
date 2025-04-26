@@ -16,12 +16,12 @@ const posts: Post[] = [
     date: new Date('April 16, 2025'),
     link: 'ai-frontend'
   },
-  // {
-  //   title: 'Inspired by',
-  //   description: 'Why you should copy people',
-  //   date: new Date('April 1, 2025'),
-  //   link: 'inspired-by'
-  // },
+  {
+    title: 'Inspired by',
+    description: 'Why you should copy people',
+    date: new Date('June 1, 2025'),
+    link: 'inspired-by'
+  },
 ]
 
 function Writing() {

@@ -16,7 +16,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h2 className='scroll-m-20 pb-2 first:mt-0 text-lg font-ui font-semibold'>{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className='scroll-m-20 text-base font-ui  font-semibold [&:not(:first-child)]:mt-12'>{children}</h3>
+      <h3 className='scroll-m-20 text-base font-ui font-medium [&:not(:first-child)]:mt-12'>{children}</h3>
     ),
     p: ({ children }) => (
       <p className='[&:not(:first-child)]:mt-6'>{children}</p>

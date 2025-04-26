@@ -81,6 +81,9 @@ export default {
   		},
       screens: {
         md: '880px'
+      },
+      fontSize: {
+        lg: '17px'
       }
   	}
   },

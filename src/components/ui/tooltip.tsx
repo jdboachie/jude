@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import styles from "./tooltip.module.css";
+import { cn } from "@/lib/utils";
 
 export const TooltipTrigger = ({children} : {children: React.ReactNode}) => {
   return <Tooltip.Trigger asChild>
@@ -9,7 +10,7 @@ export const TooltipTrigger = ({children} : {children: React.ReactNode}) => {
 }
 
 export const TooltipContent = ({children, sideOffset} : {children: React.ReactNode, sideOffset: number}) => {
-  return <Tooltip.Content sideOffset={sideOffset} className={styles.Content} >
+  return <Tooltip.Content sideOffset={sideOffset} className={cn(styles.Content, 'bg-background border')} >
     {children}
   </Tooltip.Content>
 }

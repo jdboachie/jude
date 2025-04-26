@@ -14,7 +14,7 @@ const Toppie = () => {
 }
 
 
-const Time = () => {
+export const Time = () => {
   const [currentTime, setCurrentTime] = React.useState<string>('');
 
   React.useEffect(() => {
@@ -35,7 +35,7 @@ const Time = () => {
   }, []);
 
   return (
-    <time className='text-xs max-sm:text-[10px] tnum'>{currentTime || '00:00:00 XM'}</time>
+    <time className='text-xs font-mono tabular-nums tracking-tight'>{currentTime || '00:00:00 XM'}</time>
   )
 }
 
