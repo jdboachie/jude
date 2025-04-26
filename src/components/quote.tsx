@@ -3,7 +3,7 @@ import React from 'react'
 const Quote = ({quote, by, from} : {quote: string, by?: string, from: string}) => {
   return (
     <div className='mt-10 mb-6'>
-      <p className="py-4  text-3xl italic font-medium font-serif">“{quote}”</p>
+      <q className="py-4 text-3xl italic font-medium font-serif">{quote}</q>
       <div className="sm:text-right sm:flex justify-end">
         {by && <p className='text-sm flex'>
           {by}

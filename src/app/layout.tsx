@@ -30,11 +30,11 @@ const ui = LocalFont({
 
 const sans = LocalFont({
   variable: "--font-sans",
-  src: "../font/ss0.ttf"
+  src: "../font/ss0.ttf",
 })
 
 const serif = Crimson_Pro({
-  weight: ['400', '700'],
+  weight: ['400', '500', '600', '700'],
   variable: "--font-serif",
   subsets: ['latin'],
   style: ['normal', 'italic']
@@ -61,7 +61,7 @@ export default function RootLayout({
         <script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
       </head> */}
       <body
-        className={`${sans.variable} ${ui.variable} ${mono.variable} ${serif.variable} font-sans`}
+        className={`${sans.variable} ${ui.variable} ${mono.variable} ${serif.variable} font-[470] font-sans`}
       >
         <ThemeProvider
           attribute="class"
