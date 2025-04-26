@@ -61,7 +61,7 @@ export default function RootLayout({
         <script src="https://unpkg.com/react-scan/dist/auto.global.js" async />
       </head> */}
       <body
-        className={`${sans.variable} ${ui.variable} ${mono.variable} ${serif.variable} font-[470] font-sans`}
+        className={`${sans.variable} ${ui.variable} ${mono.variable} ${serif.variable} font-sans`}
       >
         <ThemeProvider
           attribute="class"
