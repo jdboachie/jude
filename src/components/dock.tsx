@@ -67,7 +67,7 @@ export const socials: DockApp[] = [
   },
 ];
 
-const dockButtonStyles = 'grid dockbutton place-items-center w-10 aspect-square rounded-full border bg-secondary'
+const dockButtonStyles = 'grid place-items-center w-10 aspect-square rounded-full border bg-primary-foreground dark:bg-secondary'
 
 
 function Dock() {
@@ -75,13 +75,13 @@ function Dock() {
   const mouseX = useMotionValue(Infinity)
 
   return (
-    <div className='fixed flex justify-center items-center bottom-0 h-24 w-full z-50'>
+    <div className='fixed flex justify-center pointer-events-none items-center bottom-0 h-24 w-full z-50'>
       <div
         onMouseMove={(e) => {
           mouseX.set(e.pageX)
         }}
         onMouseLeave={() => {mouseX.set(Infinity)}}
-        className="rounded-full hidden sm:flex bg-primary-foreground shadow-2xl items-end mb-4 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll"
+        className="pointer-events-auto rounded-full hidden sm:flex bg-background dark:bg-primary-foreground shadow-2xl items-end mb-4 border z-[10] gap-2 p-1.5 h-[54px] max-sm:mx-6 max-sm:overflow-x-scroll"
       >
         {navlinks.map((app, index) => (
           <DockIcon
@@ -224,7 +224,7 @@ function ThemeToggleButton ({mouseX} : {mouseX: MotionValue}) {
               setTheme('system')
             }
           }}
-          className='w-10 max-sm:size-10 aspect-square rounded-full bg-secondary'
+          className='w-10 max-sm:size-10 aspect-square rounded-full border bg-primary-foreground dark:bg-secondary'
         >
           <span className="sr-only">Toggle theme</span>
           <div

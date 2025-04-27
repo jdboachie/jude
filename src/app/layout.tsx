@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Dock from '@/components/dock';
-import Toppie from '@/components/toppie';
+// import Toppie from '@/components/toppie';
 import Footer from "@/components/footer";
 import LocalFont from "next/font/local";
 import { Analytics } from '@vercel/analytics/next';
@@ -30,11 +30,11 @@ const ui = LocalFont({
 
 const sans = LocalFont({
   variable: "--font-sans",
-  src: "../font/ss0.ttf"
+  src: "../font/ss0.ttf",
 })
 
 const serif = Crimson_Pro({
-  weight: ['400', '700'],
+  weight: ['300', '400', '500', '600'],
   variable: "--font-serif",
   subsets: ['latin'],
   style: ['normal', 'italic']
@@ -71,7 +71,7 @@ export default function RootLayout({
         >
 
           <TooltipProvider delayDuration={200}>
-            <Toppie />
+            {/* <Toppie /> */}
             {children}
             <Analytics />
             <SpeedInsights />
