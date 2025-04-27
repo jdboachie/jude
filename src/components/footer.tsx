@@ -24,7 +24,7 @@ export default async function Footer() {
   }
 
   return (
-    <footer className="relative max-sm:mb-24 bg-primary-foreground border-t tabular-nums z-20 w-screen">
+    <footer className="relative max-sm:pb-28 bg-primary-foreground border-t tabular-nums z-20 w-screen">
       <div className='max-w-6xl size-full mx-auto p-6 flex justify-between items-center text-muted-foreground'>
         <Link href={'https://github.com/jdboachie/jude'} className="flex items-center gap-1 text-xs font-normal no-underline inter-tnum">
           <span className='font-mono'>{commitHash}</span>
