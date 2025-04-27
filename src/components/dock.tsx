@@ -75,7 +75,7 @@ function Dock() {
   const mouseX = useMotionValue(Infinity)
 
   return (
-    <div className='fixed flex justify-center pointer-events-none items-center bottom-0 h-24 w-full z-50'>
+    <div className='fixed flex justify-center sm:pointer-events-none items-center bottom-0 h-24 w-full z-50'>
       <div
         onMouseMove={(e) => {
           mouseX.set(e.pageX)

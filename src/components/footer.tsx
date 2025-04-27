@@ -32,8 +32,8 @@ export default async function Footer() {
           <p className="font-mono flex items-center gap-0.5"> {commitDate}</p>
         </Link>
         <div className='flex gap-2 font-mono'>
-          <Time />
           <span className='text-xs'>Kumasi</span>
+          <Time />
         </div>
       </div>
     </footer>
