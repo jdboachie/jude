@@ -34,7 +34,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         style={{ width: '100%', height: 'auto' }}
         width={5000}
         height={5000}
-        className='border z-10 rounded-md sm:col-start-1 max-sm:col-span-2'
+        // className='mt-6 sm:col-span-3 max-lg:w-full max-lg:max-w-5xl mx-auto border border-neutral-300 dark:border-neutral-600 bg-neutral-100 dark:bg-neutral-800 rounded-xl z-10 border-red-500'
         {...(props as ImageProps)}
       />
     ),

@@ -16,12 +16,12 @@ const posts: Post[] = [
     date: new Date('April 16, 2025'),
     link: 'ai-frontend'
   },
-  // {
-  //   title: 'Inspired by',
-  //   description: 'Why you should copy people',
-  //   date: new Date('June 1, 2025'),
-  //   link: 'inspired-by'
-  // },
+  {
+    title: 'Inspired by',
+    description: 'Why you should copy people',
+    date: new Date('April 29, 2025'),
+    link: 'inspired-by'
+  },
   // {
   //   title: 'Focus',
   //   description: 'Becoming a master of one',
@@ -51,7 +51,7 @@ function Writing() {
         title='Writing'
         desc='Infrequent thoughts on software development'
       />
-      <section className='grid sm:mt-8 mt-4 mb-44 divide-y border-t border-muted hover:text-muted-foreground/70'>
+      <section className='grid sm:mt-8 mt-4 mb-[50dvh] divide-y border-t border-muted hover:text-muted-foreground/70'>
         {sortedYears.map((year) => (
           <div key={year} className="grid grid-cols-[auto,1fr]">
             <div className="text-muted-foreground font-medium w-[3em] sm:w-[7em] pt-4 text-sm">{year}</div>
