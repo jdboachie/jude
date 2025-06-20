@@ -17,7 +17,7 @@ const CompareImages = (
   }
 ) => {
   return (
-    <div className='mt-6 mb-2 z-10 flex overflow-x-scroll gap-3 w-full lg:grid lg:grid-cols-2 lg:col-start-1 lg:col-span-3 lg:max-w-6xl'>
+    <div className='mt-6 mb-2 z-10 flex overflow-x-scroll gap-3 w-full lg:grid lg:grid-cols-2 lg:col-start-1 lg:col-span-3'>
       {images.map((image, index) => (
         <Image
           key={index}

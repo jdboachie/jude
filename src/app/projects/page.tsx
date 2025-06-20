@@ -41,6 +41,13 @@ const projects: Project[] = [
     technologies: ['Nextjs', 'TailwindCSS', 'Nivo'],
     date: new Date('04/07/2024')
   },
+  {
+    title: 'Anime Front Page',
+    link: 'https://animevvault.vercel.app/',
+    description: 'Infinite scroll anime site',
+    technologies: ['Nextjs', 'TailwindCSS', 'Nivo'],
+    date: new Date('04/04/2024')
+  },
 ]
 
 function Projects() {
