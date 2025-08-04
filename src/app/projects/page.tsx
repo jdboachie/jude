@@ -22,7 +22,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'Softdrive',
-    link: 'https://softdrive.vercel.app',
+    link: 'https://softdrive-two.vercel.app',
     description: 'Your personal drive in the cloud.',
     technologies: ['Nextjs', 'TailwindCSS', 'Convex'],
     date: new Date('08/04/2025')
