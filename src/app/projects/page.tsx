@@ -39,7 +39,7 @@ const projects: Project[] = [
     link: 'https://dictionary-jade-eta.vercel.app?q=definition',
     description: 'Get definitions quick',
     technologies: ['React', 'Nextjs', 'TailwindCSS'],
-    date: new Date()
+    date: new Date('07/27/2025')
   },
   {
     title: 'Dashboard UI',
