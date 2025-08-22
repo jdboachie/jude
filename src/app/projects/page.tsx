@@ -21,6 +21,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'Softdrive',
+    link: 'https://softdrive-two.vercel.app',
+    description: 'Your personal drive in the cloud.',
+    technologies: ['Nextjs', 'TailwindCSS', 'Convex'],
+    date: new Date('08/04/2025')
+  },
+  {
     title: 'Nike Shoes site',
     link: 'https://nike-landing-page-six-orpin.vercel.app',
     description: 'Product landing page',
@@ -32,7 +39,7 @@ const projects: Project[] = [
     link: 'https://dictionary-jade-eta.vercel.app?q=definition',
     description: 'Get definitions quick',
     technologies: ['React', 'Nextjs', 'TailwindCSS'],
-    date: new Date()
+    date: new Date('07/27/2025')
   },
   {
     title: 'Dashboard UI',
