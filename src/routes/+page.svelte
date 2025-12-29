@@ -1,3 +1,3 @@
-<p class="mx-auto mt-12 max-w-4xl">
+<p class="mt-12">
 	This is the 2026 iteration of my portfolio site. Built with SvelteKit.
 </p>
