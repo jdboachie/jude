@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'sans';
+	src: url("$lib/assets/fonts/X-Regular.woff2") format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'sans';
+	src: url("$lib/assets/fonts/X-Medium.woff2") format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+body {
+	font-family: 'sans';
+	@apply text-base font-medium;
+}
