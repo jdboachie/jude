@@ -2,16 +2,23 @@
 
 @font-face {
 	font-family: 'sans';
-	src: url('$lib/assets/fonts/X-Regular.woff2') format('woff2');
+	src: url('$lib/assets/fonts/sans.ttf');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'sans';
-	src: url('$lib/assets/fonts/X-Medium.woff2') format('woff2');
-	font-weight: 500;
+	font-family: 'mono';
+	src: url('$lib/assets/fonts/mono.woff2');
+	font-weight: 400;
 	font-style: normal;
+}
+
+@theme {
+	--font-sans: 'sans';
+	--font-mono: 'mono';
+
+	--color-muted: var(--color-neutral-600);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,8 +30,13 @@
 
 body {
 	font-family: 'sans';
-	width: min(60ch, 100%);
+	width: min(50ch, 100%);
 	padding: max(20px, 0rem);
 	margin: auto;
-	@apply text-2xl;
+	font-size: var(--text-2xl);
+	line-height: var(--tw-leading, var(--text-2xl--line-height));
+}
+
+*::selection {
+	@apply bg-cyan-500/70;
 }
