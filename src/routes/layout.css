@@ -2,7 +2,7 @@
 
 @font-face {
 	font-family: 'sans';
-	src: url('$lib/assets/fonts/sans.ttf');
+	src: url('$lib/assets/fonts/dd.woff2');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -29,14 +29,21 @@
 }
 
 body {
-	font-family: 'sans';
-	width: min(50ch, 100%);
-	padding: max(20px, 0rem);
-	margin: auto;
-	font-size: var(--text-2xl);
-	line-height: var(--tw-leading, var(--text-2xl--line-height));
+	@apply mx-auto w-full max-w-[65ch] px-[max(20px,1.5rem)] font-sans text-base;
+}
+
+p {
+	@apply text-[17px] sm:text-xl leading-normal;
 }
 
 *::selection {
 	@apply bg-cyan-500/70;
+}
+
+.text-inline-icon {
+	@apply inline size-5 -translate-y-px;
+}
+
+.font-mono {
+    @apply tracking-tighter
 }
