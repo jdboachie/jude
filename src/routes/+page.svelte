@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { SvelteDate } from 'svelte/reactivity';
-	import Socials from '$lib/components/Socials.svelte';
 
 	let date = new SvelteDate();
 
@@ -30,7 +29,7 @@
 		<div class="font-mono text-xs text-muted uppercase">
 			{ghanaTime} •
 			<a
-				href="https://share.google/1qNdmRhFQVQNs0mCw"
+				href="https://maps.app.goo.gl/8TYDCv2rpD9F3C8u7"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="hover:text-black"
@@ -105,7 +104,6 @@
 		>
 		Bachelor's in Computer Engineering. Light of my world.
 	</p>
-	<!-- <Socials /> -->
 	<span class="font-mono text-xs text-muted">ABOUT</span>
 	<p class="mb-12">
 		Versatile and detail-oriented software developer skilled in Python, Javascript/TypeScript, and

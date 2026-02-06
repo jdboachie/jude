@@ -2,8 +2,15 @@
 
 @font-face {
 	font-family: 'sans';
-	src: url('$lib/assets/fonts/dd.woff2');
+	src: url('$lib/assets/fonts/regular.woff2');
 	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'sans';
+	src: url('$lib/assets/fonts/medium.woff2');
+	font-weight: 500;
 	font-style: normal;
 }
 
@@ -33,7 +40,7 @@ body {
 }
 
 p {
-	@apply text-[17px] sm:text-xl leading-normal;
+	@apply text-[17px];
 }
 
 *::selection {
@@ -41,7 +48,7 @@ p {
 }
 
 .text-inline-icon {
-	@apply inline size-5 -translate-y-px;
+	@apply inline size-4 -translate-y-px;
 }
 
 .font-mono {
