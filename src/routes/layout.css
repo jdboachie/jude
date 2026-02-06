@@ -36,7 +36,7 @@
 }
 
 body {
-	@apply mx-auto w-full max-w-[65ch] px-[max(20px,1.5rem)] font-sans text-base;
+	@apply mx-auto grid w-full max-w-360 grid-cols-12 px-[max(20px,1.5rem)] font-sans text-base mt-32;
 }
 
 p {
@@ -48,9 +48,13 @@ p {
 }
 
 .text-inline-icon {
-	@apply inline size-4 -translate-y-px;
+	@apply inline size-4 -translate-y-0.5;
 }
 
 .font-mono {
-    @apply tracking-tighter
+	@apply tracking-tighter;
+}
+
+.article-container {
+	@apply col-span-12 col-start-1 sm:col-span-10 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-10 lg:col-start-2 xl:col-span-6 xl:col-start-4;
 }

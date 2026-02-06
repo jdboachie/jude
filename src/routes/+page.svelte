@@ -1,43 +1,14 @@
-<script lang="ts">
-	import { SvelteDate } from 'svelte/reactivity';
-
-	let date = new SvelteDate();
-
-	const ghanaTime = $derived(
-		date.toLocaleTimeString('en-GB', {
-			timeZone: 'Africa/Accra',
-			hour: 'numeric',
-			minute: '2-digit',
-			second: '2-digit',
-			hour12: true
-		})
-	);
-
-	$effect(() => {
-		const interval = setInterval(() => {
-			date.setTime(Date.now());
-		}, 1000);
-
-		return () => {
-			clearInterval(interval);
-		};
-	});
+<script>
+	import TimePlaceDisplay from '$lib/components/time-place-display.svelte';
 </script>
 
-<main class="mt-22 antialiased">
-	<div class="flex items-center justify-between pb-8">
-		<div class="font-mono text-xs text-muted uppercase">
-			{ghanaTime} •
-			<a
-				href="https://maps.app.goo.gl/8TYDCv2rpD9F3C8u7"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="hover:text-black"
-			>
-				KUMASI, GHANA
-			</a>
-		</div>
-		<a class="font-mono text-xs text-muted hover:text-black" href="https://cal.com/judeboachie/15min">
+<div class="antialiased main-container article-container">
+	<div class="flex items-center justify-between pb-10">
+		<TimePlaceDisplay />
+		<a
+			class="font-mono text-xs text-muted hover:text-black"
+			href="https://cal.com/judeboachie/15min"
+		>
 			SCHEDULE A MEETING
 		</a>
 	</div>
@@ -104,6 +75,10 @@
 		>
 		Bachelor's in Computer Engineering. Light of my world.
 	</p>
+	<p class="mb-12">
+		<a href="/writing" class="font-mono text-sm">WRITING</a>
+		<a href="/writing" class="font-mono text-sm">PROJECTS</a>
+	</p>
 	<span class="font-mono text-xs text-muted">ABOUT</span>
 	<p class="mb-12">
 		Versatile and detail-oriented software developer skilled in Python, Javascript/TypeScript, and
@@ -111,4 +86,4 @@
 		desktop and web. Strong focus on performance, reliability, and clean design. Quick to learn new
 		technologies and effective in both independent and team-based projects.
 	</p>
-</main>
+</div>
