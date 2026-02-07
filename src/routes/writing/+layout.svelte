@@ -2,5 +2,5 @@
 	let { children } = $props();
 </script>
 
-<nav class=""><a href="/">Index</a></nav>
+<nav class="text-right col-span-2 h-fit"><a href="/">Index</a></nav>
 <article class="article-container flex flex-col gap-8">{@render children()}</article>

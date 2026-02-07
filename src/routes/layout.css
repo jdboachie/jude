@@ -40,7 +40,7 @@ body {
 }
 
 p {
-	@apply text-[17px];
+	@apply text-[18px] font-medium;
 }
 
 *::selection {
@@ -48,7 +48,7 @@ p {
 }
 
 .text-inline-icon {
-	@apply inline size-4 -translate-y-0.5;
+	@apply inline size-4.5 -translate-y-px;
 }
 
 .font-mono {

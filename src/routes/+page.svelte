@@ -8,6 +8,8 @@
 		<a
 			class="font-mono text-xs text-muted hover:text-black"
 			href="https://cal.com/judeboachie/15min"
+			target="_blank"
+			rel="noreferrer noopener"
 		>
 			SCHEDULE A MEETING
 		</a>
@@ -22,7 +24,7 @@
 			viewBox="0 0 24 24"
 			fill="none"
 			stroke="currentColor"
-			stroke-width="2"
+			stroke-width="2.25"
 			stroke-linecap="round"
 			stroke-linejoin="round"
 		>
@@ -47,7 +49,7 @@
 			viewBox="0 0 24 24"
 			fill="none"
 			stroke="currentColor"
-			stroke-width="2"
+			stroke-width="2.25"
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			class="text-inline-icon"
