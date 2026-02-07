@@ -40,7 +40,7 @@ body {
 }
 
 p {
-	@apply text-[18px] font-medium;
+	@apply text-[20px] font-medium;
 }
 
 *::selection {

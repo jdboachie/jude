@@ -1,8 +1,9 @@
 <script>
+	import LinkGrid from '$lib/components/link-grid.svelte';
 	import TimePlaceDisplay from '$lib/components/time-place-display.svelte';
 </script>
 
-<div class="antialiased main-container article-container">
+<div class="main-container article-container antialiased">
 	<div class="flex items-center justify-between pb-10">
 		<TimePlaceDisplay />
 		<a
@@ -77,10 +78,7 @@
 		>
 		Bachelor's in Computer Engineering. Light of my world.
 	</p>
-	<p class="mb-12">
-		<a href="/writing" class="font-mono text-sm">WRITING</a>
-		<a href="/writing" class="font-mono text-sm">PROJECTS</a>
-	</p>
+	<LinkGrid />
 	<span class="font-mono text-xs text-muted">ABOUT</span>
 	<p class="mb-12">
 		Versatile and detail-oriented software developer skilled in Python, Javascript/TypeScript, and
