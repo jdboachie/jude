@@ -3,11 +3,11 @@
 	import TimePlaceDisplay from '$lib/components/time-place-display.svelte';
 </script>
 
-<div class="main-container article-container antialiased">
-	<div class="flex items-center justify-between pb-10">
+<div class="article-container space-y-12">
+	<div class="grid-centre flex items-center justify-between">
 		<TimePlaceDisplay />
 		<a
-			class="font-mono text-xs text-muted hover:text-black"
+			class="font-mono text-xs text-muted hover:text-cyan-600"
 			href="https://cal.com/judeboachie/15min"
 			target="_blank"
 			rel="noreferrer noopener"
@@ -15,7 +15,7 @@
 			SCHEDULE A MEETING
 		</a>
 	</div>
-	<p class="mb-12">
+	<p class="grid-centre">
 		Jude Boachie.
 		<svg
 			class="text-inline-icon"
@@ -60,7 +60,7 @@
 			/>
 			<path d="M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" />
 		</svg>
-		Fullstack web developer.
+		Fullstack web developer. Developer Educator.
 		<svg
 			class="text-inline-icon"
 			xmlns="http://www.w3.org/2000/svg"
@@ -79,11 +79,13 @@
 		Bachelor's in Computer Engineering. Light of my world.
 	</p>
 	<LinkGrid />
-	<span class="font-mono text-xs text-muted">ABOUT</span>
-	<p class="mb-12">
-		Versatile and detail-oriented software developer skilled in Python, Javascript/TypeScript, and
-		Rust. Experienced in building efficient, maintainable, and user-friendly applications for both
-		desktop and web. Strong focus on performance, reliability, and clean design. Quick to learn new
-		technologies and effective in both independent and team-based projects.
-	</p>
+	<section class="grid-centre">
+		<span class="font-mono text-xs text-muted">ABOUT</span>
+		<p>
+			Versatile and detail-oriented software developer skilled in Python, Javascript/TypeScript, and
+			Rust. Experienced in building efficient, maintainable, and user-friendly applications for both
+			desktop and web. Strong focus on performance, reliability, and clean design. Quick to learn
+			new technologies and effective in both independent and team-based projects.
+		</p>
+	</section>
 </div>
