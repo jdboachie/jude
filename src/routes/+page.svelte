@@ -7,7 +7,7 @@
 	<div class="grid-centre flex items-center justify-between">
 		<TimePlaceDisplay />
 		<a
-			class="font-mono text-xs text-muted hover:text-cyan-600"
+			class="font-mono font-semibold text-xs text-cyan-600"
 			href="https://cal.com/judeboachie/15min"
 			target="_blank"
 			rel="noreferrer noopener"

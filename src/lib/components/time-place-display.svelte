@@ -30,7 +30,7 @@
 		href="https://maps.app.goo.gl/8TYDCv2rpD9F3C8u7"
 		target="_blank"
 		rel="noopener noreferrer"
-		class="hover:text-black"
+		class="hover:text-cyan-600"
 	>
 		KUMASI, GHANA
 	</a>

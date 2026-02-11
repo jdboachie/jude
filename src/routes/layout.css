@@ -40,7 +40,7 @@ body {
 }
 
 p {
-	@apply text-xl opacity-80;
+	@apply text-lg sm:text-xl opacity-80;
 }
 
 *::selection {
