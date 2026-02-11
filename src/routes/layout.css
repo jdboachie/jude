@@ -48,7 +48,7 @@ p {
 }
 
 .text-inline-icon {
-	@apply inline size-4.5 -translate-y-px;
+	@apply inline size-4.5 -translate-y-0.5;
 }
 
 .font-mono {
@@ -61,4 +61,8 @@ p {
 
 .grid-centre {
 	@apply col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-10 lg:col-start-2 xl:col-span-6 xl:col-start-4;
+}
+
+.grid-span-all {
+    @apply col-span-12 col-start-1
 }

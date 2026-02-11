@@ -2,32 +2,32 @@
 	let links = [
 		{
 			href: '/writing',
-			label: 'WRITING'
+			label: 'writing'
 		},
 		{
 			href: '/projects',
-			label: 'PROJECTS'
+			label: 'projects'
 		},
 		{
 			href: '/cv',
-			label: 'CV/RESUME'
+			label: 'cv / resume'
 		},
 		{
 			href: '/work',
-			label: 'WORK'
+			label: 'work'
 		},
 		{
 			href: '/volunteering',
-			label: 'VOLUNTEERING'
+			label: 'volunteering'
 		}
 	];
 </script>
 
-<ul class="grid-centre grid min-w-0 grid-cols-1 sm:grid-cols-3">
+<ul class="grid-span-all grid min-w-0 grid-flow-col">
 	{#each links as link}
 		<a
 			href={link.href}
-			class="p-3 text-center font-mono text-sm odd:bg-neutral-50 hover:bg-neutral-100"
+			class="p-3 text-center font-mono font-semibold text-sm odd:bg-neutral-50 hover:bg-neutral-100 uppercase"
 		>
 			{link.label}
 		</a>

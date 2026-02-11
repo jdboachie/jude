@@ -1,5 +1,5 @@
 <script>
-	import LinkGrid from '$lib/components/link-grid.svelte';
+	import LinkGrid from '$lib/components/links.svelte';
 	import TimePlaceDisplay from '$lib/components/time-place-display.svelte';
 </script>
 
