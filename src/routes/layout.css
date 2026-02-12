@@ -46,7 +46,7 @@ body {
 }
 
 p {
-	@apply opacity-95;
+	@apply opacity-95 font-medium;
 }
 
 *::selection {
