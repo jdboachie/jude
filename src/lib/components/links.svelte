@@ -1,35 +1,37 @@
 <script lang="ts">
 	let links = [
 		{
-			href: '/writing',
-			label: 'writing'
+			href: 'https://docs.google.com/document/d/1NQqm138mFAgGMw0Uoos4vTHVbGc0bUot/edit?usp=sharing&ouid=108028889967778196062&rtpof=true&sd=true',
+			label: 'CV / resume'
 		},
 		{
 			href: '/projects',
 			label: 'projects'
 		},
 		{
-			href: '/cv',
-			label: 'cv / resume'
+			href: '/volunteering',
+			label: 'volunteering'
 		},
 		{
 			href: '/work',
 			label: 'work'
 		},
 		{
-			href: '/volunteering',
-			label: 'volunteering'
+			href: '/writing',
+			label: 'writing'
 		}
 	];
 </script>
 
-<ul class="grid-span-all grid min-w-0 max-md:grid-cols-3 sm:grid-flow-col">
+<div
+	class="col-start-1 ml-8 grid h-fit w-full max-lg:hidden max-sm:col-span-12 sm:grid-flow-row md:row-span-2"
+>
 	{#each links as link}
 		<a
 			href={link.href}
-			class="bg-transparent p-3 text-center font-mono text-sm font-semibold uppercase odd:bg-neutral-50 hover:bg-neutral-100 dark:odd:bg-neutral-800/60 dark:hover:bg-neutral-800"
+			class="flex w-full items-center gap-4 rounded-full bg-transparent p-1.5 px-3 text-start text-sm font-medium text-muted capitalize hover:bg-neutral-900/5 dark:hover:bg-neutral-100/10"
 		>
 			{link.label}
 		</a>
 	{/each}
-</ul>
+</div>

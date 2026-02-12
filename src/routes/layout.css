@@ -24,6 +24,8 @@
 @theme {
 	--font-sans: 'sans';
 	--font-mono: 'mono';
+	
+	--text-base: 17px;
 
 	--color-muted: var(--color-neutral-600);
 }
@@ -31,16 +33,20 @@
 @media (prefers-color-scheme: dark) {
 	html {
 		background-color: #161616;
-		color: #cccccc;
+		color: #dddddd;
+	}
+
+	:root {
+		--color-muted: var(--color-neutral-400);
 	}
 }
 
 body {
-	@apply mx-auto mt-32 max-w-360 px-5 font-sans text-base antialiased whitespace-normal;
+	@apply mx-auto mt-20 max-w-360 px-5 font-sans text-base whitespace-normal antialiased sm:mt-32;
 }
 
 p {
-	@apply text-lg sm:text-xl opacity-80;
+	@apply opacity-95;
 }
 
 *::selection {
@@ -48,7 +54,7 @@ p {
 }
 
 .text-inline-icon {
-	@apply inline size-4.5 -translate-y-0.5;
+	@apply inline size-4 -translate-y-px;
 }
 
 .font-mono {
@@ -60,9 +66,9 @@ p {
 }
 
 .grid-centre {
-	@apply col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-10 lg:col-start-2 xl:col-span-6 xl:col-start-4;
+	@apply col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-7 lg:col-start-4 xl:col-span-6 xl:col-start-4;
 }
 
 .grid-span-all {
-    @apply col-span-12 col-start-1
+	@apply col-span-12 col-start-1;
 }

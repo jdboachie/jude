@@ -1,20 +1,26 @@
 <script>
 	import LinkGrid from '$lib/components/links.svelte';
 	import TimePlaceDisplay from '$lib/components/time-place-display.svelte';
+	import VideoCameraIcon from 'phosphor-svelte/lib/VideoCameraIcon';
+	import LinkedinLogoIcon from 'phosphor-svelte/lib/LinkedinLogoIcon';
+	import GithubLogoIcon from 'phosphor-svelte/lib/GithubLogoIcon';
+	import XLogoIcon from 'phosphor-svelte/lib/XLogoIcon';
 </script>
 
 <div class="article-container space-y-12">
-	<div class="grid-centre flex items-center justify-between">
+	<div class="grid-centre flex items-center-safe justify-between">
 		<TimePlaceDisplay />
 		<a
-			class="font-mono font-semibold text-xs text-cyan-600"
+			class="flex h-9 items-center rounded-full bg-neutral-100/50 px-4 text-muted transition-colors duration-300 ease-out hover:bg-neutral-100 dark:bg-neutral-100/5 dark:hover:bg-neutral-100/10"
 			href="https://cal.com/judeboachie/15min"
 			target="_blank"
 			rel="noreferrer noopener"
 		>
-			SCHEDULE A MEETING
+			<VideoCameraIcon class="mr-2 inline-flex size-5" />
+			<span class="h-3 text-xs font-medium">BOOK A CALL</span>
 		</a>
 	</div>
+	<LinkGrid />
 	<p class="grid-centre">
 		Jude Boachie.
 		<svg
@@ -78,7 +84,6 @@
 		>
 		Bachelor's in Computer Engineering. Light of my world.
 	</p>
-	<LinkGrid />
 	<section class="grid-centre">
 		<span class="font-mono text-xs text-muted">ABOUT</span>
 		<p>
@@ -88,4 +93,9 @@
 			new technologies and effective in both independent and team-based projects.
 		</p>
 	</section>
+	<div class="grid-centre flex items-center gap-4">
+		<div class="grid place-items-center size-6 rounded-full"><LinkedinLogoIcon size="24" /></div>
+		<div class="grid place-items-center size-6 rounded-full"><XLogoIcon size="24" /></div>
+		<div class="grid place-items-center size-6 rounded-full"><GithubLogoIcon size="24" /></div>
+	</div>
 </div>
