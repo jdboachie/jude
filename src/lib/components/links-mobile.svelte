@@ -23,9 +23,7 @@
 	];
 </script>
 
-<div
-	class="col-start-1 ml-8 grid h-fit w-full max-lg:hidden max-sm:col-span-12 sm:grid-flow-row md:row-span-2"
->
+<div class="grid-centre flex flex-wrap justify-between">
 	{#each links as link}
 		<a
 			href={link.href}

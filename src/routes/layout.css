@@ -24,7 +24,7 @@
 @theme {
 	--font-sans: 'sans';
 	--font-mono: 'mono';
-	
+
 	--text-base: 17px;
 
 	--color-muted: var(--color-neutral-600);
@@ -46,7 +46,7 @@ body {
 }
 
 p {
-	@apply opacity-95 font-medium;
+	@apply font-medium opacity-95 xl:text-[17px];
 }
 
 *::selection {
@@ -65,10 +65,15 @@ p {
 	@apply grid grid-cols-12;
 }
 
+.article-container p,
 .grid-centre {
-	@apply col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-7 lg:col-start-4 xl:col-span-6 xl:col-start-4;
+	@apply col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-6 lg:col-start-4 xl:col-span-6 xl:col-start-4;
 }
 
 .grid-span-all {
 	@apply col-span-12 col-start-1;
+}
+
+.article-container > p {
+	@apply mb-6;
 }

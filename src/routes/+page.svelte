@@ -1,10 +1,10 @@
 <script>
-	import LinkGrid from '$lib/components/links.svelte';
 	import TimePlaceDisplay from '$lib/components/time-place-display.svelte';
 	import VideoCameraIcon from 'phosphor-svelte/lib/VideoCameraIcon';
 	import LinkedinLogoIcon from 'phosphor-svelte/lib/LinkedinLogoIcon';
 	import GithubLogoIcon from 'phosphor-svelte/lib/GithubLogoIcon';
 	import XLogoIcon from 'phosphor-svelte/lib/XLogoIcon';
+	import LinksMobile from '$lib/components/links-mobile.svelte';
 </script>
 
 <div class="article-container space-y-12">
@@ -20,7 +20,6 @@
 			<span class="h-3 text-xs font-medium">BOOK A CALL</span>
 		</a>
 	</div>
-	<LinkGrid />
 	<p class="grid-centre">
 		Jude Boachie.
 		<svg
@@ -84,6 +83,7 @@
 		>
 		Bachelor's in Computer Engineering. Light of my world.
 	</p>
+	<LinksMobile />
 	<section class="grid-centre">
 		<span class="font-mono text-xs text-muted">ABOUT</span>
 		<p>
@@ -94,8 +94,8 @@
 		</p>
 	</section>
 	<div class="grid-centre flex items-center gap-4">
-		<div class="grid place-items-center size-6 rounded-full"><LinkedinLogoIcon size="24" /></div>
-		<div class="grid place-items-center size-6 rounded-full"><XLogoIcon size="24" /></div>
-		<div class="grid place-items-center size-6 rounded-full"><GithubLogoIcon size="24" /></div>
+		<div class="grid size-6 place-items-center rounded-full"><LinkedinLogoIcon size="24" /></div>
+		<div class="grid size-6 place-items-center rounded-full"><XLogoIcon size="24" /></div>
+		<div class="grid size-6 place-items-center rounded-full"><GithubLogoIcon size="24" /></div>
 	</div>
 </div>
