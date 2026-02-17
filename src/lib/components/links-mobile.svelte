@@ -27,7 +27,7 @@
 	];
 </script>
 
-<div class="grid-centre grid grid-cols-2 lg:grid-cols-3 justify-between">
+<div class="grid-centre grid grid-cols-2 lg:grid-cols-3 max-md:space-y-4 justify-between">
 	{#each links as link}
 		<a
 			href={link.href}
