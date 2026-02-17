@@ -21,7 +21,7 @@
 			label: 'writing'
 		},
 		{
-			href: 'devaccelerator.notion.site',
+			href: 'https://devaccelerator.notion.site',
 			label: 'DevX'
 		},
 	];
