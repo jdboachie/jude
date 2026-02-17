@@ -19,11 +19,15 @@
 		{
 			href: '/writing',
 			label: 'writing'
-		}
+		},
+		{
+			href: 'devaccelerator.notion.site',
+			label: 'DevX'
+		},
 	];
 </script>
 
-<div class="grid-centre flex flex-wrap justify-between">
+<div class="grid-centre grid grid-cols-2 lg:grid-cols-3 justify-between">
 	{#each links as link}
 		<a
 			href={link.href}
