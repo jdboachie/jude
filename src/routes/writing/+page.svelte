@@ -53,14 +53,14 @@
 
 <a
 	href="/"
-	class="col-start-1 grid h-fit w-full max-lg:mb-8 max-sm:col-span-12 sm:grid-flow-row md:row-span-2 lg:ml-8"
+	class="font-light text-sm  lg:pt-4 col-start-1 grid h-fit w-fit max-lg:mb-8 max-sm:col-span-12 sm:grid-flow-row md:row-span-2 lg:ml-8"
 >
 	Index
 </a>
-<section class="grid-centre flex flex-col gap-8">
+<section class="grid-centre w-full flex flex-col gap-8">
 	{#each sortedYears as year}
 		<div class="flex max-xl:flex-col">
-			<div class="col-start-1 w-[3em] pt-4 text-sm font-medium text-muted sm:w-[7em]">{year}</div>
+			<div class="col-start-1 w-[3em] pt-4 text-sm text-muted sm:w-[7em]">{year}</div>
 			<div class="col-start-2 flex grow flex-col divide-y">
 				{#each [...postsByYear[year]].sort((a, b) => b.date.getTime() - a.date.getTime()) as post}
 					<a href={`/writing/${post.link}`} class="group flex items-center justify-between py-3">

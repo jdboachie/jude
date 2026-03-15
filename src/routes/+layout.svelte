@@ -1,6 +1,8 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import Footer from '$lib/components/footer.svelte';
+	import Header from '$lib/components/header.svelte';
 
 	let { children } = $props();
 </script>
@@ -10,4 +12,8 @@
 	<title>Jude Boachie</title>
 </svelte:head>
 
-{@render children()}
+<Header />
+<main>
+	{@render children()}
+</main>
+<Footer />
