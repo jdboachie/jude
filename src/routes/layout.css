@@ -44,11 +44,11 @@ body {
 
 main {
 	--footer-height: 200px;
-	@apply min-h-[calc(100vh-var(--footer-height))] max-lg:min-h-[calc(100vh-345px)];
+	@apply min-h-[calc(100vh-var(--footer-height))] max-lg:min-h-[calc(100vh-350px)];
 }
 
 .reading-container {
-	@apply mx-auto mt-20 grid grid-cols-12;
+	@apply mx-auto w-full mt-20 grid grid-cols-12;
 }
 
 a {
@@ -77,7 +77,7 @@ hr {
 
 .reading-container > p,
 .grid-centre {
-	@apply max-w-[70ch] mx-auto col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3 xl:col-span-6 xl:col-start-4;
+	@apply max-w-[70ch] w-full mx-auto col-span-12 sm:col-span-10 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3 xl:col-span-6 xl:col-start-4;
 }
 
 .grid-span-all {

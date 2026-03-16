@@ -1,7 +1,3 @@
-<script>
-	import VideoCameraIcon from 'phosphor-svelte/lib/VideoCameraIcon';
-</script>
-
 <main class="reading-container">
 	<div class="article grid-centre space-y-12">
 		<p>

@@ -24,13 +24,13 @@
 	});
 </script>
 
-<div class="inline-flex gap-2 text-sm">
-	<time class="font-mono uppercase">{ghanaTime}</time>•
+<div class="inline-flex gap-2 text-xs  text-muted tabular-nums">
+	<time class="uppercase">{ghanaTime}</time>•
 	<a
 		href="https://maps.app.goo.gl/8TYDCv2rpD9F3C8u7"
 		target="_blank"
 		rel="noopener noreferrer"
-		class="font-mono hover:text-black"
+		class="hover:text-amber-500/90"
 	>
 		KUMASI
 	</a>

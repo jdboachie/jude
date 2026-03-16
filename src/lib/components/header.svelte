@@ -6,7 +6,7 @@
 	<TimePlaceDisplay />
 	<div class="flex items-center max-md:flex-col gap-4 max-lg:items-end">
 		<a href="/writing">Writing</a>
-		<a href="/writing">Projects</a>
-		<a href="/writing">Volunteering</a>
+		<a href="/projects">Projects</a>
+		<a href="/volunteering">Volunteering</a>
 	</div>
 </header>
